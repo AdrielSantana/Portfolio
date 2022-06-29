@@ -1,5 +1,5 @@
 .container-1-human{
-    @include background(url(/imagens/humanFlight/01.jpg))
+    @include background(url(../imagens/humanFlight/01.jpg))
 }
 
 .container-1-human-texto{
@@ -33,7 +33,7 @@
 }
 
 .container-3-human{
-    @include background(url(/imagens/humanFlight/02.jpg))
+    @include background(url(../imagens/humanFlight/02.jpg))
 }
 
 .container-3-human-texto{
@@ -42,7 +42,7 @@
 }
 
 .container-4-human{
-    @include background(url(/imagens/humanFlight/03.jpg))
+    @include background(url(../imagens/humanFlight/03.jpg))
 }
 
 .container-4-human-texto{
@@ -51,7 +51,7 @@
 }
 
 .container-5-human{
-    @include background(url(/imagens/humanFlight/04.jpg))
+    @include background(url(../imagens/humanFlight/04.jpg))
 }
 
 .container-5-human-texto{
@@ -60,7 +60,7 @@
 }
 
 .container-6-human{
-    @include background(url(/imagens/humanFlight/05.jpg))
+    @include background(url(../imagens/humanFlight/05.jpg))
 }
 
 .container-6-human-texto{

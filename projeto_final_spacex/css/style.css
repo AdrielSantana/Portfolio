@@ -94,7 +94,7 @@
   }
 }
 .container-1-home {
-  background-image: url(/imagens/home/01.jpg);
+  background-image: url(../imagens/home/01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -110,7 +110,7 @@
 }
 
 .container-2-home {
-  background-image: url(/imagens/home/03.jpg);
+  background-image: url(../imagens/home/03.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -118,7 +118,7 @@
 }
 
 .container-3-home {
-  background-image: url(/imagens/home/02.gif);
+  background-image: url(../imagens/home/02.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -126,7 +126,7 @@
 }
 
 .container-4-home {
-  background-image: url(/imagens/home/04.jpg);
+  background-image: url(../imagens/home/04.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -139,7 +139,7 @@
   }
 }
 .container-1-falcon {
-  background-image: url(/imagens/falcon9/01.jpg);
+  background-image: url(../imagens/falcon9/01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -166,7 +166,7 @@
 }
 
 .container-2-falcon {
-  background-image: url(/imagens/falcon9/02.jpg);
+  background-image: url(../imagens/falcon9/02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -193,7 +193,7 @@ td {
 }
 
 .carousel-1 {
-  background-image: url(/imagens/falcon9/03.jpg);
+  background-image: url(../imagens/falcon9/03.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -201,7 +201,7 @@ td {
 }
 
 .carousel-2 {
-  background-image: url(/imagens/falcon9/04.jpg);
+  background-image: url(../imagens/falcon9/04.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -209,7 +209,7 @@ td {
 }
 
 .carousel-3 {
-  background-image: url(/imagens/falcon9/05.jpg);
+  background-image: url(../imagens/falcon9/05.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -217,7 +217,7 @@ td {
 }
 
 .carousel-4 {
-  background-image: url(/imagens/falcon9/06.jpg);
+  background-image: url(../imagens/falcon9/06.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -225,7 +225,7 @@ td {
 }
 
 .carousel-5 {
-  background-image: url(/imagens/falcon9/07.jpg);
+  background-image: url(../imagens/falcon9/07.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -233,7 +233,7 @@ td {
 }
 
 .container-4-falcon {
-  background-image: url(/imagens/falcon9/08.jpg);
+  background-image: url(../imagens/falcon9/08.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -241,7 +241,7 @@ td {
 }
 
 .carousel-final-1 {
-  background-image: url(/imagens/falcon9/09.jpg);
+  background-image: url(../imagens/falcon9/09.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -249,7 +249,7 @@ td {
 }
 
 .carousel-final-2 {
-  background-image: url(/imagens/falcon9/10.jpg);
+  background-image: url(../imagens/falcon9/10.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -257,7 +257,7 @@ td {
 }
 
 .carousel-final-3 {
-  background-image: url(/imagens/falcon9/11.jpg);
+  background-image: url(../imagens/falcon9/11.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -265,7 +265,7 @@ td {
 }
 
 .carousel-final-4 {
-  background-image: url(/imagens/falcon9/12.jpg);
+  background-image: url(../imagens/falcon9/12.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -273,7 +273,7 @@ td {
 }
 
 .carousel-final-5 {
-  background-image: url(/imagens/falcon9/13.jpg);
+  background-image: url(../imagens/falcon9/13.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -281,7 +281,7 @@ td {
 }
 
 .carousel-final-6 {
-  background-image: url(/imagens/falcon9/14.jpg);
+  background-image: url(../imagens/falcon9/14.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -360,7 +360,7 @@ td {
   }
 }
 .container-1-human {
-  background-image: url(/imagens/humanFlight/01.jpg);
+  background-image: url(../imagens/humanFlight/01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -397,7 +397,7 @@ td {
 }
 
 .container-3-human {
-  background-image: url(/imagens/humanFlight/02.jpg);
+  background-image: url(../imagens/humanFlight/02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -410,7 +410,7 @@ td {
 }
 
 .container-4-human {
-  background-image: url(/imagens/humanFlight/03.jpg);
+  background-image: url(../imagens/humanFlight/03.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -423,7 +423,7 @@ td {
 }
 
 .container-5-human {
-  background-image: url(/imagens/humanFlight/04.jpg);
+  background-image: url(../imagens/humanFlight/04.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -436,7 +436,7 @@ td {
 }
 
 .container-6-human {
-  background-image: url(/imagens/humanFlight/05.jpg);
+  background-image: url(../imagens/humanFlight/05.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
