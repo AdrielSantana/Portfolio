@@ -15,3 +15,5 @@ O site é feito utilizando as tecnologias:
 
 >Bibliotecas extras ultilizadas:
 >* Animation Lib AOS
+
+>Back-End ainda incompleto, sem funcionalidade para a parte do contato.
