@@ -1,0 +1,365 @@
+//Color
+$color-azul-real: #00a9a5;
+$color-verde: #48e5c2;
+$color-cinza: #333333;
+
+// Corpo
+* {
+    margin: 0px;
+    padding: 0px;
+    color: $color-cinza;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// Back to top btn
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    opacity: 0.7;
+}
+
+#btn-back-to-top:hover {
+    border-color: $color-verde !important;
+    background-color: $color-verde !important;
+    transition: 0.5s;
+}
+
+// scroll
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: $color-cinza;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    padding: 2px;
+    background: $color-verde;
+    border-radius: 10px;
+}
+
+.img-logo {
+    width: 60px;
+}
+
+.navbar {
+    background-color: $color-verde;
+}
+
+// Animação Botão Nav
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: $color-cinza;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation-card {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-cinza;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-card:hover{
+    color: $color-verde;
+    transition: 0.5s;
+}
+
+.hover-underline-animation-card:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-verde;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.cta:hover .hover-underline-animation-card:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.container-1 {
+    background-color: $color-azul-real;
+    height: auto;
+    box-shadow: inset 0 0 2em $color-cinza;
+}
+
+.container-1-texto {
+    width: 500px;
+}
+
+.img-perfil {
+    min-width: 600px;
+}
+
+.texto-animado {
+    width: 500px;
+    height: 90vh;
+}
+
+.container-2 {
+    background-color: $color-cinza;
+    height: auto;
+    box-shadow: inset 0 0 2em black;
+}
+
+.img-web {
+    width: 800px;
+}
+
+.container-2-texto-title {
+    border-bottom: $color-verde solid 5px;
+    color: white;
+}
+
+.container-2-texto {
+    color: white;
+}
+
+.container-3 {
+    background-color: $color-azul-real;
+    height: auto;
+    box-shadow: inset 0 0 1em $color-cinza;
+}
+
+.container-3-texto-title {
+    border-bottom: $color-cinza solid 5px;
+}
+
+.container-3-texto {
+    color: $color-cinza;
+}
+
+.card-projeto {
+    background-color: $color-cinza  !important;
+    width: 20rem;
+}
+
+.texto-card-projeto {
+    color: white;
+}
+
+.texto-card-projeto-corpo {
+    color: white;
+}
+
+.container-4 {
+    background-color: $color-cinza;
+    height: auto;
+    box-shadow: inset 0 0 2em black;
+}
+
+.title-4 {
+    color: white;
+}
+
+.img-habilidade {
+    width: 100px;
+}
+
+.card-habilidade{
+    width: 300px;
+}
+
+@mixin btn-lang($color) {
+    border-color: $color !important;
+    background-color: $color !important;
+    transition: 0.5s;
+}
+
+.btn-css:hover {
+    @include btn-lang(#2965f1)
+}
+
+.btn-html:hover {
+    @include btn-lang(#f06529)
+}
+
+.btn-sass:hover {
+    @include btn-lang(#cd6799)
+}
+
+.btn-js:hover {
+    @include btn-lang(#f7df1e)
+}
+
+.btn-bootstrap:hover {
+    @include btn-lang(#563d7c)
+}
+
+.container-5 {
+    background-color: $color-azul-real;
+    height: auto;
+    box-shadow: inset 0 0 1em $color-cinza;
+}
+
+.contato {
+    min-width: 70%;
+}
+
+.title-5 {
+    color: $color-cinza;
+}
+
+.btn-submit {
+    display: none;
+}
+
+.btn-submit:hover {
+    border-color: $color-verde !important;
+    background-color: $color-verde !important;
+    transition: 0.5s;
+}
+
+.copy {
+    color: white;
+}
+
+.footer {
+    background-color: $color-cinza;
+    height: 110px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-nav{
+    filter: invert(1);
+}
+
+.img-nav:hover{
+    filter: invert(71%) sepia(99%) saturate(287%) hue-rotate(107deg) brightness(94%) contrast(90%);
+    transition: 0.5s;
+}
+
+// Animação de texto
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 16em;
+    padding-left: 34px;
+    border-right: 2px solid $color-cinza;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 3s steps(44) 1s 1 normal both,
+        blinkTextCursor 700ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 16em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: $color-cinza;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+// Media Query
+
+@media (max-width:1400px) {
+    .texto-animado {
+        height: 50vh;
+    }
+}
+
+@media (max-width:1022px) {
+    .img-perfil {
+        min-width: 450px;
+    }
+}
+
+@media (max-width:550px) {
+    .line-1 {
+        font-size: 130%;
+        width: 17em;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 17em;
+        }
+    }
+
+    .img-perfil {
+        min-width: 280px;
+    }
+}
+
+@media (max-width:450px) {
+    .line-1 {
+        font-size: 100%;
+        width: 17em;
+    }
+
+    .card-habilidade{
+        width: 230px;
+    }
+
+    .img-perfil {
+        min-width: 180px;
+    }
+
+    .card-projeto {
+        width: 14rem;
+    }
+}

@@ -1,0 +1,101 @@
+.container-1-human{
+    @include background(url(/imagens/humanFlight/01.jpg))
+}
+
+.container-1-human-texto{
+    padding-top: 10rem;
+}
+
+.title-human{
+    font-size: 80px;
+    font-family: "Rubik", sans-serif;
+}
+
+.container-2-human{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+}
+
+.container-2-human-texto{
+    color: $table-items-color;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    width: 800px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.container-3-human{
+    @include background(url(/imagens/humanFlight/02.jpg))
+}
+
+.container-3-human-texto{
+    margin-left: 50vw;
+    padding-top: 30vh;
+}
+
+.container-4-human{
+    @include background(url(/imagens/humanFlight/03.jpg))
+}
+
+.container-4-human-texto{
+    margin-left: 5vw;
+    padding-top: 30vh;
+}
+
+.container-5-human{
+    @include background(url(/imagens/humanFlight/04.jpg))
+}
+
+.container-5-human-texto{
+    margin-left: 50vw;
+    padding-top: 30vh;
+}
+
+.container-6-human{
+    @include background(url(/imagens/humanFlight/05.jpg))
+}
+
+.container-6-human-texto{
+    margin-left: 5vw;
+    padding-top: 30vh;
+}
+
+// Media Query
+
+@media (max-width: 768px){
+    .container-1-human-texto{
+        padding-top: 10rem;
+    }
+    .title-human{
+        font-size: 60px;
+        font-family: "Rubik", sans-serif;
+    }
+}
+
+@media (max-width: 475px){
+    .title-human{
+        font-size: 40px;
+        font-family: "Rubik", sans-serif;
+    }
+}
+
+@media (max-width: 410px){
+    .container-2-human{
+       height: 280px;
+    }
+}
+
+@media (max-width: 340px){
+    .title-human{
+        font-size: 33px;
+        font-family: "Rubik", sans-serif;
+    }
+}

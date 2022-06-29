@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+// scroll
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    padding: 2px;
+    background: white;
+    border-radius: 10px;
+}
+
+@mixin background($url) {
+    background-image: $url;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;  
+}
+
+.container-6-falcon-texto {
+    text-align: center;
+    align-self: center;
+
+    a {
+        text-decoration: none;
+        color: $table-items-color;
+
+        &:hover {
+            color: $hover-links-color;
+        }
+    }
+}
+
+.footer {
+    background-color: black;
+    height: 110px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    a {
+      text-decoration: none;
+      color: white;
+  
+      &:hover {
+        color: $hover-links-color;
+      }
+    }
+  }
+
+.copy{
+    color: $copy-color;
+}
+
+.nav-item{
+    font-size: 13px;
+}
+
+.img-logoOBC{
+    width: 250px;
+}
+
+.btn-hover{
+    padding: 15px 40px;
+    border-width: 2px;
+}
+
+.seta-gif {
+    width: 100px;
+}
+
+// Media Query
+
+@media (max-width: 400px){
+    .img-logoOBC{
+        width: 200px;
+    }
+    .footer{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 350px){
+    .img-logoOBC{
+        width: 150px;
+    }
+    .nav-item{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px){
+    .footer{
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 300px){
+    .img-logoOBC{
+        width: 125px;
+    }
+}

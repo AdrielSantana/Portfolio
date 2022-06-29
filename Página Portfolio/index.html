@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Animation Lib CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Portfólio | Adriel Santana</title>
+</head>
+
+<body>
+    <section>
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-light btn-lg" id="btn-back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            </svg>
+        </button>
+    </section>
+
+    <header>
+        <nav class="navbar shadow-lg navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img data-aos="flip-right" class="img-logo" src="./imagens/favicon 192x192.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link cta fw-bold" href="#sobre-mim"><span class="hover-underline-animation">Sobre
+                                mim</span></a>
+                        <a class="nav-link cta fw-bold" href="#projetos"><span
+                                class="hover-underline-animation">Projetos</span></a>
+                        <a class="nav-link cta fw-bold" href="#habilidades"><span
+                                class="hover-underline-animation">Habilidades</span></a>
+                        <a class="nav-link cta fw-bold" href="#contato"><span
+                                class="hover-underline-animation">Contato</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="justify-content-center d-flex container-1">
+            <div class="row container">
+                <div class="col-lg d-flex justify-content-center">
+                    <div class="texto-animado">
+                        <p class="line-1 anim-typewriter">Bem vindo ao meu portfólio.</p>
+                    </div>
+                </div>
+                <div class="align-self-end justify-items-end col-lg">
+                    <img class="img-fluid img-perfil" src="./imagens/Foto Perfil editado sem fundo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="sobre-mim" class="d-flex justify-content-center align-content-center container-fluid container-2">
+            <div class="row container">
+                <div class="col-lg py-5 align-self-center">
+                    <img data-aos="flip-right" data-aos-duration="2000" class="img-web img-fluid"
+                        src="./imagens/simbolo web.png" alt="">
+                </div>
+                <div data-aos="fade-down" data-aos-duration="2000" class="col-lg pb-5 align-self-center">
+                    <p class="fw-bold container-2-texto-title display-5">Sobre mim</p>
+                    <p class="container-2-texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus iste sint? Neque, quaerat
+                        eligendi aliquid tenetur officiis corporis veniam ea autem quibusdam saepe atque explicabo
+                        molestias
+                        fuga dicta, consectetur ducimus iste expedita recusandae, ipsam illo aliquam! Accusantium, nemo
+                        ea
+                        quia blanditiis nostrum, autem quae adipisci reiciendis, fugit ullam sapiente.
+                    </p>
+                    <p class="container-2-texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus iste sint? Neque, quaerat
+                        eligendi aliquid tenetur officiis corporis veniam ea autem quibusdam saepe atque explicabo
+                        molestias
+                        fuga dicta, consectetur ducimus iste expedita recusandae, ipsam illo aliquam! Accusantium, nemo
+                        ea
+                        quia blanditiis nostrum, autem quae adipisci reiciendis, fugit ullam sapiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="projetos" class="d-flex justify-content-center align-content-center container-fluid container-3">
+            <div class="row container">
+                <div class="col-12 py-5">
+                    <p data-aos="fade-down" data-aos-duration="1500" class="display-3 fw-bold text-center title-3">
+                        Projetos</p>
+                </div>
+
+                <div data-aos="fade-down" data-aos-duration="2000"
+                    class="col-lg d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <div class="card shadow-lg card-projeto">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                <img class="card-img-top rounded img-projeto" src="./imagens/Projeto_spaceX.png" alt="">
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-projeto card-body">
+                                    <h5 class="card-title texto-card-projeto">SpaceX</h5>
+                                    <p class="texto-card-projeto-corpo">
+                                        Projeto inspirado no site da SpaceX, mostrando sua funcionalidade e
+                                        responsividade Front-End, utilizando apenas HTML, CSS, Bootstrap e Sass
+                                    </p>
+                                    <a class="nav-link cta fw-bold" href="#"><span
+                                            class="hover-underline-animation-card">Veja aqui</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="habilidades" class="d-flex justify-content-center align-content-center container-fluid container-4">
+            <div class="row container">
+                <div class="col-12 py-5">
+                    <p data-aos="fade-down" data-aos-duration="1500" class="display-3 fw-bold text-center title-4">
+                        Habilidades
+                    </p>
+                </div>
+
+                <div data-aos="flip-right" data-aos-duration="2000"
+                    class="col-xxl-4 d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <p>
+                            <a class="btn shadow-md btn-css btn-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#CSS" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <img class="img-habilidade" src="./imagens/icons8-css3 (1).svg" alt="">
+                            </a>
+                        </p>
+                        <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="CSS">
+                                <h5 class="card-title texto-card-projeto">CSS</h5>
+                                <div class="card card-habilidade card-body">
+                                    Mecanismo para adicionar estilo a um documento web em formato cascata
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="flip-right" data-aos-duration="2000"
+                    class="col-xxl-4 d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <p>
+                            <a class="btn shadow-md btn-html btn-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#HTML" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <img class="img-habilidade" src="./imagens/icons8-html-5.svg" alt="">
+                            </a>
+                        </p>
+                        <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="HTML">
+                                <h5 class="card-title texto-card-projeto">HTML</h5>
+                                <div class="card card-habilidade card-body">
+                                    Linguagem de marcação utilizada na construção de páginas na Web
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="flip-right" data-aos-duration="2000"
+                    class="col-xxl-4 d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <p>
+                            <a class="btn shadow-md btn-js btn-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#JS" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <img class="img-habilidade" src="./imagens/icons8-javascript.svg" alt="">
+                            </a>
+                        </p>
+                        <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="JS">
+                                <h5 class="card-title texto-card-projeto">JavaScript</h5>
+                                <div class="card card-habilidade card-body">
+                                    Linguagem de programação interpretada estruturada, de script em alto nível com
+                                    tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é
+                                    uma das três principais tecnologias da World Wide Web.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="flip-right" data-aos-duration="2000"
+                    class="col-xxl-4 d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <p>
+                            <a class="btn shadow-md btn-sass btn-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#SASS" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <img class="img-habilidade" src="./imagens/icons8-sass.svg" alt="">
+                            </a>
+                        </p>
+                        <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="SASS">
+                                <h5 class="card-title texto-card-projeto">Sass</h5>
+                                <div class="card card-habilidade card-body">
+                                    Linguagem de extensão do CSS pré-compilada para dar mais agilidade e utilidade ao
+                                    CSS padrão, além da facil manutenção e desenvolvimento de páginas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="flip-right" data-aos-duration="2000"
+                    class="col-xxl-4 d-flex justify-content-center pb-5 align-self-center">
+                    <div>
+                        <p>
+                            <a class="btn shadow-md btn-bootstrap btn-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#bootstrap" aria-expanded="false" aria-controls="collapseWidthExample">
+                                <img class="img-habilidade" src="./imagens/bootstrap.svg" alt="">
+                            </a>
+                        </p>
+                        <div style="min-height: 120px;">
+                            <div class="collapse collapse-horizontal" id="bootstrap">
+                                <h5 class="card-title texto-card-projeto">Bootstrap</h5>
+                                <div class="card card-habilidade card-body">
+                                    Framework web com código-fonte aberto para desenvolvimento de componentes de
+                                    interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript,
+                                    baseado em modelos de design para a tipografia, melhorando a experiência do usuário
+                                    em um site amigável e responsivo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <section>
+        <div id="contato" class="d-flex justify-content-center align-content-center container-fluid container-5">
+            <div class="row pb-5 contato">
+                <div class="col-12 py-5">
+                    <p data-aos="fade-down" data-aos-duration="1500" class="display-3 fw-bold text-center title-5">
+                        Contato
+                    </p>
+                </div>
+
+                <form data-aos="fade-down" data-aos-duration="2000" class="mb-3 col-6 form-floating">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com">
+                    <label class="ps-4" for="floatingInputValue">Seu nome</label>
+                </form>
+
+                <form data-aos="fade-down" data-aos-duration="2000" class="mb-3 col-6 form-floating">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com">
+                    <label class="ps-4" for="floatingInputValue">Email</label>
+                </form>
+
+                <div data-aos="fade-down" data-aos-duration="2000" class="mb-5 form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label class="ps-4" for="floatingTextarea">Sua mensagem</label>
+                </div>
+
+                <div data-aos="fade-down" data-aos-duration="2000" class="mb-3">
+                    <button type="submit" class="btn btn-light btn-submit">
+                        Enviar
+                    </button>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid flex-wrap footer">
+            <p class="copy me-4 mt-3">Adriel Santana &copy; 2022</p>
+
+            <div class="row g-0">
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/adrielsan/" target="_blank">
+                        <img class="me-2 img-nav" src="./imagens/linkedin.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="nav-link cta" href="https://github.com/AdrielSantana" target="_blank"><span
+                            class="hover-underline-animation-card">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-0">
+                <div class="col">
+                    <a href="https://github.com/AdrielSantana" target="_blank">
+                        <img class="ms-3 me-2 img-nav" src="./imagens/github.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="nav-link cta" href="https://github.com/AdrielSantana" target="_blank"><span
+                            class="hover-underline-animation-card">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- Animation Lib CDN -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Script Back to Top button -->
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
