@@ -1,7 +1,7 @@
 # Portfolio
 --------------------------------
 ### Projetos pessoais que fiz enquanto aprendo programação web
-Aqui você verá projetos Full-Stack, tanto utilizando do Front-End quando o Back-End com as mais usadas tecnologias do mercado.  
+Aqui você verá projetos Full-Stack, tanto utilizando do Front-End quanto o Back-End com as mais usadas tecnologias do mercado.  
 
 #### Para melhor visualização, aqui vai meu Portfolio: [Site Portfolio](https:...)
 
