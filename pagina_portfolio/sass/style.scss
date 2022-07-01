@@ -143,6 +143,7 @@ $color-cinza: #333333;
 }
 
 .container-2-texto-title {
+    padding-top: 3rem;
     border-bottom: $color-verde solid 5px;
     color: white;
 }
@@ -320,6 +321,13 @@ $color-cinza: #333333;
     .texto-animado {
         height: 50vh;
     }
+}
+
+@media (max-width:991px) {
+    .container-2-texto-title {
+        padding-top: 0;
+    }
+
 }
 
 @media (max-width:1022px) {
