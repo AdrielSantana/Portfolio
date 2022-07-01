@@ -132,6 +132,7 @@
 }
 
 .container-2-texto-title {
+  padding-top: 3rem;
   border-bottom: #48e5c2 solid 5px;
   color: white;
 }
@@ -303,6 +304,11 @@
 @media (max-width: 1400px) {
   .texto-animado {
     height: 50vh;
+  }
+}
+@media (max-width: 991px) {
+  .container-2-texto-title {
+    padding-top: 0;
   }
 }
 @media (max-width: 1022px) {
