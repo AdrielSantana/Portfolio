@@ -323,17 +323,21 @@ $color-cinza: #333333;
     }
 }
 
+@media (max-width:1022px) {
+    .img-perfil {
+        min-width: 450px;
+    }
+
+    .card-habilidade{
+        width: 230px;
+    }
+}
+
 @media (max-width:991px) {
     .container-2-texto-title {
         padding-top: 0;
     }
 
-}
-
-@media (max-width:1022px) {
-    .img-perfil {
-        min-width: 450px;
-    }
 }
 
 @media (max-width:550px) {
