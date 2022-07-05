@@ -174,6 +174,7 @@
 
 .container-4 {
   background-color: #333333;
+  margin: 0px !important;
   height: auto;
   box-shadow: inset 0 0 2em black;
 }
@@ -188,6 +189,19 @@
 
 .card-habilidade {
   width: 300px;
+}
+
+.collapse-body {
+  width: 330px !important;
+}
+
+.btn-hability {
+  max-width: 125px !important;
+  max-height: 125px !important;
+}
+
+.hability-container {
+  max-width: 320px;
 }
 
 .btn-css:hover {
@@ -313,6 +327,9 @@
   .card-habilidade {
     width: 230px;
   }
+  .collapse-body {
+    width: 260px !important;
+  }
 }
 @media (max-width: 991px) {
   .container-2-texto-title {
@@ -342,13 +359,16 @@
     width: 17em;
   }
   .card-habilidade {
-    width: 230px;
+    width: 220px;
   }
   .img-perfil {
     min-width: 180px;
   }
   .card-projeto {
     width: 14rem;
+  }
+  .collapse-body {
+    width: 250px !important;
   }
 }
 
