@@ -185,6 +185,7 @@ $color-cinza: #333333;
 
 .container-4 {
     background-color: $color-cinza;
+    margin: 0px !important;
     height: auto;
     box-shadow: inset 0 0 2em black;
 }
@@ -201,10 +202,23 @@ $color-cinza: #333333;
     width: 300px;
 }
 
+.collapse-body{
+    width: 330px !important;
+}
+
 @mixin btn-lang($color) {
     border-color: $color !important;
     background-color: $color !important;
     transition: 0.5s;
+}
+
+.btn-hability{
+    max-width: 125px !important;
+    max-height: 125px !important;
+}
+
+.hability-container{
+    max-width: 320px;
 }
 
 .btn-css:hover {
@@ -331,6 +345,10 @@ $color-cinza: #333333;
     .card-habilidade{
         width: 230px;
     }
+
+    .collapse-body{
+        width: 260px !important;
+    }
 }
 
 @media (max-width:991px) {
@@ -368,7 +386,7 @@ $color-cinza: #333333;
     }
 
     .card-habilidade{
-        width: 230px;
+        width: 220px;
     }
 
     .img-perfil {
@@ -377,5 +395,9 @@ $color-cinza: #333333;
 
     .card-projeto {
         width: 14rem;
+    }
+
+    .collapse-body{
+        width: 250px !important;
     }
 }
