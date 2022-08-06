@@ -241,6 +241,10 @@ $color-cinza: #333333;
     @include btn-lang(#563d7c)
 }
 
+.btn-git:hover {
+    @include btn-lang(#f1502f)
+}
+
 .container-5 {
     background-color: $color-azul-real;
     height: auto;
