@@ -245,6 +245,19 @@ $color-cinza: #333333;
     @include btn-lang(#f1502f)
 }
 
+.btn-figma:hover {
+    @include btn-lang(#E64A19)
+}
+.btn-mongo:hover {
+    @include btn-lang(#58AA50)
+}
+.btn-nodejs:hover {
+    @include btn-lang(#388E3C)
+}
+.btn-react:hover {
+    @include btn-lang(#4E7AB5)
+}
+
 .container-5 {
     background-color: $color-azul-real;
     height: auto;
@@ -274,7 +287,7 @@ $color-cinza: #333333;
 }
 
 .footer {
-    background-color: $color-cinza;
+    background-color: $color-azul-real;
     height: 110px;
     font-size: 12px;
     font-weight: 500;
