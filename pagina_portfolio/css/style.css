@@ -5,6 +5,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+::selection {
+  color: #333333;
+  background: #48e5c2;
+}
+
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;

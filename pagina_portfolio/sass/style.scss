@@ -11,6 +11,13 @@ $color-cinza: #333333;
     font-family: 'Montserrat', sans-serif;
 }
 
+// Text selection
+
+::selection {
+    color: $color-cinza;
+    background: $color-verde;
+}
+
 // Back to top btn
 #btn-back-to-top {
     position: fixed;
@@ -21,8 +28,8 @@ $color-cinza: #333333;
 }
 
 #btn-back-to-top:hover {
-    border-color: $color-verde !important;
-    background-color: $color-verde !important;
+    border-color: $color-verde  !important;
+    background-color: $color-verde  !important;
     transition: 0.5s;
 }
 
@@ -85,7 +92,7 @@ $color-cinza: #333333;
     transition: transform 0.25s ease-out;
 }
 
-.hover-underline-animation-card:hover{
+.hover-underline-animation-card:hover {
     color: $color-verde;
     transition: 0.5s;
 }
@@ -198,26 +205,26 @@ $color-cinza: #333333;
     width: 100px;
 }
 
-.card-habilidade{
+.card-habilidade {
     width: 300px;
 }
 
-.collapse-body{
+.collapse-body {
     width: 330px !important;
 }
 
 @mixin btn-lang($color) {
-    border-color: $color !important;
-    background-color: $color !important;
+    border-color: $color  !important;
+    background-color: $color  !important;
     transition: 0.5s;
 }
 
-.btn-hability{
+.btn-hability {
     max-width: 125px !important;
     max-height: 125px !important;
 }
 
-.hability-container{
+.hability-container {
     max-width: 320px;
 }
 
@@ -248,12 +255,15 @@ $color-cinza: #333333;
 .btn-figma:hover {
     @include btn-lang(#E64A19)
 }
+
 .btn-mongo:hover {
     @include btn-lang(#58AA50)
 }
+
 .btn-nodejs:hover {
     @include btn-lang(#388E3C)
 }
+
 .btn-react:hover {
     @include btn-lang(#4E7AB5)
 }
@@ -277,8 +287,8 @@ $color-cinza: #333333;
 }
 
 .btn-submit:hover {
-    border-color: $color-verde !important;
-    background-color: $color-verde !important;
+    border-color: $color-verde  !important;
+    background-color: $color-verde  !important;
     transition: 0.5s;
 }
 
@@ -296,11 +306,11 @@ $color-cinza: #333333;
     justify-content: center;
 }
 
-.img-nav{
+.img-nav {
     filter: invert(1);
 }
 
-.img-nav:hover{
+.img-nav:hover {
     filter: invert(71%) sepia(99%) saturate(287%) hue-rotate(107deg) brightness(94%) contrast(90%);
     transition: 0.5s;
 }
@@ -359,11 +369,11 @@ $color-cinza: #333333;
         min-width: 450px;
     }
 
-    .card-habilidade{
+    .card-habilidade {
         width: 230px;
     }
 
-    .collapse-body{
+    .collapse-body {
         width: 260px !important;
     }
 }
@@ -402,7 +412,7 @@ $color-cinza: #333333;
         width: 17em;
     }
 
-    .card-habilidade{
+    .card-habilidade {
         width: 220px;
     }
 
@@ -414,7 +424,7 @@ $color-cinza: #333333;
         width: 14rem;
     }
 
-    .collapse-body{
+    .collapse-body {
         width: 250px !important;
     }
 }
