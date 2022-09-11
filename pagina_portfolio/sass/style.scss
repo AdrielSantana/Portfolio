@@ -268,6 +268,10 @@ $color-cinza: #333333;
     @include btn-lang(#4E7AB5)
 }
 
+.btn-typescript:hover {
+    @include btn-lang(#1976D2)
+}
+
 .container-5 {
     background-color: $color-azul-real;
     height: auto;
