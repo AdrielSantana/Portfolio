@@ -272,6 +272,10 @@ $color-cinza: #333333;
     @include btn-lang(#1976D2)
 }
 
+.btn-nextjs:hover {
+    @include btn-lang(#95A5A6)
+}
+
 .container-5 {
     background-color: $color-azul-real;
     height: auto;

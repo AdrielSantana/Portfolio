@@ -275,6 +275,12 @@
   transition: 0.5s;
 }
 
+.btn-nextjs:hover {
+  border-color: #95A5A6 !important;
+  background-color: #95A5A6 !important;
+  transition: 0.5s;
+}
+
 .container-5 {
   background-color: #00a9a5;
   height: auto;
