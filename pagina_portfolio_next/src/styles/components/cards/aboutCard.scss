@@ -1,0 +1,19 @@
+@import '../../assets/colors.scss';
+@import '../../assets/typography.scss';
+
+.about-text{
+    font-family: $custom-font-body;
+    font-size: 1.2rem;
+    text-align: start;
+    word-spacing: 3px;
+    text-indent: 2rem;
+    line-height: 160%;
+    margin-bottom: 2rem;
+    span{
+        color: $custom-color-secondary;
+    }
+    span:hover{
+        color: $custom-color-white;
+        transition: 0.3s;
+    }
+}

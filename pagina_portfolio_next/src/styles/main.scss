@@ -1,0 +1,26 @@
+@import './assets/colors.scss';
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: $custom-color-dark;
+    background: $custom-color-secondary;
+}
+
+body {
+    background-color: $custom-color-primary;
+}
+
+@import './components/layout/burgerMenu.scss';
+@import './components/layout/principalLayout.scss';
+@import './components/layout/principalCard.scss';
+
+@import './components/cards/aboutCard.scss';
+@import './components/cards/contactCard.scss';
+
+@import './components/cards/projects/projectCard.scss';
+@import './components/cards/skills/skillCard.scss'

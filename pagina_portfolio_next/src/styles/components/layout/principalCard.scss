@@ -1,0 +1,37 @@
+@import '../../assets/colors.scss';
+@import '../../assets/typography.scss';
+
+.principal-card {
+    background-color: $custom-color-dark;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 64px;
+    width: 100%;
+    max-width: 800px;
+    height: 75vh;
+    z-index: 2;
+    filter: drop-shadow(0 8px 4px rgba(0, 0, 0, .4));
+}
+
+.principal-container{
+    color: $custom-color-white;
+    overflow: auto;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.principal-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.principal-container::-webkit-scrollbar-track {
+    background: $custom-color-dark;
+    /* color of the tracking area */
+}
+
+.principal-container::-webkit-scrollbar-thumb {
+    background-color: $custom-color-secondary;
+    /* color of the scroll thumb */
+    border-radius: 2rem;
+    /* roundness of the scroll thumb */
+}
