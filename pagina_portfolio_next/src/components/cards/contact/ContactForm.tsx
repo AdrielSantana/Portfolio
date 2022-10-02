@@ -9,6 +9,10 @@ type Request = {
     message: string
 }
 
+type fetchData = {
+    validate: boolean
+}
+
 const ContactForm = () => {
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
@@ -34,7 +38,7 @@ const ContactForm = () => {
 
 
         try {
-            const userReq = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/contact`, {
+            const userReq: fetchData = await fetch(`/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -42,7 +46,7 @@ const ContactForm = () => {
                 body: JSON.stringify(userRequest)
             }).then(res => res.json())
 
-            const myReq = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/contact`, {
+            const myReq: fetchData = await fetch(`/api/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -54,7 +58,7 @@ const ContactForm = () => {
             setEmail('')
             setMessage('')
 
-            if (myReq && userReq) {
+            if (myReq.validate && userReq.validate) {
                 setResult(true)
             } else {
                 setResult(false)
