@@ -14,7 +14,7 @@ import ContactCard from '../src/components/cards/ContactCard'
 
 const Home: NextPage = () => {
   const [card, setCard] = useState('hero')
-  const [title, setTitle] = useState('Me use!')
+  const [title, setTitle] = useState('/')
 
   const handleCardChange = (card: string) => {
     switch (card) {
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         break;
       default:
         setCard(card)
-        setTitle('de novo?')
+        setTitle('/')
         break;
     }
   }
