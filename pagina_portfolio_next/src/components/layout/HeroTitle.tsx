@@ -1,5 +1,4 @@
 import { Typewriter } from 'react-simple-typewriter'
-import { useState } from 'react'
 
 const HeroTitle = () => {
     return (
