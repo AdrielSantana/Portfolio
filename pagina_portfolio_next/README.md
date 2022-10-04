@@ -31,4 +31,4 @@ Lista de tecnologias utilizadas:
 > * framer-motion ( Animações )
 > * react-burger-renu ( Menu hambuger )
 > * react-simple-typewriter ( Texto sendo digitado )
-> * mailgun-js ( API para envio de emails )
+> * mailgun-js ( API para envio de emails ) 
