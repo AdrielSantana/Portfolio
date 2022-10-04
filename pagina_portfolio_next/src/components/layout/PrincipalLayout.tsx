@@ -51,6 +51,21 @@ const animationCard = {
     }
 }
 
+const animationPointer = {
+    pulse: {
+        scale: [1, 1.2, 1],
+        transition: {
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0
+        }
+    },
+    stopPulse: {
+    }
+}
+
 const animationTitle = {
     hidden: {
         y: "-6rem",
@@ -80,6 +95,13 @@ const animationTitle = {
 
 const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => {
     const [slideAnimation, setSlideAnimation] = useState<string>('next')
+    const [slidePointerAnimation, setSlidePointerAnimation] = useState<boolean>(true)
+
+    const handleSlide = (card: string) => {
+        handleCardChange(card)
+
+        setSlidePointerAnimation(false)
+    }
 
     const findNext = (card: string) => {
         let nextCard: string
@@ -182,8 +204,10 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
             <motion.span
                 layout
                 className="previous-btn slide"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                variants={animationPointer}
+                animate={slidePointerAnimation ? "pulse" : "stopPulse"}
+                whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
+                whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
                 style={{
                     position: 'fixed',
                     left: 'calc(50% - 7.3rem)',
@@ -192,7 +216,7 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
                 }}
             >
                 <Image
-                    onClick={e => handleCardChange(findPrevious(card))}
+                    onClick={e => handleSlide(findPrevious(card))}
                     src={'/images/extra/pointer.svg'}
                     alt={'Previous card'}
                     height={30}
@@ -203,8 +227,10 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
             <motion.span
                 layout
                 className="next-btn slide"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                variants={animationPointer}
+                animate={slidePointerAnimation ? "pulse" : "stopPulse"}
+                whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
+                whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
                 style={{
                     position: 'fixed',
                     left: 'calc(50% + 5.3rem)',
@@ -213,7 +239,7 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
                 }}
             >
                 <Image
-                    onClick={e => handleCardChange(findNext(card))}
+                    onClick={e => handleSlide(findNext(card))}
                     style={{ transform: 'rotate(180deg)' }}
                     src={'/images/extra/pointer.svg'}
                     alt={'Next card'}

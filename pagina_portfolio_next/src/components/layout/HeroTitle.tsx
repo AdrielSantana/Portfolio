@@ -7,7 +7,7 @@ const HeroTitle = () => {
             <div className='title'>
                 <p className='text-center'>
                     <Typewriter
-                    words={["Bem vindo ao meu Portfolio :)","Desenvolvedor Web Full-Stack","Dá uma olhadinha nos projetos ;)", "Não esquece de mandar mensagem!", "Cansei de escrever :P", "Tá esperando oque pra ir ver?", "Bem vindo ao meu Portfolio :)"]}
+                    words={["Bem vindo ao meu Portfolio :)","Desenvolvedor Web Full-Stack","Olha meus projetos ;)", "Não esquece de mandar mensagem!", "Cansei de escrever :P", "Tá esperando oque?", "Bem vindo ao meu Portfolio :)"]}
                     typeSpeed={90}
                     deleteSpeed={50}
                     delaySpeed={5000}
