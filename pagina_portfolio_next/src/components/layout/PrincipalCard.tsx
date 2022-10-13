@@ -1,5 +1,4 @@
 import { Container } from "react-bootstrap";
-import { motion, AnimatePresence } from 'framer-motion'
 
 type Props = {
     children?: React.ReactNode;

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import { useState } from 'react'
 
 import { Cross as Hamburger } from 'hamburger-react'
 import { slide as Menu } from 'react-burger-menu'

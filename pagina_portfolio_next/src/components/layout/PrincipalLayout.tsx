@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useState } from "react";
 import { Container } from "react-bootstrap"
-import { motion, AnimatePresence, transform } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 type Props = {
     title: string;

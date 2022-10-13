@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Dispatch, SetStateAction } from 'react'
 import { Button } from 'react-bootstrap'
 
 type Props = {
