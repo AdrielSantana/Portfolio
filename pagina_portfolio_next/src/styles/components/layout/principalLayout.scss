@@ -2,31 +2,31 @@
 @import '../../assets/typography.scss';
 
 .principal-layout {
-    background-color: $custom-color-primary;
-    height: 100vh;
-    overflow: hidden;
+  background-color: $custom-color-primary;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .title {
-    font-size: 2rem;
-    font-family: $custom-font-title;
+  font-size: 2rem;
+  font-family: $custom-font-title;
 }
 
 .title-hero {
-    position: fixed;
-    left: 50%;
-    top: 4rem;
-    transform: translate(-50%, -50%)
+  position: fixed;
+  left: 50%;
+  top: 4rem;
+  transform: translate(-50%, -50%)
 }
 
 .perfil-photo-container {
-    height: 300px;
-    width: 400px;
-    position: fixed;
-    right: 0 !important;
-    bottom: 0 !important;
+  height: 300px;
+  width: 400px;
+  position: fixed;
+  right: 0 !important;
+  bottom: 0 !important;
 }
 
-.slide{
-    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, .25));
+.slide {
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, .25));
 }

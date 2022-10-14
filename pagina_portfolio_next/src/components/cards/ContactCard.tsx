@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap"
+import {Col, Row} from "react-bootstrap"
 
 import ContactLink from "./contact/ContactLink"
 import ContactForm from "./contact/ContactForm"
@@ -6,9 +6,10 @@ import ContactForm from "./contact/ContactForm"
 const ContactCard = () => {
     return (
         <>
-            <Row style={{ height: '100%' }}>
+            <Row style={{height: '100%'}}>
 
-                <Col style={{ minHeight: '100%' }} className="pb-3 d-flex flex-column align-items-center justify-content-evenly" xs={12} lg={6}>
+                <Col style={{minHeight: '100%'}}
+                     className="pb-3 d-flex flex-column align-items-center justify-content-evenly" xs={12} lg={6}>
 
                     <ContactLink
                         name={"LinkedIn"}
@@ -33,7 +34,8 @@ const ContactCard = () => {
 
                 </Col>
 
-                <Col style={{ minHeight: '100%' }} className="pb-3 d-flex flex-column align-items-center justify-content-center" xs={12} lg={6}>
+                <Col style={{minHeight: '100%'}}
+                     className="pb-3 d-flex flex-column align-items-center justify-content-center" xs={12} lg={6}>
                     <ContactForm/>
                 </Col>
 

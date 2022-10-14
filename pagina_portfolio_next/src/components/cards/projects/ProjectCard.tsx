@@ -1,22 +1,22 @@
 import Image from 'next/image'
-import { useState } from 'react'
-import { Button, Card, Collapse, Container } from 'react-bootstrap'
-import { Project } from '../ProjectsCard'
+import {useState} from 'react'
+import {Button, Card, Collapse, Container} from 'react-bootstrap'
+import {Project} from '../ProjectsCard'
 
-import { motion } from 'framer-motion'
+import {motion} from 'framer-motion'
 
 type Props = {
     project: Project
 }
 
-const ProjectCard = ({ project}: Props) => {
+const ProjectCard = ({project}: Props) => {
     const [open, setOpen] = useState(false);
 
     return (
         <>
             <div className='project-container'>
 
-                <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+                <motion.div whileTap={{scale: 0.95}} whileHover={{scale: 1.05}}>
                     <Image
                         className='project-image'
                         onClick={() => setOpen(!open)}
@@ -34,7 +34,7 @@ const ProjectCard = ({ project}: Props) => {
                         <Card className='project-card' body>
                             <Card.Title className='text-center'><strong>{project.name}</strong></Card.Title>
                             <Card.Text>{project.description}</Card.Text>
-                            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+                            <motion.div whileTap={{scale: 0.95}} whileHover={{scale: 1.05}}>
                                 <p className='text-center'>
                                     <Button className='project-button'>
                                         <a target='_blank' rel='noreferrer' href={project.link}>Veja aqui</a>

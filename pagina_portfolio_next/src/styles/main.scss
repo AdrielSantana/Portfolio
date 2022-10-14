@@ -1,18 +1,18 @@
 @import './assets/colors.scss';
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 ::selection {
-    color: $custom-color-dark;
-    background: $custom-color-secondary;
+  color: $custom-color-dark;
+  background: $custom-color-secondary;
 }
 
 body {
-    background-color: $custom-color-primary;
+  background-color: $custom-color-primary;
 }
 
 @import './components/layout/burgerMenu.scss';

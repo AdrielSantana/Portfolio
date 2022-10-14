@@ -1,20 +1,22 @@
 import Image from 'next/image'
-import { useState } from 'react'
-import { Card, Collapse } from 'react-bootstrap'
-import { Skill } from '../SkillsCard'
+import {useState} from 'react'
+import {Card, Collapse} from 'react-bootstrap'
+import {Skill} from '../SkillsCard'
 
-import { motion } from 'framer-motion'
+import {motion} from 'framer-motion'
 
 type Props = {
     skill: Skill
 }
 
-const SkillCard = ({ skill }: Props) => {
+const SkillCard = ({skill}: Props) => {
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            <motion.div className='skill-image d-flex align-items-center justify-content-center' whileTap={{ scale: 0.95, backgroundColor: skill.color }} whileHover={{ scale: 1.05, backgroundColor: skill.color }}>
+            <motion.div className='skill-image d-flex align-items-center justify-content-center'
+                        whileTap={{scale: 0.95, backgroundColor: skill.color}}
+                        whileHover={{scale: 1.05, backgroundColor: skill.color}}>
                 <Image
                     onClick={() => setOpen(!open)}
                     aria-controls={`skill-${skill.name}`}

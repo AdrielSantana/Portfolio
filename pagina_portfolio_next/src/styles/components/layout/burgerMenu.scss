@@ -4,35 +4,35 @@
 
 //Button
 .hamburger-react {
-    z-index: 10!important;
-    position: fixed!important;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
+  z-index: 10 !important;
+  position: fixed !important;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
 }
 
 .hamburger-react[aria-expanded="true"] div {
-    background-color: $custom-color-secondary  !important;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
+  background-color: $custom-color-secondary !important;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
 }
 
 //Sidebar
 
 /* Position and sizing of burger button */
 
-.menu-title{
-    margin-top: 10px;
+.menu-title {
+  margin-top: 10px;
 }
 
 .bm-burger-button {
-    z-index: 1200!important;
-    position: fixed;
-    left: 1rem;
-    top: 1rem;
+  z-index: 1200 !important;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 /*
@@ -40,62 +40,62 @@
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
 .bm-menu-wrap {
-    position: fixed;
-    height: 100%;
+  position: fixed;
+  height: 100%;
 }
 
 /* General sidebar styles */
 .bm-menu {
-    background: $custom-color-dark;
-    padding-top: 1rem;
+  background: $custom-color-dark;
+  padding-top: 1rem;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-    fill: $custom-color-dark;
+  fill: $custom-color-dark;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-    justify-content: space-around;
-    flex-direction: column;
-    display: flex!important;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex !important;
 }
 
 /* Individual item */
 .bm-item {
-    display: inline-block;
+  display: inline-block;
 }
 
 // Nav button
 
 .nav-button {
-    border-radius: 4rem;
-    width: 12rem;
-    height: 4rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    font-family: $custom-font-title;
-    color: $custom-color-dark;
-    background-color: $custom-color-white;
-    border-color: transparent!important;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 4rem;
+  width: 12rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-family: $custom-font-title;
+  color: $custom-color-dark;
+  background-color: $custom-color-white;
+  border-color: transparent !important;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
 }
 
-.nav-button:hover{
-    color: $custom-color-dark!important;
-    border-color: transparent!important;
-    background-color: $custom-color-secondary!important;
+.nav-button:hover {
+  color: $custom-color-dark !important;
+  border-color: transparent !important;
+  background-color: $custom-color-secondary !important;
 }
 
-.nav-title{
-    font-family: $custom-font-title;
-    text-decoration: none;
-    color: $custom-color-white;
-    font-size: 2rem;
+.nav-title {
+  font-family: $custom-font-title;
+  text-decoration: none;
+  color: $custom-color-white;
+  font-size: 2rem;
 }
 
-.nav-title:hover{
-    color: $custom-color-secondary;
-    transition: .2s;
+.nav-title:hover {
+  color: $custom-color-secondary;
+  transition: .2s;
 }

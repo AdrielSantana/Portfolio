@@ -2,47 +2,49 @@
 @import '../../../assets/typography.scss';
 
 .skill-container {
-    max-width: 300px;
-    filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.55));
+  max-width: 300px;
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.55));
 }
 
 .skill-image {
-    border-radius: 2rem;
-    background-color: $custom-color-white;
-    height: 130px;
-    width: 130px;
+  border-radius: 2rem;
+  background-color: $custom-color-white;
+  height: 130px;
+  width: 130px;
 }
 
-.skill-title{
-    font-family: $custom-font-body;
-    margin-bottom: 0;
+.skill-title {
+  font-family: $custom-font-body;
+  margin-bottom: 0;
 }
 
 .skill-card {
-    max-width: 300px;
-    font-family: $custom-font-body;
-    color: $custom-color-dark;
-    background-color: $custom-color-white;
-    border-radius: 2rem;
-    font-size: 1.15rem;
+  max-width: 300px;
+  font-family: $custom-font-body;
+  color: $custom-color-dark;
+  background-color: $custom-color-white;
+  border-radius: 2rem;
+  font-size: 1.15rem;
 }
 
 .skill-button {
-    border-radius: 1rem;
-    background-color: $custom-color-dark;
-    border: none;
-    a {
-        font-size: 1.25rem;
-        text-decoration: none;
-        font-weight: 600;
-        color: $custom-color-white;
-    }
+  border-radius: 1rem;
+  background-color: $custom-color-dark;
+  border: none;
+
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: $custom-color-white;
+  }
 }
 
 .skill-button:hover {
-    background-color: $custom-color-dark!important;
-    a{
-        color: $custom-color-secondary;
-        transition: .3s;
-    }
+  background-color: $custom-color-dark !important;
+
+  a {
+    color: $custom-color-secondary;
+    transition: .3s;
+  }
 }

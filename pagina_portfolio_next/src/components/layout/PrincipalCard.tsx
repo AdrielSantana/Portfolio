@@ -1,10 +1,10 @@
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 type Props = {
     children?: React.ReactNode;
 };
 
-const PrincipalCard = ({ children }: Props) => {
+const PrincipalCard = ({children}: Props) => {
 
     return (
         <>

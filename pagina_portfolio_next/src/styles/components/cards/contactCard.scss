@@ -2,43 +2,43 @@
 @import '../../assets/typography.scss';
 
 .contact-link {
-    text-decoration: none;
-    color: $custom-color-white;
-    font-family: $custom-font-body;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.55));
+  text-decoration: none;
+  color: $custom-color-white;
+  font-family: $custom-font-body;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.55));
 }
 
 .contact-link:hover {
-    color: $custom-color-secondary;
-    transition: .3s;
+  color: $custom-color-secondary;
+  transition: .3s;
 }
 
-.form-title{
-    font-family: $custom-font-body;
+.form-title {
+  font-family: $custom-font-body;
 }
 
-.form-confirmation{
-    font-family: $custom-font-body;
-    line-height: 150%;
+.form-confirmation {
+  font-family: $custom-font-body;
+  line-height: 150%;
 }
 
-.form-button{
-    border-radius: 1rem;
-    border: none;
-    background-color: $custom-color-white;
-    color: $custom-color-dark;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.55));
+.form-button {
+  border-radius: 1rem;
+  border: none;
+  background-color: $custom-color-white;
+  color: $custom-color-dark;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.55));
 }
 
-.form-button:hover{
-    background-color: $custom-color-secondary!important;
-    color: $custom-color-dark!important;
+.form-button:hover {
+  background-color: $custom-color-secondary !important;
+  color: $custom-color-dark !important;
 }
 
-.sucessful{
-    color: $custom-color-secondary;
+.sucessful {
+  color: $custom-color-secondary;
 }
 
-.denied{
-    color: #b40039;
+.denied {
+  color: #b40039;
 }

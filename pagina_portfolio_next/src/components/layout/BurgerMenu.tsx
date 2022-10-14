@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import {useState} from 'react'
 
-import { Cross as Hamburger } from 'hamburger-react'
-import { slide as Menu } from 'react-burger-menu'
-import { Col, Row } from 'react-bootstrap'
+import {Cross as Hamburger} from 'hamburger-react'
+import {slide as Menu} from 'react-burger-menu'
+import {Col, Row} from 'react-bootstrap'
 
 import BurgerButton from './BurgerButton'
 
@@ -10,13 +10,14 @@ type Props = {
     handleCardChange: (card: string) => void
 }
 
-const BurguerMenu = ({ handleCardChange }: Props) => {
+const BurguerMenu = ({handleCardChange}: Props) => {
     const [navbarOpen, setNavbarOpen] = useState(false)
 
     return (
         <>
             <Menu
-                customBurgerIcon={<Hamburger color="#212121" distance="md" direction="right" rounded onToggle={setNavbarOpen} />}
+                customBurgerIcon={<Hamburger color="#212121" distance="md" direction="right" rounded
+                                             onToggle={setNavbarOpen}/>}
                 customCrossIcon={false}
                 pageWrapId={'page-wrap'}
                 outerContainerId={'outer-container'}

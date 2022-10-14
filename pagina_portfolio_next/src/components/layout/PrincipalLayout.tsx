@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { useState } from "react";
-import { Container } from "react-bootstrap"
-import { motion, AnimatePresence } from 'framer-motion'
+import {useState} from "react";
+import {Container} from "react-bootstrap"
+import {motion, AnimatePresence} from 'framer-motion'
 
 type Props = {
     title: string;
@@ -62,8 +62,7 @@ const animationPointer = {
             repeatDelay: 0
         }
     },
-    stopPulse: {
-    }
+    stopPulse: {}
 }
 
 const animationTitle = {
@@ -93,7 +92,7 @@ const animationTitle = {
     }
 }
 
-const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => {
+const PrincipalLayout = ({title, children, card, handleCardChange}: Props) => {
     const [slideAnimation, setSlideAnimation] = useState<string>('next')
     const [slidePointerAnimation, setSlidePointerAnimation] = useState<boolean>(true)
 
@@ -182,7 +181,8 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
                 </motion.div>
             </AnimatePresence>
 
-            <Container fluid className="justify-content-center align-items-center principal-layout d-flex" id='page-wrap'>
+            <Container fluid className="justify-content-center align-items-center principal-layout d-flex"
+                       id='page-wrap'>
                 <Container className="d-flex justify-content-center card-container">
                     <AnimatePresence
                         initial={false}
@@ -206,8 +206,8 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
                 className="previous-btn slide"
                 variants={animationPointer}
                 animate={slidePointerAnimation ? "pulse" : "stopPulse"}
-                whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
-                whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
+                whileHover={!slidePointerAnimation ? {scale: 1.2} : {}}
+                whileTap={!slidePointerAnimation ? {scale: 0.8} : {}}
                 style={{
                     position: 'fixed',
                     left: 'calc(50% - 7.3rem)',
@@ -229,8 +229,8 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
                 className="next-btn slide"
                 variants={animationPointer}
                 animate={slidePointerAnimation ? "pulse" : "stopPulse"}
-                whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
-                whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
+                whileHover={!slidePointerAnimation ? {scale: 1.2} : {}}
+                whileTap={!slidePointerAnimation ? {scale: 0.8} : {}}
                 style={{
                     position: 'fixed',
                     left: 'calc(50% + 5.3rem)',
@@ -240,7 +240,7 @@ const PrincipalLayout = ({ title, children, card, handleCardChange }: Props) => 
             >
                 <Image
                     onClick={e => handleSlide(findNext(card))}
-                    style={{ transform: 'rotate(180deg)' }}
+                    style={{transform: 'rotate(180deg)'}}
                     src={'/images/extra/pointer.svg'}
                     alt={'Next card'}
                     height={30}

@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type {NextApiRequest, NextApiResponse} from 'next'
 
 import Mailgun from 'mailgun-js';
 
@@ -25,10 +25,10 @@ export default async function handler(
     if (req.method === 'POST') {
         try {
             await sendEmail(req.body.email, 'Adriel Santana <no-reply@adrielsan.social>', req.body.subject, req.body.message)
-            res.status(200).json({ validate: true })
+            res.status(200).json({validate: true})
         } catch (error) {
             console.log(error)
-            res.status(500).json({ validate: false })
+            res.status(500).json({validate: false})
         }
     }
 }
