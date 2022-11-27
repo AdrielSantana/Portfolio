@@ -1,3 +1,6 @@
+# Descontinuado, migrado para projeto mais atual com o framework NextJs
+## Link para o repositorio: [Repositorio Portfolio NextJs](https://github.com/AdrielSantana/Portfolio/tree/master/pagina_portfolio_next)
+
 # Meu portfolio
 ------------------------------
 ## Meu Curriculum Vitae
@@ -15,5 +18,3 @@ O site é feito utilizando as tecnologias:
 
 >Bibliotecas extras ultilizadas:
 >* Animation Lib AOS
-
->Back-End ainda incompleto, sem funcionalidade para a parte do contato.
