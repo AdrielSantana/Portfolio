@@ -21,7 +21,7 @@ const AboutCard = ({handleCardChange}: Props) => {
             </p>
             <p className="about-text">
                 Quer ver como estou me saindo? dá uma olhada nos meu últimos <a
-                onClick={e => handleCardChange('projects')}><strong><i><span>projetos</span></i></strong></a>!
+                onClick={e => handleCardChange('projects')}><strong><i><span className="pointer">projetos</span></i></strong></a>!
                 Minha curva de aprendizagem é <strong>O(!n)!</strong>
             </p>
         </>

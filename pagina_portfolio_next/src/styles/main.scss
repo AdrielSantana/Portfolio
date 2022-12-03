@@ -1,4 +1,4 @@
-@import './assets/colors.scss';
+@import "./assets/colors.scss";
 
 * {
   padding: 0px;
@@ -15,12 +15,16 @@ body {
   background-color: $custom-color-primary;
 }
 
-@import './components/layout/burgerMenu.scss';
-@import './components/layout/principalLayout.scss';
-@import './components/layout/principalCard.scss';
+.pointer {
+  cursor: pointer;
+}
 
-@import './components/cards/aboutCard.scss';
-@import './components/cards/contactCard.scss';
+@import "./components/layout/burgerMenu.scss";
+@import "./components/layout/principalLayout.scss";
+@import "./components/layout/principalCard.scss";
 
-@import './components/cards/projects/projectCard.scss';
-@import './components/cards/skills/skillCard.scss';
+@import "./components/cards/aboutCard.scss";
+@import "./components/cards/contactCard.scss";
+
+@import "./components/cards/projects/projectCard.scss";
+@import "./components/cards/skills/skillCard.scss";

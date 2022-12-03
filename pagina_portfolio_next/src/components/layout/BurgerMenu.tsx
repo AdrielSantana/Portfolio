@@ -26,7 +26,7 @@ const BurguerMenu = ({handleCardChange}: Props) => {
             >
                 <Row className='justify-items-start align-self-center'>
                     <Col>
-                        <a onClick={e => handleCardChange('hero')} className='nav-title'>Adriel&apos;s Portfolio</a>
+                        <a onClick={e => handleCardChange('hero')} className='pointer nav-title'>Adriel&apos;s Portfolio</a>
                     </Col>
                 </Row>
 
