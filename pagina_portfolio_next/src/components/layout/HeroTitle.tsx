@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Typewriter } from "react-simple-typewriter";
 import WavyText from "./WavyText";
 
 const HeroTitle = () => {
