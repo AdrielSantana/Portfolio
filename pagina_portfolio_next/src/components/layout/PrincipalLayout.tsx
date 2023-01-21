@@ -180,7 +180,10 @@ const PrincipalLayout = ({
         className="justify-content-center align-items-center principal-layout d-flex"
         id="page-wrap"
       >
-        <Container className="d-flex justify-content-center">
+        <Container
+          style={{ zIndex: 1 }}
+          className="d-flex justify-content-center"
+        >
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={title}
