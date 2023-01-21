@@ -1,22 +1,25 @@
-import {Typewriter} from 'react-simple-typewriter'
+import { useState, useEffect } from "react";
+import { Typewriter } from "react-simple-typewriter";
+import WavyText from "./WavyText";
 
 const HeroTitle = () => {
-    return (
-        <>
-            <div className='title'>
-                <p className='text-center'>
-                    <Typewriter
-                        words={["Bem vindo ao meu Portfolio :)", "Desenvolvedor Web Full-Stack", "Olha meus projetos ;)", "Não esquece de mandar mensagem!", "Cansei de escrever :P", "Tá esperando oque?", "Bem vindo ao meu Portfolio :)"]}
-                        typeSpeed={90}
-                        deleteSpeed={50}
-                        delaySpeed={5000}
-                        loop={1}
-                        cursor={true}
-                    />
-                </p>
-            </div>
-        </>
-    )
-}
+  const [replay, setReplay] = useState<boolean>(false);
 
-export default HeroTitle
+  useEffect(() => {
+    setReplay(true);
+  }, []);
+
+  return (
+    <>
+      <div className="title">
+        <WavyText
+          text="Bem vindo ao meu Portfolio :)"
+          replay={replay}
+          duration={0.1}
+        />
+      </div>
+    </>
+  );
+};
+
+export default HeroTitle;

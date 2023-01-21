@@ -1,17 +1,16 @@
-@import '../../assets/colors.scss';
-@import '../../assets/typography.scss';
-
+@import "../../assets/colors.scss";
+@import "../../assets/typography.scss";
 
 //Button
 .hamburger-react {
   z-index: 10 !important;
   position: fixed !important;
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 .hamburger-react[aria-expanded="true"] div {
   background-color: $custom-color-secondary !important;
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 //Sidebar
@@ -57,14 +56,9 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column;
   display: flex !important;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
 }
 
 // Nav button
@@ -97,5 +91,5 @@
 
 .nav-title:hover {
   color: $custom-color-secondary;
-  transition: .2s;
+  transition: 0.2s;
 }

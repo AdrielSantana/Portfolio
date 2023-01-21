@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
+import Background from "./Background";
 
 type Props = {
   title: string;
@@ -12,11 +13,11 @@ type Props = {
 
 const animationCard = {
   hiddenNext: {
-    x: "130vh",
+    x: "100vw",
     opacity: 0,
   },
   hiddenPrevious: {
-    x: "-130vh",
+    x: "-100vw",
     opacity: 0,
   },
   visible: {
@@ -30,7 +31,7 @@ const animationCard = {
     },
   },
   exitNext: {
-    x: "-130vh",
+    x: "-100vw",
     opacity: 0,
     transition: {
       duration: 0.05,
@@ -40,7 +41,7 @@ const animationCard = {
     },
   },
   exitPrevious: {
-    x: "130vh",
+    x: "100vw",
     opacity: 0,
     transition: {
       duration: 0.05,
@@ -160,17 +161,9 @@ const PrincipalLayout = ({
 
   return (
     <>
-      <div className="perfil-photo-container">
-        <Image
-          width={400}
-          height={300}
-          priority
-          alt="perfil photo"
-          src={"/images/me/perfil.png"}
-        ></Image>
-      </div>
+      <Background card={card} />
 
-      <AnimatePresence initial={false} exitBeforeEnter={true}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={title}
           variants={animationTitle}
@@ -187,8 +180,8 @@ const PrincipalLayout = ({
         className="justify-content-center align-items-center principal-layout d-flex"
         id="page-wrap"
       >
-        <Container className="d-flex justify-content-center card-container">
-          <AnimatePresence initial={false} exitBeforeEnter={true}>
+        <Container className="d-flex justify-content-center">
+          <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={title}
               variants={animationCard}

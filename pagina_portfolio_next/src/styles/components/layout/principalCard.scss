@@ -1,16 +1,15 @@
-@import '../../assets/colors.scss';
-@import '../../assets/typography.scss';
+@import "../../assets/colors.scss";
+@import "../../assets/typography.scss";
 
 .principal-card {
   background-color: $custom-color-dark;
   padding: 2rem;
-  margin-top: 3rem;
   border-radius: 64px;
-  width: 100%;
   max-width: 800px;
+  margin-top: 3rem;
   height: 75vh;
   z-index: 2;
-  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, .4));
+  filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.4));
 }
 
 .principal-container {
@@ -34,4 +33,10 @@
   /* color of the scroll thumb */
   border-radius: 2rem;
   /* roundness of the scroll thumb */
+}
+
+@media (max-height: 560px) {
+  .principal-card {
+    height: 60vh;
+  }
 }

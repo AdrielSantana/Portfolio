@@ -22,7 +22,6 @@
     "react-burger-menu": "^3.0.8",
     "react-dom": "18.2.0",
     "react-scripts": "^5.0.1",
-    "react-simple-typewriter": "^4.0.2",
     "sass": "^1.55.0"
   },
   "devDependencies": {
