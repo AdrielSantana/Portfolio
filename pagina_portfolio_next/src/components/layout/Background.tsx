@@ -1,59 +1,53 @@
 import PhotoBackground from "../background/PhotoBackground";
+import WavyBackground from "../background/WavyBackground";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
-    card: String
-}
+  background: string;
+};
 
-const animationCard = {
-    hiddenNext: {
-      x: "130vh",
-      opacity: 0,
+const animationTitle = {
+  hidden: {
+    y: "12rem",
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      type: "spring",
+      damping: 100,
+      stiffness: 600,
     },
-    hiddenPrevious: {
-      x: "-130vh",
-      opacity: 0,
+  },
+  exit: {
+    y: "12rem",
+    opacity: 0,
+    transition: {
+      duration: 0.05,
+      type: "spring",
+      damping: 100,
+      stiffness: 600,
     },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.1,
-        type: "spring",
-        damping: 100,
-        stiffness: 600,
-      },
-    },
-    exitNext: {
-      x: "-130vh",
-      opacity: 0,
-      transition: {
-        duration: 0.05,
-        type: "spring",
-        damping: 100,
-        stiffness: 600,
-      },
-    },
-    exitPrevious: {
-      x: "130vh",
-      opacity: 0,
-      transition: {
-        duration: 0.05,
-        type: "spring",
-        damping: 100,
-        stiffness: 600,
-      },
-    },
-  };
+  },
+};
 
-const Background = ({ card}: Props) => {
+const Background = ({ background }: Props) => {
   return (
     <>
-      {card === "hero" && <PhotoBackground />}
-      {card === "about" && <PhotoBackground />}
-      {card === "projects" && <PhotoBackground />}
-      {card === "skills" && <PhotoBackground />}
-      {card === "contact" && <PhotoBackground />}
+      <AnimatePresence initial={true} mode="sync">
+        <motion.div
+          style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
+          key={background}
+          variants={animationTitle}
+          initial={"hidden"}
+          animate={"visible"}
+          exit={"exit"}
+        >
+          {background === "photo" ? <PhotoBackground /> : <WavyBackground />}
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 };

@@ -161,9 +161,9 @@ const PrincipalLayout = ({
 
   return (
     <>
-      <Background card={card} />
+      <Background background={card === "hero" ? "photo" : "wave"} />
 
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={false} mode="sync">
         <motion.div
           key={title}
           variants={animationTitle}

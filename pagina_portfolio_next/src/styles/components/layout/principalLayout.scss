@@ -20,12 +20,13 @@
 }
 
 .perfil-photo-container {
-  z-index: 0;
   height: 300px;
   width: 400px;
-  position: fixed;
-  right: 0 !important;
-  bottom: 0 !important;
+}
+
+.wave{
+  height: 75vh;
+  width: 120vw;
 }
 
 .slide {
