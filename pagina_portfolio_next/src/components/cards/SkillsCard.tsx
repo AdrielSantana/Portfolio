@@ -97,11 +97,11 @@ const SkillsCard = () => {
       color: "#95A5A6",
     },
     {
-      name: "Next Js",
+      name: "PostgreSQL",
       description:
-        "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
-      imgUrl: "/images/skills/nextJs.svg",
-      color: "#95A5A6",
+        "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.",
+      imgUrl: "/images/skills/postgre.svg",
+      color: "#0275B9",
     },
   ];
 
