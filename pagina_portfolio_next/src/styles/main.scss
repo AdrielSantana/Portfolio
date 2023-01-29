@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: -webkit-fill-avaiable;
+}
+
 ::selection {
   color: $custom-color-dark;
   background: $custom-color-secondary;
