@@ -31,18 +31,16 @@ const UserEmail = ({ name }: Props) => {
           {name}
         </Heading>
         <Text style={message}>
-          Recebi sua mensagem e vou te responder o mais rápido o possível!
+          Recebi sua mensagem e vou te responder o mais rápido possível!
         </Text>
-        <Section style={logoContainer}>
-          <Link href="https://www.adrielsan.social">
-            <Img
-              src={`${baseUrl}/images/extra/logo.png`}
-              alt="Logo"
-              width="150"
-              height="150"
-            />
-          </Link>
-        </Section>
+        <Link style={image} href="https://www.adrielsan.social">
+          <Img
+            src={`${baseUrl}/images/extra/logo.png`}
+            alt="Logo"
+            width="150"
+            height="150"
+          />
+        </Link>
         <Hr style={hr} />
         <Text style={outro}>
           Agradecimentos,{" "}
@@ -56,15 +54,24 @@ const UserEmail = ({ name }: Props) => {
   );
 };
 
+const flex = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+const image = { display: "flex", justifyContent: "center" };
+
 const main = {
   backgroundColor: "#212121",
   padding: "1.5rem",
+  ...flex,
 };
 
-const font = {
+const text = {
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-};
+  textAlign: "center",
+} as React.CSSProperties;
 
 const hr = {
   borderColor: "#F8F9FA",
@@ -73,28 +80,24 @@ const hr = {
 
 const title = {
   color: "#F8F9FA",
-  ...font,
+  ...text,
 };
 
 const message = {
   color: "#F8F9FA",
   paddingBottom: "1rem",
   fontSize: "1rem",
-  ...font,
-};
-
-const logoContainer = {
-  display: "grid",
-  placeItems: "center",
+  ...text,
 };
 
 const outro = {
   color: "#a3a3a3",
-  ...font,
+  ...text,
 };
 
 const link = {
   color: "#48E5C2",
+  textDecoration: "none",
 };
 
 export default UserEmail;
