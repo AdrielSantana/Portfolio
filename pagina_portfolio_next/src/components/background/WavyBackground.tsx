@@ -49,11 +49,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveSlow"}
       >
-        <Image
-          src={"/images/background/high_wave.png"}
-          alt={"waves"}
-          layout={"fill"}
-        />
+        <Image src={"/images/background/high_wave.png"} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -61,11 +57,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveMedium"}
       >
-        <Image
-          src={"/images/background/medium_wave.png"}
-          alt={"waves"}
-          layout={"fill"}
-        />
+        <Image src={"/images/background/medium_wave.png"} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -73,11 +65,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveFast"}
       >
-        <Image
-          src={"/images/background/small_wave.png"}
-          alt={"waves"}
-          layout={"fill"}
-        />
+        <Image src={"/images/background/small_wave.png"} alt={"waves"} fill />
       </motion.div>
     </>
   );

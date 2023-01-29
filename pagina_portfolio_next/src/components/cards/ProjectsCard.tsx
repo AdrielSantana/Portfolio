@@ -77,6 +77,7 @@ const ProjectsCard = () => {
                 className="d-flex flex-column align-items-center skill-container"
                 key={i}
                 initial={{ y: "-4rem", opacity: 0 }}
+                viewport={{ once: true }}
                 whileInView={{
                   y: 0,
                   opacity: 1,

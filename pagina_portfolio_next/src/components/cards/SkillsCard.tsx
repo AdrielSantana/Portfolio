@@ -126,6 +126,7 @@ const SkillsCard = () => {
                     perspective: "1000px",
                   }}
                   initial={{ transform: "rotateY(90deg)", opacity: 0 }}
+                  viewport={{ once: true }}
                   whileInView={{
                     transform: "rotateY(0deg)",
                     opacity: 1,

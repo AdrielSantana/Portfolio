@@ -7,7 +7,6 @@ import { Img } from "@react-email/img";
 import { Link } from "@react-email/link";
 import { Hr } from "@react-email/hr";
 import * as React from "react";
-import { Section } from "@react-email/section";
 
 type Props = {
   name: string;

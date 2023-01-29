@@ -3,20 +3,27 @@
 
 .principal-layout {
   background-color: $custom-color-primary;
-  height: 100vh;
   overflow: hidden;
+  height: 100%;
+}
+
+.main-content{
+  max-height: 100vh;
+  height: calc(100vh - 6rem);
+}
+
+.selector{
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
 }
 
 .title {
+  margin-bottom: 0!important;
   font-size: 2rem;
   font-family: $custom-font-title;
-}
-
-.title-hero {
-  position: fixed;
-  left: 50%;
-  top: 4rem;
-  transform: translate(-50%, -50%)
 }
 
 .perfil-photo-container {
@@ -32,4 +39,20 @@
 .slide {
   z-index: 2;
   filter: drop-shadow(0 4px 2px rgba(0, 0, 0, .25));
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $custom-color-dark;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $custom-color-secondary;
+  /* color of the scroll thumb */
+  border-radius: 2rem;
+  /* roundness of the scroll thumb */
 }

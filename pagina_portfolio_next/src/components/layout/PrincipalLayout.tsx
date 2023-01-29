@@ -52,7 +52,7 @@ const animationCard = {
   },
 };
 
-const animationPointer = {
+const animationSlide = {
   pulse: {
     scale: [1, 1.2, 1],
     transition: {
@@ -163,89 +163,83 @@ const PrincipalLayout = ({
     <>
       <Background background={card === "hero" ? "photo" : "wave"} />
 
-      <AnimatePresence initial={false} mode="sync">
-        <motion.div
-          key={title}
-          variants={animationTitle}
-          initial={"hidden"}
-          animate={"visible"}
-          exit={"exit"}
-        >
-          <p className="h1 title title-hero text-center">{title}</p>
-        </motion.div>
-      </AnimatePresence>
+      <div className="main-content">
+        <Container className="selector">
+          <motion.span
+            layout
+            className="previous-btn pointer slide"
+            transition={{ type: "spring", stiffness: 700, damping: 30 }}
+            variants={animationSlide}
+            animate={slidePointerAnimation ? "pulse" : "stopPulse"}
+            whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
+            whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
+          >
+            <Image
+              onClick={(e) => handleSlide(findPrevious(card))}
+              src={"/images/extra/pointer.svg"}
+              alt={"Previous card"}
+              height={30}
+              width={30}
+            />
+          </motion.span>
 
-      <Container
-        fluid
-        className="justify-content-center align-items-center principal-layout d-flex"
-        id="page-wrap"
-      >
-        <Container
-          style={{ zIndex: 1 }}
-          className="d-flex justify-content-center"
-        >
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={title}
-              variants={animationCard}
-              initial={
-                slideAnimation === "next" ? "hiddenNext" : "hiddenPrevious"
-              }
+              variants={animationTitle}
+              initial={"hidden"}
               animate={"visible"}
-              exit={slideAnimation === "next" ? "exitNext" : "exitPrevious"}
+              exit={"exit"}
             >
-              {children}
+              <p className="h1 title title-hero text-center">{title}</p>
             </motion.div>
           </AnimatePresence>
+
+          <motion.span
+            layout
+            className="next-btn pointer slide"
+            transition={{ type: "spring", stiffness: 700, damping: 30 }}
+            variants={animationSlide}
+            animate={slidePointerAnimation ? "pulse" : "stopPulse"}
+            whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
+            whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
+          >
+            <Image
+              onClick={(e) => handleSlide(findNext(card))}
+              style={{ transform: "rotate(180deg)" }}
+              src={"/images/extra/pointer.svg"}
+              alt={"Next card"}
+              height={30}
+              width={30}
+            />
+          </motion.span>
         </Container>
-      </Container>
 
-      <motion.span
-        layout
-        className="previous-btn pointer slide"
-        variants={animationPointer}
-        animate={slidePointerAnimation ? "pulse" : "stopPulse"}
-        whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
-        whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
-        style={{
-          position: "fixed",
-          left: "calc(50% - 7.3rem)",
-          top: "3.1rem",
-          transform: "translate(-50 %, -50 %)",
-        }}
-      >
-        <Image
-          onClick={(e) => handleSlide(findPrevious(card))}
-          src={"/images/extra/pointer.svg"}
-          alt={"Previous card"}
-          height={30}
-          width={30}
-        />
-      </motion.span>
-
-      <motion.span
-        layout
-        className="next-btn pointer slide"
-        variants={animationPointer}
-        animate={slidePointerAnimation ? "pulse" : "stopPulse"}
-        whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
-        whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
-        style={{
-          position: "fixed",
-          left: "calc(50% + 5.3rem)",
-          top: "3.1rem",
-          transform: "translate(-50 %, -50 %)",
-        }}
-      >
-        <Image
-          onClick={(e) => handleSlide(findNext(card))}
-          style={{ transform: "rotate(180deg)" }}
-          src={"/images/extra/pointer.svg"}
-          alt={"Next card"}
-          height={30}
-          width={30}
-        />
-      </motion.span>
+        <Container
+          fluid
+          className="justify-content-center align-items-center principal-layout d-flex"
+          id="page-wrap"
+        >
+          <Container
+            style={{ zIndex: 1 }}
+            className="d-flex justify-content-center"
+          >
+            <AnimatePresence initial={false} mode="wait">
+              <motion.div
+                key={title}
+                variants={animationCard}
+                initial={
+                  slideAnimation === "next" ? "hiddenNext" : "hiddenPrevious"
+                }
+                animate={"visible"}
+                exit={slideAnimation === "next" ? "exitNext" : "exitPrevious"}
+              >
+                {children}
+              </motion.div>
+            </AnimatePresence>
+          </Container>
+        </Container>
+      </div>
     </>
   );
 };
