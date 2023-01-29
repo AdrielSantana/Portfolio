@@ -32,8 +32,9 @@ const UserEmail = ({ name }: Props) => {
         <Text style={message}>
           Recebi sua mensagem e vou te responder o mais rápido possível!
         </Text>
-        <Link style={image} href="https://www.adrielsan.social">
+        <Link href="https://www.adrielsan.social">
           <Img
+            style={image}
             src={`${baseUrl}/images/extra/logo.png`}
             alt="Logo"
             width="150"
@@ -58,7 +59,7 @@ const flex = {
   justifyContent: "center",
 };
 
-const image = { display: "flex", justifyContent: "center" };
+const image = { margin: "0 auto" };
 
 const main = {
   backgroundColor: "#212121",
