@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import highWave from "../../../public/images/background/high_wave.png";
+import mediumWave from "../../../public/images/background/medium_wave.png";
+import smallWave from "../../../public/images/background/small_wave.png";
+
 const animationWave = {
   waveFast: {
     x: ["0vw", "20vw", "0vw"],
@@ -49,7 +53,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveSlow"}
       >
-        <Image src={"/images/background/high_wave.png"} alt={"waves"} fill />
+        <Image placeholder="blur" src={highWave} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -57,7 +61,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveMedium"}
       >
-        <Image src={"/images/background/medium_wave.png"} alt={"waves"} fill />
+        <Image placeholder="blur" src={mediumWave} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -65,7 +69,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveFast"}
       >
-        <Image src={"/images/background/small_wave.png"} alt={"waves"} fill />
+        <Image placeholder="blur" src={smallWave} alt={"waves"} fill />
       </motion.div>
     </>
   );

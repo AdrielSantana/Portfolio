@@ -25,6 +25,7 @@ const ProjectCard = ({ project }: Props) => {
             alt={project.name}
             width={300}
             height={160}
+            placeholder="blur"
           />
         </motion.div>
 
