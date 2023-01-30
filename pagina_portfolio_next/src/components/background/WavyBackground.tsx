@@ -53,7 +53,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveSlow"}
       >
-        <Image placeholder="blur" src={highWave} alt={"waves"} fill />
+        <Image priority src={highWave} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -61,7 +61,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveMedium"}
       >
-        <Image placeholder="blur" src={mediumWave} alt={"waves"} fill />
+        <Image priority src={mediumWave} alt={"waves"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
@@ -69,7 +69,7 @@ const WavyBackground = () => {
         variants={animationWave}
         animate={"waveFast"}
       >
-        <Image placeholder="blur" src={smallWave} alt={"waves"} fill />
+        <Image priority src={smallWave} alt={"waves"} fill />
       </motion.div>
     </>
   );
