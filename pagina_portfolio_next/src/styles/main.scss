@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: -webkit-fill-avaiable;
 }
 
@@ -21,6 +22,11 @@ body {
 
 .pointer {
   cursor: pointer;
+}
+
+#__next, #outer-container {
+  height: 100vh;
+  width: 100%;
 }
 
 @import "./components/layout/burgerMenu.scss";

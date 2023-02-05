@@ -1,11 +1,13 @@
 import Image from "next/image";
 
-import lowPoly from "../../../public/images/background/projects/low_poly.svg";
+import lowPolyDesktop from "../../../public/images/background/projects/low_poly_desktop.svg";
+import lowPolyPhone from "../../../public/images/background/projects/low_poly_phone.svg";
 
 const LowPolyBackground = () => {
   return (
     <div className="solid-background">
-      <Image fill priority alt="perfil photo" src={lowPoly}></Image>
+      <Image fill priority alt="Low Poly" src={lowPolyPhone}></Image>
+      <Image className="desktop-poly" fill priority alt="Low Poly" src={lowPolyDesktop}></Image>
     </div>
   );
 };

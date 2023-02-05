@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import highWave from "../../../public/images/background/about/high_wave.svg";
-import mediumWave from "../../../public/images/background/about/medium_wave.svg";
-import smallWave from "../../../public/images/background/about/small_wave.svg";
+import { StaticImageData } from "next/image";
 
 const animationWave = {
   waveFast: {
@@ -44,35 +42,24 @@ const animationWave = {
   },
 };
 
-const WavyBackground = () => {
+type Props = {
+  src: string | StaticImageData;
+  animation: string;
+};
+
+const Waves = ({ src, animation }: Props) => {
   return (
     <>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
         className="wave"
         variants={animationWave}
-        animate={"waveSlow"}
+        animate={animation}
       >
-        <Image priority src={highWave} alt={"waves"} fill />
-      </motion.div>
-      <motion.div
-        style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className="wave"
-        variants={animationWave}
-        animate={"waveMedium"}
-      >
-        <Image priority src={mediumWave} alt={"waves"} fill />
-      </motion.div>
-      <motion.div
-        style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className="wave"
-        variants={animationWave}
-        animate={"waveFast"}
-      >
-        <Image priority src={smallWave} alt={"waves"} fill />
+        <Image priority src={src} alt={"waves"} fill />
       </motion.div>
     </>
   );
 };
 
-export default WavyBackground;
+export default Waves;

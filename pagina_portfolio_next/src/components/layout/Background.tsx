@@ -1,8 +1,8 @@
 import PhotoBackground from "../background/PhotoBackground";
-import WavyBackground from "../background/WavyBackground";
+import WavyBackground from "../background/waves/WavyBackground";
 import { motion, AnimatePresence } from "framer-motion";
 import LowPolyBackground from "../background/LowPolyBackground";
-import FloatingBallsBackground from "../background/FloatingBallsBackground";
+import FloatingBallsBackground from "../background/floatingBalls/FloatingBallsBackground";
 
 type Props = {
   card: string;
@@ -40,7 +40,14 @@ const Background = ({ card }: Props) => {
     <>
       <AnimatePresence initial={true} mode="sync">
         <motion.div
-          style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
+          style={{
+            height: "100%",
+            width: "100%",
+            position: "fixed",
+            right: 0,
+            bottom: 0,
+            zIndex: 0,
+          }}
           key={card}
           variants={animationTitle}
           initial={"hidden"}
