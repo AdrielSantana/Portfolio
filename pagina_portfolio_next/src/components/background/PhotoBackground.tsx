@@ -8,7 +8,7 @@ const PhotoBackground = () => {
         height={300}
         priority
         alt="perfil photo"
-        src={"/images/background/perfil.png"}
+        src={"/images/background/hero/perfil.png"}
       ></Image>
     </div>
   );

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import highWave from "../../../public/images/background/about/high_wave.svg";
-import mediumWave from "../../../public/images/background/about/medium_wave.svg";
-import smallWave from "../../../public/images/background/about/small_wave.svg";
+import farBalls from "../../../public/images/background/skills/far_balls.svg";
+import mediumBalls from "../../../public/images/background/skills/medium_balls.svg";
+import closeBalls from "../../../public/images/background/skills/close_balls.svg";
 
-const animationWave = {
-  waveFast: {
-    x: ["0vw", "20vw", "0vw"],
+const animationFloating = {
+  floatingFast: {
+    y: ["0%", "10%", "0%"],
     transition: {
       duration: 10,
       type: "spring",
@@ -18,8 +18,8 @@ const animationWave = {
       times: [0, 0.5, 1],
     },
   },
-  waveMedium: {
-    x: ["0vw", "20vw", "0vw"],
+  floatingMedium: {
+    y: ["0%", "10%", "0%"],
     transition: {
       duration: 20,
       type: "spring",
@@ -30,8 +30,8 @@ const animationWave = {
       times: [0, 0.5, 1],
     },
   },
-  waveSlow: {
-    x: ["0vw", "20vw", "0vw"],
+  floatingSlow: {
+    y: ["0%", "10%", "0%"],
     transition: {
       duration: 30,
       type: "spring",
@@ -44,35 +44,35 @@ const animationWave = {
   },
 };
 
-const WavyBackground = () => {
+const FloatingBallsBackground = () => {
   return (
     <>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className="wave"
-        variants={animationWave}
-        animate={"waveSlow"}
+        className="floating"
+        variants={animationFloating}
+        animate={"floatingSlow"}
       >
-        <Image priority src={highWave} alt={"waves"} fill />
+        <Image priority src={farBalls} alt={"floating balls"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className="wave"
-        variants={animationWave}
-        animate={"waveMedium"}
+        className="floating"
+        variants={animationFloating}
+        animate={"floatingMedium"}
       >
-        <Image priority src={mediumWave} alt={"waves"} fill />
+        <Image priority src={mediumBalls} alt={"floating balls"} fill />
       </motion.div>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className="wave"
-        variants={animationWave}
-        animate={"waveFast"}
+        className="floating"
+        variants={animationFloating}
+        animate={"floatingFast"}
       >
-        <Image priority src={smallWave} alt={"waves"} fill />
+        <Image priority src={closeBalls} alt={"floating balls"} fill />
       </motion.div>
     </>
   );
 };
 
-export default WavyBackground;
+export default FloatingBallsBackground;

@@ -161,7 +161,7 @@ const PrincipalLayout = ({
 
   return (
     <>
-      <Background background={card === "hero" ? "photo" : "wave"} />
+      <Background card={card} />
 
       <div className="main-content">
         <Container className="selector">
@@ -191,7 +191,7 @@ const PrincipalLayout = ({
               animate={"visible"}
               exit={"exit"}
             >
-              <p className="h1 title title-hero text-center">{title}</p>
+              <p className="h1 title text-center">{title}</p>
             </motion.div>
           </AnimatePresence>
 

@@ -1,18 +1,17 @@
-@import '../../assets/colors.scss';
-@import '../../assets/typography.scss';
+@import "../../assets/colors.scss";
+@import "../../assets/typography.scss";
 
 .principal-layout {
-  background-color: $custom-color-primary;
   overflow: hidden;
   height: 100%;
 }
 
-.main-content{
+.main-content {
   max-height: 100vh;
   height: calc(100vh - 6rem);
 }
 
-.selector{
+.selector {
   width: 16rem;
   display: flex;
   align-items: center;
@@ -21,7 +20,9 @@
 }
 
 .title {
-  margin-bottom: 0!important;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 0 !important;
   font-size: 2rem;
   font-family: $custom-font-title;
 }
@@ -31,14 +32,25 @@
   width: 400px;
 }
 
-.wave{
-  height: 75vh;
+.solid-background {
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wave {
+  height: 100vh;
   width: 120vw;
+}
+
+.floating {
+  height: 100vh;
+  width: 100vw;
 }
 
 .slide {
   z-index: 2;
-  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
 }
 
 body::-webkit-scrollbar {

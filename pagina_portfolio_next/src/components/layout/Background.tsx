@@ -1,9 +1,11 @@
 import PhotoBackground from "../background/PhotoBackground";
 import WavyBackground from "../background/WavyBackground";
 import { motion, AnimatePresence } from "framer-motion";
+import LowPolyBackground from "../background/LowPolyBackground";
+import FloatingBallsBackground from "../background/FloatingBallsBackground";
 
 type Props = {
-  background: string;
+  card: string;
 };
 
 const animationTitle = {
@@ -33,19 +35,23 @@ const animationTitle = {
   },
 };
 
-const Background = ({ background }: Props) => {
+const Background = ({ card }: Props) => {
   return (
     <>
       <AnimatePresence initial={true} mode="sync">
         <motion.div
           style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-          key={background}
+          key={card}
           variants={animationTitle}
           initial={"hidden"}
           animate={"visible"}
           exit={"exit"}
         >
-          {background === "photo" ? <PhotoBackground /> : <WavyBackground />}
+          {card === "hero" && <PhotoBackground />}
+          {card === "about" && <WavyBackground />}
+          {card === "projects" && <LowPolyBackground />}
+          {card === "skills" && <FloatingBallsBackground />}
+          {card === "contact" && <></>}
         </motion.div>
       </AnimatePresence>
     </>
