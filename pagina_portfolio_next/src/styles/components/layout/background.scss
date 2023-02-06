@@ -1,0 +1,56 @@
+.perfil-photo-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 300px;
+  width: 400px;
+}
+
+.solid-background {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wave {
+  height: 100%;
+  width: 120vw;
+}
+
+.desktop-floating,
+.phone-floating {
+  height: 100%;
+  width: 100%;
+}
+
+.phone-poly {
+  display: none;
+}
+
+.phone-floating {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .wave {
+    height: 50%;
+  }
+
+  .desktop-poly {
+    display: none;
+  }
+
+  .phone-poly {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .desktop-floating {
+    display: none;
+  }
+
+  .phone-floating {
+    display: block;
+  }
+}

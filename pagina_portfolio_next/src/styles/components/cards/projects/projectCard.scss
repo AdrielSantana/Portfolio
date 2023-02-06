@@ -2,7 +2,7 @@
 @import '../../../assets/typography.scss';
 
 .project-container {
-  max-width: 300px;
+  max-width: 280px;
   filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.55));
 }
 
@@ -11,7 +11,7 @@
 }
 
 .project-card {
-  max-width: 300px;
+  max-width: 280px;
   padding-top: 1rem;
   font-family: $custom-font-body;
   color: $custom-color-dark;

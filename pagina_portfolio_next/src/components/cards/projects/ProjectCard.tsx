@@ -23,8 +23,8 @@ const ProjectCard = ({ project }: Props) => {
             aria-expanded={open}
             src={project.imgUrl}
             alt={project.name}
-            width={300}
-            height={160}
+            width={280}
+            height={158}
             placeholder="blur"
           />
         </motion.div>

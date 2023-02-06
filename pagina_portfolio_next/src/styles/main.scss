@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $custom-color-dark;
+  /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $custom-color-secondary;
+  /* color of the scroll thumb */
+  border-radius: 2rem;
+  /* roundness of the scroll thumb */
+}
+
 html,
 body {
   height: -webkit-fill-avaiable;
@@ -17,14 +33,11 @@ body {
 }
 
 body {
-  background-image: url(../../public/images/background/blur_background.svg);
+  background-color: $custom-color-primary;
 }
 
-.pointer {
-  cursor: pointer;
-}
-
-#__next, #outer-container {
+#__next,
+#outer-container {
   height: 100vh;
   width: 100%;
 }
@@ -32,6 +45,7 @@ body {
 @import "./components/layout/burgerMenu.scss";
 @import "./components/layout/principalLayout.scss";
 @import "./components/layout/principalCard.scss";
+@import "./components/layout/background.scss";
 
 @import "./components/cards/aboutCard.scss";
 @import "./components/cards/contactCard.scss";
