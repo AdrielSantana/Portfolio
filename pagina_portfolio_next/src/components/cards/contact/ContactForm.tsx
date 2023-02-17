@@ -1,89 +1,10 @@
-import { FormEvent } from "react";
-import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { render } from "@react-email/render";
-import UserEmail from "../../../../emails";
-
-type Request = {
-  email: string;
-  subject: string;
-  text: string;
-  html: string;
-};
-
-type fetchData = {
-  validate: boolean;
-};
+import useContactForm from "../../../hooks/useContactForm";
 
 const ContactForm = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-
-  const [result, setResult] = useState<boolean>(false);
-  const [showResult, setShowResult] = useState<boolean>(false);
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const html = render(<UserEmail name={name} />, {
-      pretty: true,
-    });
-
-    const text = render(<UserEmail name={name} />, {
-      plainText: true,
-    });
-
-    let userRequest: Request = {
-      email: email,
-      subject: "Confirmação de recebimento",
-      text: text,
-      html: html,
-    };
-
-    let myRequest: Request = {
-      email: "adriel.sanxd@gmail.com",
-      subject: `Mensagem de ${name}`,
-      text: "Email: ${email}\n\nMensagem: ${message}",
-      html: `<p>Email: ${email}\n\nMensagem: ${message}<p>`,
-    };
-
-    try {
-      const userReq: fetchData = await fetch(`/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(userRequest),
-      }).then((res) => res.json());
-
-      const myReq: fetchData = await fetch(`/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(myRequest),
-      }).then((res) => res.json());
-
-      setName("");
-      setEmail("");
-      setMessage("");
-
-      if (myReq.validate && userReq.validate) {
-        setResult(true);
-      } else {
-        setResult(false);
-      }
-
-      setShowResult(true);
-    } catch (error) {
-      console.log(error);
-      setResult(false);
-
-      setShowResult(true);
-    }
-  };
+  const { nameRef, emailRef, messageRef, result, showResult, handleSubmit } =
+    useContactForm();
 
   return (
     <>
@@ -95,8 +16,7 @@ const ContactForm = () => {
           <Form.Control
             required
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            ref={nameRef}
             placeholder="Seu nome"
           />
         </Form.Group>
@@ -106,8 +26,7 @@ const ContactForm = () => {
           <Form.Control
             required
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            ref={emailRef}
             placeholder="Seu email"
           />
         </Form.Group>
@@ -117,10 +36,8 @@ const ContactForm = () => {
           <Form.Control
             required
             as="textarea"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            ref={messageRef}
             placeholder="Olá, gostaria de te contatar..."
-            rows={3}
           />
           <Form.Text className="text-muted">
             Será enviado um email de confirmação, favor checar caixa de spam

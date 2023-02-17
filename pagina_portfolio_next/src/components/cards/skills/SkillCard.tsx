@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Card, Collapse } from "react-bootstrap";
-import { Skill } from "../SkillsCard";
 
 import { motion } from "framer-motion";
+import { Skill } from "../../../types/skills";
 
 type Props = {
   skill: Skill;

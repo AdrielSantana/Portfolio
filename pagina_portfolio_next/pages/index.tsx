@@ -11,7 +11,6 @@ import ProjectsCard from "../src/components/cards/ProjectsCard";
 import SkillsCard from "../src/components/cards/SkillsCard";
 import ContactCard from "../src/components/cards/ContactCard";
 import { useCard } from "../src/hooks/useCard";
-import { SlideContextProvider } from "../src/hooks/useSlide";
 
 const Home: NextPage = () => {
   const { card } = useCard();
@@ -22,20 +21,18 @@ const Home: NextPage = () => {
         <title>Portfolio | Adriel Santana</title>
       </Head>
       <BurgerMenu />
-      <SlideContextProvider>
-        <PrincipalLayout>
-          {card === "hero" ? (
-            <HeroTitle />
-          ) : (
-            <PrincipalCard>
-              {card === "about" && <AboutCard />}
-              {card === "projects" && <ProjectsCard />}
-              {card === "skills" && <SkillsCard />}
-              {card === "contact" && <ContactCard />}
-            </PrincipalCard>
-          )}
-        </PrincipalLayout>
-      </SlideContextProvider>
+      <PrincipalLayout>
+        {card === "hero" ? (
+          <HeroTitle />
+        ) : (
+          <PrincipalCard>
+            {card === "about" && <AboutCard />}
+            {card === "projects" && <ProjectsCard />}
+            {card === "skills" && <SkillsCard />}
+            {card === "contact" && <ContactCard />}
+          </PrincipalCard>
+        )}
+      </PrincipalLayout>
     </div>
   );
 };

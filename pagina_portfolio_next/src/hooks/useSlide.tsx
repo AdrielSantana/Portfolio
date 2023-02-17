@@ -1,18 +1,8 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import { useState } from "react";
 
 import { useCard } from "./useCard";
 
-type SlideContextType = {
-  slideAnimation: string;
-  slidePointerAnimation: boolean;
-  handleSlide: (card: string) => void;
-  findPrevious: (card: string) => string;
-  findNext: (card: string) => string;
-};
-
-const SlideContext = createContext<SlideContextType>({} as SlideContextType);
-
-export const SlideContextProvider = (props: { children?: ReactNode }) => {
+export const useSlide = () => {
   const { handleCardChange } = useCard();
 
   const [slideAnimation, setSlideAnimation] = useState<string>("next");
@@ -75,19 +65,13 @@ export const SlideContextProvider = (props: { children?: ReactNode }) => {
     return previousCard;
   };
 
-  return (
-    <SlideContext.Provider
-      value={{
-        slideAnimation,
-        slidePointerAnimation,
-        handleSlide,
-        findPrevious,
-        findNext,
-      }}
-    >
-      {props.children}
-    </SlideContext.Provider>
-  );
+  return {
+    slideAnimation,
+    slidePointerAnimation,
+    handleSlide,
+    findPrevious,
+    findNext,
+  };
 };
 
-export const useSlide = () => useContext(SlideContext);
+export default useSlide;

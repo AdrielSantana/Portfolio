@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button, Card, Collapse, Container } from "react-bootstrap";
-import { Project } from "../ProjectsCard";
 
 import { motion } from "framer-motion";
+import { Project } from "../../../types/projects";
 
 type Props = {
   project: Project;

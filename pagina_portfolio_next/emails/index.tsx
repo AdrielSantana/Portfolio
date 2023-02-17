@@ -9,7 +9,7 @@ import { Hr } from "@react-email/hr";
 import * as React from "react";
 
 type Props = {
-  name: string;
+  name?: string;
 };
 
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
