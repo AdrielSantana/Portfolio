@@ -3,12 +3,11 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
 import Background from "./Background";
+import { useCard } from "../../hooks/useCard";
+import { useSlide } from "../../hooks/useSlide";
 
 type Props = {
-  title: string;
   children: React.ReactNode;
-  handleCardChange: (card: string) => void;
-  card: string;
 };
 
 const animationCard = {
@@ -93,71 +92,15 @@ const animationTitle = {
   },
 };
 
-const PrincipalLayout = ({
-  title,
-  children,
-  card,
-  handleCardChange,
-}: Props) => {
-  const [slideAnimation, setSlideAnimation] = useState<string>("next");
-  const [slidePointerAnimation, setSlidePointerAnimation] =
-    useState<boolean>(true);
-
-  const handleSlide = (card: string) => {
-    handleCardChange(card);
-
-    setSlidePointerAnimation(false);
-  };
-
-  const findNext = (card: string) => {
-    let nextCard: string;
-
-    switch (card) {
-      case "about":
-        nextCard = "projects";
-        break;
-      case "projects":
-        nextCard = "skills";
-        break;
-      case "skills":
-        nextCard = "contact";
-        break;
-      case "contact":
-        nextCard = "about";
-        break;
-      default:
-        nextCard = "about";
-        break;
-    }
-    setSlideAnimation("next");
-
-    return nextCard;
-  };
-
-  const findPrevious = (card: string) => {
-    let previousCard: string;
-
-    switch (card) {
-      case "about":
-        previousCard = "contact";
-        break;
-      case "projects":
-        previousCard = "about";
-        break;
-      case "skills":
-        previousCard = "projects";
-        break;
-      case "contact":
-        previousCard = "skills";
-        break;
-      default:
-        previousCard = "about";
-        break;
-    }
-    setSlideAnimation("previous");
-
-    return previousCard;
-  };
+const PrincipalLayout = ({ children }: Props) => {
+  const { handleCardChange, card, title } = useCard();
+  const {
+    slideAnimation,
+    slidePointerAnimation,
+    handleSlide,
+    findPrevious,
+    findNext,
+  } = useSlide();
 
   return (
     <>

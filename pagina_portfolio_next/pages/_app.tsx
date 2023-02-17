@@ -3,12 +3,16 @@ import "../src/styles/main.scss";
 
 import { Analytics } from "@vercel/analytics/react";
 
+import { CardContextProvider } from "../src/hooks/useCard";
+
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
+      <CardContextProvider>
+        <Component {...pageProps} />
+      </CardContextProvider>
       <Analytics />
     </>
   );

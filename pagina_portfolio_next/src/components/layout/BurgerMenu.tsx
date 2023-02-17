@@ -5,13 +5,11 @@ import { slide as Menu } from "react-burger-menu";
 import { Col, Row } from "react-bootstrap";
 
 import BurgerButton from "./BurgerButton";
+import { useCard } from "../../hooks/useCard";
 
-type Props = {
-  handleCardChange: (card: string) => void;
-};
-
-const BurguerMenu = ({ handleCardChange }: Props) => {
+const BurguerMenu = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { handleCardChange } = useCard();
 
   return (
     <>
@@ -44,32 +42,16 @@ const BurguerMenu = ({ handleCardChange }: Props) => {
 
         <Row className="align-self-center menu-buttons">
           <Col>
-            <BurgerButton
-              handleCardChange={handleCardChange}
-              name={"Sobre"}
-              card={"about"}
-            />
+            <BurgerButton name={"Sobre"} card={"about"} />
           </Col>
           <Col>
-            <BurgerButton
-              handleCardChange={handleCardChange}
-              name={"Projetos"}
-              card={"projects"}
-            />
+            <BurgerButton name={"Projetos"} card={"projects"} />
           </Col>
           <Col>
-            <BurgerButton
-              handleCardChange={handleCardChange}
-              name={"Habilidades"}
-              card={"skills"}
-            />
+            <BurgerButton name={"Habilidades"} card={"skills"} />
           </Col>
           <Col>
-            <BurgerButton
-              handleCardChange={handleCardChange}
-              name={"Contato"}
-              card={"contact"}
-            />
+            <BurgerButton name={"Contato"} card={"contact"} />
           </Col>
         </Row>
       </Menu>
