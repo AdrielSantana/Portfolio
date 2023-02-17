@@ -3,10 +3,8 @@ import WavyBackground from "../background/waves/WavyBackground";
 import { motion, AnimatePresence } from "framer-motion";
 import LowPolyBackground from "../background/LowPolyBackground";
 import FloatingBallsBackground from "../background/floatingBalls/FloatingBallsBackground";
+import { useCard } from "../../hooks/useCard";
 
-type Props = {
-  card: string;
-};
 
 const animationTitle = {
   hidden: {
@@ -35,7 +33,9 @@ const animationTitle = {
   },
 };
 
-const Background = ({ card }: Props) => {
+const Background = () => {
+  const { card } = useCard();
+
   return (
     <>
       <AnimatePresence initial={true} mode="sync">

@@ -93,7 +93,7 @@ const animationTitle = {
 };
 
 const PrincipalLayout = ({ children }: Props) => {
-  const { handleCardChange, card, title } = useCard();
+  const { card, title } = useCard();
   const {
     slideAnimation,
     slidePointerAnimation,
@@ -104,7 +104,7 @@ const PrincipalLayout = ({ children }: Props) => {
 
   return (
     <>
-      <Background card={card} />
+      <Background />
 
       <div className="main-content">
         <Container className="selector">

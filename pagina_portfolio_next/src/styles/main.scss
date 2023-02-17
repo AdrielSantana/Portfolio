@@ -32,13 +32,17 @@ body {
   background: $custom-color-secondary;
 }
 
+html,
 body {
   background-color: $custom-color-primary;
+  height: 100%;
 }
 
+html,
+body,
 #__next,
 #outer-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
