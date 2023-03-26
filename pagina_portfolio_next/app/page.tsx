@@ -1,5 +1,4 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+"use client";
 
 import BurgerMenu from "../src/components/layout/BurgerMenu";
 import PrincipalLayout from "../src/components/layout/PrincipalLayout";
@@ -12,14 +11,11 @@ import SkillsCard from "../src/components/cards/SkillsCard";
 import ContactCard from "../src/components/cards/ContactCard";
 import { useCard } from "../src/hooks/useCard";
 
-const Home: NextPage = () => {
+const Home = () => {
   const { card } = useCard();
 
   return (
     <div id="outer-container">
-      <Head>
-        <title>Portfolio | Adriel Santana</title>
-      </Head>
       <BurgerMenu />
       <PrincipalLayout>
         {card === "hero" ? (
