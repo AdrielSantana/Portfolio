@@ -65,17 +65,19 @@ export const useContactForm = () => {
     try {
       const userReq: fetchData = await fetch(`/api/contact`, {
         method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
+        headers: new Headers({
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        }),
         body: JSON.stringify(userRequest),
       }).then((res) => res.json());
 
       const myReq: fetchData = await fetch(`/api/contact`, {
         method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
+        headers: new Headers({
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        }),
         body: JSON.stringify(myRequest),
       }).then((res) => res.json());
 

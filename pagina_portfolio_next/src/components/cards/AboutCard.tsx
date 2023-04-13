@@ -6,31 +6,51 @@ const AboutCard = () => {
   return (
     <>
       <p className="about-text">
-        Olá, me chamo Adriel Santana, sou programador Full-Stack, tenho 19 anos
-        e resido em Aracaju, Sergipe. Desde pequeno tenho anseio para aprender
-        coisas novas, e isso só aumentou ao ter descoberto o mundo da
-        programação. Desde então o foco e uma boa organização foi essencial para
-        o desenvolvimento na carreira.
+        Olá, meu nome é Adriel Santana e sou um programador Full-Stack de 20
+        anos de idade, com experiência em diversas tecnologias. Atualmente, sou
+        estudante de Engenharia da Computação e resido em Aracaju, Sergipe.
+        Desde que comecei a programar, há alguns anos, descobri que a tecnologia
+        é uma das minhas grandes paixões e decidi seguir carreira nessa área.
       </p>
       <p className="about-text">
-        Comecei a cursar engenharia de computação no intuito de descobrir mais
-        sobre computadores, porém descobri um grande empecilho nessa escolha:{" "}
-        <strong>a faculdade não te ensina a programar de verdade.</strong>{" "}
-        Depois de perceber isso, fui de cabeça no aprendizado auto-didata,
-        pesquisando e aprendendo através da própria internet. Então larguei a
-        faculdade? Não, pois a faculdade é muito importante para as Soft-Skills{" "}
-        <i>e o almoço é bom</i>, portanto irei terminar o curso.
-      </p>
-      <p className="about-text">
-        Quer ver como estou me saindo? dá uma olhada nos meu últimos{" "}
+        Minha experiência em programação inclui trabalhar em{" "}
         <a onClick={(e) => handleCardChange("projects")}>
           <strong>
             <i>
               <span className="pointer">projetos</span>
             </i>
           </strong>
-        </a>
-        ! Minha curva de aprendizagem é <strong>O(!n)!</strong>
+        </a>{" "}
+        complexos, utilizando diversas linguagens de programação, bancos de
+        dados e frameworks. Além disso, também possuo{" "}
+        <a onClick={(e) => handleCardChange("skills")}>
+          <strong>
+            <i>
+              <span className="pointer">habilidades</span>
+            </i>
+          </strong>
+        </a>{" "}
+        em áreas como análise de dados e desenvolvimento de aplicativos móveis.
+      </p>
+      <p className="about-text">
+        Busco sempre estar atualizado com as novas tecnologias e tendências do
+        mercado, por isso, dedico uma parte do meu tempo para estudar e
+        aprimorar minhas habilidades. Sou um profissional dedicado, organizado e
+        apaixonado por solucionar problemas através da programação.
+      </p>
+      <p className="about-text">
+        Estou sempre em busca de novos desafios e oportunidades para colocar em
+        prática minhas habilidades e aprender ainda mais. Se você busca um
+        programador Full-Stack comprometido e com experiência em diversas
+        tecnologias, entre em{" "}
+        <a onClick={(e) => handleCardChange("contact")}>
+          <strong>
+            <i>
+              <span className="pointer">contato</span>
+            </i>
+          </strong>
+        </a>{" "}
+        comigo!
       </p>
     </>
   );
