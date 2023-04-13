@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     name: "Tomenote",
     description:
-      "Projeto Full-Stack Web. Crie e edite notas de onde quiser. Utilizei Figma, Sass, BootStrap, ReactJs, NodeJS e MongoDB.",
+      "Projeto Full-Stack Web. Crie e edite notas de onde quiser. Utilizei Figma, Sass, Bootstrap, ReactJs, NodeJS e MongoDB.",
     imgUrl: tomenoteImg,
     link: "http://www.tomenote.adrielsan.social",
   },

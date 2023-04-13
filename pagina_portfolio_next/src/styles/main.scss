@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.css';
 @import "./assets/colors.scss";
 
 * {
@@ -46,6 +47,7 @@ body,
   width: 100%;
 }
 
+
 @import "./components/layout/burgerMenu.scss";
 @import "./components/layout/principalLayout.scss";
 @import "./components/layout/principalCard.scss";
@@ -56,4 +58,3 @@ body,
 
 @import "./components/cards/projects/projectCard.scss";
 @import "./components/cards/skills/skillCard.scss";
-@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
