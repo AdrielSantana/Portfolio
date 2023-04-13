@@ -7,6 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { Nunito, Courgette } from "next/font/google";
 
 import { CardContextProvider } from "../src/hooks/useCard";
+import BurgerMenu from "../src/components/layout/BurgerMenu";
+import PrincipalLayout from "../src/components/layout/PrincipalLayout";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -31,7 +33,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={`${nunito.variable} ${courgette.variable}`}>
       <body>
-        <CardContextProvider>{children}</CardContextProvider>
+        <CardContextProvider>
+          <div id="outer-container">
+            <BurgerMenu />
+            <PrincipalLayout>
+              {children}
+            </PrincipalLayout>
+          </div>
+        </CardContextProvider>
         <Analytics />
       </body>
     </html>
