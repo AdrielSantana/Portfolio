@@ -1,5 +1,6 @@
+'use client'
+
 import Image from "next/image";
-import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
 import Background from "./Background";

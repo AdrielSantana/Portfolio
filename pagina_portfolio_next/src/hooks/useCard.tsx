@@ -12,8 +12,8 @@ type CardContextType = {
 const CardContext = createContext<CardContextType>({} as CardContextType);
 
 export const CardContextProvider = (props: { children?: ReactNode }) => {
-  const [card, setCard] = useState<string>("hero");
-  const [title, setTitle] = useState<string>("/");
+  const [card, setCard] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
 
   const router = useRouter()
 

@@ -1,9 +1,18 @@
 'use client'
 
+import { useEffect } from "react"
 import ProjectsCard from "../../src/components/cards/ProjectsCard"
 import PrincipalCard from "../../src/components/layout/PrincipalCard"
+import { useCard } from "../../src/hooks/useCard"
 
 const Projects = () => {
+    const { handleCardChange } = useCard()
+
+    useEffect(() => {
+        handleCardChange("projects")
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return (
         <PrincipalCard>
             <ProjectsCard />

@@ -1,5 +1,3 @@
-"use client";
-
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../src/styles/main.scss";
 
@@ -9,6 +7,28 @@ import { Nunito, Courgette } from "next/font/google";
 import { CardContextProvider } from "../src/hooks/useCard";
 import BurgerMenu from "../src/components/layout/BurgerMenu";
 import PrincipalLayout from "../src/components/layout/PrincipalLayout";
+
+export const metadata = {
+  title: {
+    template: '%s | Adriel Santana',
+    default: 'Porfolio | Adriel Santana',
+  },
+  description: "Adriel's Portfolio",
+  colorScheme: 'dark',
+  keywords: ['Adriel Santana', 'Adriel', 'Portfolio'],
+  creator: 'Adriel Santana',
+  manifest: "/favicon/site.webmanifest",
+  icons: {
+    icon: [
+      { url: '/favicon/favicon.ico' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+};
 
 const nunito = Nunito({
   subsets: ["latin"],
