@@ -1,4 +1,5 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import "../src/styles/main.scss";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -7,6 +8,7 @@ import { Nunito, Courgette } from "next/font/google";
 import { CardContextProvider } from "../src/hooks/useCard";
 import BurgerMenu from "../src/components/layout/BurgerMenu";
 import PrincipalLayout from "../src/components/layout/PrincipalLayout";
+import Script from "next/script";
 
 export const metadata = {
   title: {
@@ -60,6 +62,11 @@ export default function RootLayout({
           </div>
         </CardContextProvider>
         <Analytics />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
