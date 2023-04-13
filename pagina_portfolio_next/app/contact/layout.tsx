@@ -1,13 +1,11 @@
 export const metadata = {
-    title: "Contact"
-}
+  title: "Contact",
+};
 
 export default function ContactLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode,
+  children: React.ReactNode;
 }) {
-    return (
-        <>{children}</>
-    );
+  return <>{children}</>;
 }

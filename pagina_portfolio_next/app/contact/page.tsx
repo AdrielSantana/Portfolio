@@ -1,23 +1,24 @@
-'use client'
+"use client";
 
-import { useEffect } from "react"
-import ContactCard from "../../src/components/cards/ContactCard"
-import PrincipalCard from "../../src/components/layout/PrincipalCard"
-import { useCard } from "../../src/hooks/useCard"
+import { useEffect } from "react";
+import ContactCard from "../../src/components/cards/ContactCard";
+import PrincipalCard from "../../src/components/layout/PrincipalCard";
+import { useCard } from "../../src/hooks/useCard";
 
 const Contact = () => {
-    const { handleCardChange } = useCard()
+  const { setTitle, setCard } = useCard();
 
-    useEffect(() => {
-        handleCardChange("contact")
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+  useEffect(() => {
+    setTitle("Contato");
+    setCard("contact");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    return (
-        <PrincipalCard>
-            <ContactCard />
-        </PrincipalCard>
-    )
-}
+  return (
+    <PrincipalCard>
+      <ContactCard />
+    </PrincipalCard>
+  );
+};
 
-export default Contact
+export default Contact;

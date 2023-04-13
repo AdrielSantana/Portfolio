@@ -10,22 +10,22 @@ import PrincipalLayout from "../src/components/layout/PrincipalLayout";
 
 export const metadata = {
   title: {
-    template: '%s | Adriel Santana',
-    default: 'Porfolio | Adriel Santana',
+    template: "%s | Adriel Santana",
+    default: "Porfolio | Adriel Santana",
   },
   description: "Adriel's Portfolio",
-  colorScheme: 'dark',
-  keywords: ['Adriel Santana', 'Adriel', 'Portfolio'],
-  creator: 'Adriel Santana',
+  colorScheme: "dark",
+  keywords: ["Adriel Santana", "Adriel", "Portfolio"],
+  creator: "Adriel Santana",
   manifest: "/favicon/site.webmanifest",
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico' },
-      { url: '/favicon/favicon-32x32.png', sizes: '32x32' },
-      { url: '/favicon/favicon-16x16.png', sizes: '16x16' },
+      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16" },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 };
@@ -56,9 +56,7 @@ export default function RootLayout({
         <CardContextProvider>
           <div id="outer-container">
             <BurgerMenu />
-            <PrincipalLayout>
-              {children}
-            </PrincipalLayout>
+            <PrincipalLayout>{children}</PrincipalLayout>
           </div>
         </CardContextProvider>
         <Analytics />

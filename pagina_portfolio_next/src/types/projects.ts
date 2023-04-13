@@ -6,6 +6,8 @@ import spaceXImg from "../../public/images/projects/spaceX.png";
 import portfolioImg from "../../public/images/projects/portfolio.png";
 import githubImg from "../../public/images/projects/github.png";
 import gameAwards from "../../public/images/projects/gameAwards.png";
+import dashboardApp from "../../public/images/projects/dashboardApp.png";
+import mandaDex from "../../public/images/projects/mandaDex.png";
 
 import { StaticImageData } from "next/image";
 
@@ -17,6 +19,20 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    name: "Dashboard App",
+    description:
+      "Projeto Full-Stack Web. Veja dados e informações relevantes sobre a empresa. Clique na engranagem para acessar. Utilizei ChakraUi, NextJs, TypeScript e MongoDB.",
+    imgUrl: dashboardApp,
+    link: "https://dashboard-app-indol.vercel.app",
+  },
+  {
+    name: "MandaDex",
+    description:
+      "Projeto Front-End Web. Procure e ache seu pokemon favorito. Api fornecida pela Mandarin desabilitada no momento. Utilizei Bootstrap, NextJs e TypeScript.",
+    imgUrl: mandaDex,
+    link: "https://mandadex-client.vercel.app",
+  },
   {
     name: "Tomenote",
     description:

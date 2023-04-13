@@ -1,13 +1,11 @@
 export const metadata = {
-    title: "Projects"
-}
+  title: "Projects",
+};
 
 export default function ProjectsLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode,
+  children: React.ReactNode;
 }) {
-    return (
-        <>{children}</>
-    );
+  return <>{children}</>;
 }

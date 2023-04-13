@@ -5,16 +5,15 @@ import HeroTitle from "../src/components/layout/HeroTitle";
 import { useCard } from "../src/hooks/useCard";
 
 const Home = () => {
-  const { handleCardChange } = useCard()
+  const { setTitle, setCard } = useCard();
 
   useEffect(() => {
-    handleCardChange("hero")
+    setTitle("/");
+    setCard("hero");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
-  return (
-    <HeroTitle />
-  );
+  return <HeroTitle />;
 };
 
 export default Home;

@@ -1,13 +1,11 @@
 export const metadata = {
-    title: "About"
-}
+  title: "About",
+};
 
 export default function AboutLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode,
+  children: React.ReactNode;
 }) {
-    return (
-        <>{children}</>
-    );
+  return <>{children}</>;
 }

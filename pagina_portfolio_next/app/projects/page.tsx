@@ -1,23 +1,24 @@
-'use client'
+"use client";
 
-import { useEffect } from "react"
-import ProjectsCard from "../../src/components/cards/ProjectsCard"
-import PrincipalCard from "../../src/components/layout/PrincipalCard"
-import { useCard } from "../../src/hooks/useCard"
+import { useEffect } from "react";
+import ProjectsCard from "../../src/components/cards/ProjectsCard";
+import PrincipalCard from "../../src/components/layout/PrincipalCard";
+import { useCard } from "../../src/hooks/useCard";
 
 const Projects = () => {
-    const { handleCardChange } = useCard()
+  const { setTitle, setCard } = useCard();
 
-    useEffect(() => {
-        handleCardChange("projects")
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+  useEffect(() => {
+    setTitle("Projetos");
+    setCard("projects");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    return (
-        <PrincipalCard>
-            <ProjectsCard />
-        </PrincipalCard>
-    )
-}
+  return (
+    <PrincipalCard>
+      <ProjectsCard />
+    </PrincipalCard>
+  );
+};
 
-export default Projects
+export default Projects;
