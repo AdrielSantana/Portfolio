@@ -1,5 +1,4 @@
 import "../src/styles/main.scss";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { Nunito, Courgette } from "next/font/google";
