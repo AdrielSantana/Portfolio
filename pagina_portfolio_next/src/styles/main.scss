@@ -1,4 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap.css';
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./assets/colors.scss";
 
 * {
@@ -46,7 +46,6 @@ body,
   height: 100%;
   width: 100%;
 }
-
 
 @import "./components/layout/burgerMenu.scss";
 @import "./components/layout/principalLayout.scss";
