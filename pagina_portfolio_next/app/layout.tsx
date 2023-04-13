@@ -1,3 +1,4 @@
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../src/styles/main.scss";
 
 import { Analytics } from "@vercel/analytics/react";
