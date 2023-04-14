@@ -13,7 +13,7 @@ export const metadata = {
     default: "Porfolio | Adriel Santana",
   },
   description: "Adriel's Portfolio",
-  colorScheme: "dark",
+  colorScheme: "light",
   keywords: ["Adriel Santana", "Adriel", "Portfolio"],
   creator: "Adriel Santana",
   manifest: "/favicon/site.webmanifest",
