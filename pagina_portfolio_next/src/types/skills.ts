@@ -97,4 +97,11 @@ export const skills: Skill[] = [
     imgUrl: "/images/skills/postgre.svg",
     color: "#0275B9",
   },
+  {
+    name: "Docker",
+    description:
+      "Docker é um projeto de código aberto que automatiza a implantação de aplicativos dentro de recipientes de software.",
+    imgUrl: "/images/skills/docker.svg",
+    color: "#2395EC",
+  },
 ];
