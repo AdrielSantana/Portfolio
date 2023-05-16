@@ -6,43 +6,43 @@ import phoneFarBalls from "../../../../public/images/background/skills/phone_far
 import phoneMediumBalls from "../../../../public/images/background/skills/phone_medium_balls.svg";
 import phoneCloseBalls from "../../../../public/images/background/skills/phone_close_balls.svg";
 
-import FloatingBalls from "./FloatingBalls";
+import FloatingObjects from "./FloatingObjects";
 
 const FloatingBallsBackground = () => {
   return (
     <>
-      <FloatingBalls
-        className="desktop-floating"
+      <FloatingObjects
+        device="desktop"
         animation="floatingSlow"
         src={desktopFarBalls}
       />
 
-      <FloatingBalls
-        className="desktop-floating"
+      <FloatingObjects
+        device="desktop"
         animation="floatingMedium"
         src={desktopMediumBalls}
       />
 
-      <FloatingBalls
-        className="desktop-floating"
+      <FloatingObjects
+        device="desktop"
         animation="floatingFast"
         src={desktopCloseBalls}
       />
 
-      <FloatingBalls
-        className="phone-floating"
+      <FloatingObjects
+        device="phone"
         animation="floatingSlow"
         src={phoneFarBalls}
       />
 
-      <FloatingBalls
-        className="phone-floating"
+      <FloatingObjects
+        device="phone"
         animation="floatingMedium"
         src={phoneMediumBalls}
       />
 
-      <FloatingBalls
-        className="phone-floating"
+      <FloatingObjects
+        device="phone"
         animation="floatingFast"
         src={phoneCloseBalls}
       />

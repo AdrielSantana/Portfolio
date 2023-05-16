@@ -33,6 +33,9 @@ export const CardContextProvider = (props: { children?: ReactNode }) => {
       case "contact":
         router.push("/contact");
         break;
+      case "career":
+        router.push("/career");
+        break;
       default:
         router.push("/");
         break;

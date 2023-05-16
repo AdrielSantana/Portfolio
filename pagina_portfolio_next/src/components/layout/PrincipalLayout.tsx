@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { Container } from "react-bootstrap";
@@ -9,47 +9,6 @@ import { useSlide } from "../../hooks/useSlide";
 
 type Props = {
   children: React.ReactNode;
-};
-
-const animationCard = {
-  hiddenNext: {
-    x: "100vw",
-    opacity: 0,
-  },
-  hiddenPrevious: {
-    x: "-100vw",
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-      type: "spring",
-      damping: 100,
-      stiffness: 600,
-    },
-  },
-  exitNext: {
-    x: "-100vw",
-    opacity: 0,
-    transition: {
-      duration: 0.05,
-      type: "spring",
-      damping: 100,
-      stiffness: 600,
-    },
-  },
-  exitPrevious: {
-    x: "100vw",
-    opacity: 0,
-    transition: {
-      duration: 0.05,
-      type: "spring",
-      damping: 100,
-      stiffness: 600,
-    },
-  },
 };
 
 const animationSlide = {
@@ -74,23 +33,51 @@ const animationTitle = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.1,
-      type: "spring",
-      damping: 100,
-      stiffness: 600,
-    },
   },
   exit: {
     y: "-6rem",
     opacity: 0,
-    transition: {
-      duration: 0.05,
-      type: "spring",
-      damping: 100,
-      stiffness: 600,
-    },
   },
+};
+
+const animationCard = {
+  enter: (slideAnimation: number) => {
+    if (slideAnimation == 0) {
+      return {
+        x: 0,
+        opacity: 1,
+      };
+    }
+
+    return {
+      x: slideAnimation > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (slideAnimation: number) => {
+    if (slideAnimation == 0) {
+      return {
+        x: 0,
+        opacity: 1,
+      };
+    }
+
+    return {
+      zIndex: 0,
+      x: slideAnimation < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+};
+
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
 };
 
 const PrincipalLayout = ({ children }: Props) => {
@@ -103,23 +90,39 @@ const PrincipalLayout = ({ children }: Props) => {
     findNext,
   } = useSlide();
 
+  function checkKey(e: any) {
+    switch (e.key) {
+      case "ArrowLeft":
+        handleSlide(findPrevious());
+        break;
+      case "ArrowRight":
+        handleSlide(findNext());
+        break;
+    }
+  }
+
   return (
     <>
       <Background />
-
-      <div className="main-content">
+      <div
+        tabIndex={-1}
+        onKeyDown={(e) => {
+          checkKey(e);
+        }}
+        className="main-content"
+      >
         <Container className="selector">
           <motion.span
             layout
             className="previous-btn pointer slide"
             transition={{ type: "spring", stiffness: 700, damping: 30 }}
             variants={animationSlide}
+            onClick={(e) => handleSlide(findPrevious())}
             animate={slidePointerAnimation ? "pulse" : "stopPulse"}
             whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
             whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
           >
             <Image
-              onClick={(e) => handleSlide(findPrevious(card))}
               src={"/images/extra/pointer.svg"}
               alt={"Previous card"}
               height={30}
@@ -134,6 +137,10 @@ const PrincipalLayout = ({ children }: Props) => {
               initial={"hidden"}
               animate={"visible"}
               exit={"exit"}
+              transition={{
+                y: { type: "spring", stiffness: 400, damping: 50 },
+                opacity: { duration: 0.2 },
+              }}
             >
               <p className="h1 title text-center">{title}</p>
             </motion.div>
@@ -144,12 +151,12 @@ const PrincipalLayout = ({ children }: Props) => {
             className="next-btn pointer slide"
             transition={{ type: "spring", stiffness: 700, damping: 30 }}
             variants={animationSlide}
+            onClick={(e) => handleSlide(findNext())}
             animate={slidePointerAnimation ? "pulse" : "stopPulse"}
             whileHover={!slidePointerAnimation ? { scale: 1.2 } : {}}
             whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
           >
             <Image
-              onClick={(e) => handleSlide(findNext(card))}
               style={{ transform: "rotate(180deg)" }}
               src={"/images/extra/pointer.svg"}
               alt={"Next card"}
@@ -168,15 +175,34 @@ const PrincipalLayout = ({ children }: Props) => {
             style={{ zIndex: 1 }}
             className="d-flex justify-content-center"
           >
-            <AnimatePresence initial={false} mode="wait">
+            <AnimatePresence
+              initial={false}
+              custom={slideAnimation}
+              mode="wait"
+            >
               <motion.div
-                key={title}
+                key={card}
                 variants={animationCard}
-                initial={
-                  slideAnimation === "next" ? "hiddenNext" : "hiddenPrevious"
-                }
-                animate={"visible"}
-                exit={slideAnimation === "next" ? "exitNext" : "exitPrevious"}
+                custom={slideAnimation}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 },
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+
+                  if (swipe < -swipeConfidenceThreshold) {
+                    handleSlide(findNext());
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    handleSlide(findPrevious());
+                  }
+                }}
               >
                 {children}
               </motion.div>

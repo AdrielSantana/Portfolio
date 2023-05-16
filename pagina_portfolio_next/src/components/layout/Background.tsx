@@ -2,9 +2,9 @@ import PhotoBackground from "../background/PhotoBackground";
 import WavyBackground from "../background/waves/WavyBackground";
 import { motion, AnimatePresence } from "framer-motion";
 import LowPolyBackground from "../background/LowPolyBackground";
-import FloatingBallsBackground from "../background/floatingBalls/FloatingBallsBackground";
+import FloatingBallsBackground from "../background/floatingObjects/FloatingBallsBackground";
 import { useCard } from "../../hooks/useCard";
-
+import FloatingCubesBackground from "../background/floatingObjects/FloatingCubesBackground";
 
 const animationTitle = {
   hidden: {
@@ -56,6 +56,7 @@ const Background = () => {
         >
           {card === "hero" && <PhotoBackground />}
           {card === "about" && <WavyBackground />}
+          {card === "career" && <FloatingCubesBackground />}
           {card === "projects" && <LowPolyBackground />}
           {card === "skills" && <FloatingBallsBackground />}
           {card === "contact" && <></>}

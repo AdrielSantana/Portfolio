@@ -1,0 +1,26 @@
+@import "../../../assets/colors.scss";
+@import "../../../assets/typography.scss";
+
+.progress-bar {
+  width: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: $custom-color-secondary;
+  stroke-width: 0.8px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.55));
+}
+
+.career-card-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.company-description, .company-date{
+  text-align: center;
+}
+
+

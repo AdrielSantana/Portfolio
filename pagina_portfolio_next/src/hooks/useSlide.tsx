@@ -3,23 +3,24 @@ import { useState } from "react";
 import { useCard } from "./useCard";
 
 export const useSlide = () => {
-  const { handleCardChange } = useCard();
-
-  const [slideAnimation, setSlideAnimation] = useState<string>("next");
+  const { card, handleCardChange } = useCard();
+  const [slideAnimation, setSlideAnimation] = useState<number>(0);
   const [slidePointerAnimation, setSlidePointerAnimation] =
     useState<boolean>(true);
 
-  const handleSlide = (card: string): void => {
-    handleCardChange(card);
-
+  const handleSlide = (nextCard: string): void => {
+    handleCardChange(nextCard);
     setSlidePointerAnimation(false);
   };
 
-  const findNext = (card: string): string => {
+  const findNext = (): string => {
     let nextCard: string;
 
     switch (card) {
       case "about":
+        nextCard = "career";
+        break;
+      case "career":
         nextCard = "projects";
         break;
       case "projects":
@@ -35,20 +36,23 @@ export const useSlide = () => {
         nextCard = "about";
         break;
     }
-    setSlideAnimation("next");
+    setSlideAnimation(1);
 
     return nextCard;
   };
 
-  const findPrevious = (card: string): string => {
+  const findPrevious = (): string => {
     let previousCard: string;
 
     switch (card) {
       case "about":
         previousCard = "contact";
         break;
-      case "projects":
+      case "career":
         previousCard = "about";
+        break;
+      case "projects":
+        previousCard = "career";
         break;
       case "skills":
         previousCard = "projects";
@@ -60,7 +64,7 @@ export const useSlide = () => {
         previousCard = "about";
         break;
     }
-    setSlideAnimation("previous");
+    setSlideAnimation(-1);
 
     return previousCard;
   };
@@ -71,6 +75,7 @@ export const useSlide = () => {
     handleSlide,
     findPrevious,
     findNext,
+    setSlideAnimation
   };
 };
 

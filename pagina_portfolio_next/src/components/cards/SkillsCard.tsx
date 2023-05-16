@@ -33,7 +33,7 @@ const SkillsCard = () => {
                     transform: "rotateY(0deg)",
                     opacity: 1,
                     transition: {
-                      delay: 0.15,
+                      delay: 0.3,
                       type: "spring",
                       damping: 30,
                       stiffness: 130,

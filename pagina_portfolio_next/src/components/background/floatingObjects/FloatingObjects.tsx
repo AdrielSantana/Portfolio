@@ -44,23 +44,23 @@ const animationFloating = {
 
 type Props = {
   src: string | StaticImageData;
-  animation: string;
-  className: string;
+  animation: "floatingFast" | "floatingMedium" | "floatingSlow";
+  device: "desktop" | "phone";
 };
 
-const FloatingBalls = ({ src, animation, className }: Props) => {
+const FloatingObjects = ({ src, animation, device }: Props) => {
   return (
     <>
       <motion.div
         style={{ position: "fixed", right: 0, bottom: 0, zIndex: 0 }}
-        className={className}
+        className={device === 'desktop' ? "desktop-floating" : "phone-floating"}
         variants={animationFloating}
         animate={animation}
       >
-        <Image priority src={src} alt={"floating balls"} fill />
+        <Image priority src={src} alt={"floating objects"} fill />
       </motion.div>
     </>
   );
 };
 
-export default FloatingBalls;
+export default FloatingObjects;

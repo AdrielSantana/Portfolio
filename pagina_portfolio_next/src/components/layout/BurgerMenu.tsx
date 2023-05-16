@@ -47,6 +47,9 @@ const BurguerMenu = () => {
             <BurgerButton name={"Sobre"} card={"about"} />
           </Col>
           <Col>
+            <BurgerButton name={"Carreira"} card={"career"} />
+          </Col>
+          <Col>
             <BurgerButton name={"Projetos"} card={"projects"} />
           </Col>
           <Col>

@@ -24,7 +24,7 @@ const ProjectsCard = () => {
                   y: 0,
                   opacity: 1,
                   transition: {
-                    delay: 0.2,
+                    delay: 0.3,
                     type: "spring",
                     damping: 50,
                     stiffness: 130,

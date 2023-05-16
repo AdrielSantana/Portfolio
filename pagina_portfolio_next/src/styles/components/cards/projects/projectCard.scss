@@ -8,11 +8,12 @@
 
 .project-image {
   border-radius: 2rem;
+  object-fit: cover;
 }
 
 .project-card {
   max-width: 280px;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-family: $custom-font-body;
   color: $custom-color-dark;
   background-color: $custom-color-white;
