@@ -104,4 +104,32 @@ export const skills: Skill[] = [
     imgUrl: "/images/skills/docker.svg",
     color: "#2395EC",
   },
+  {
+    name: "TDD",
+    description:
+      "Metodologia de desenvolvimento voltada à testes automatizados.",
+    imgUrl: "/images/skills/tdd.svg",
+    color: "#AFAFAF",
+  },
+  {
+    name: "DDD - Clean Architecture",
+    description:
+      "Clean Architecture esclareceu as responsabilidades de cada área da nossa aplicação, impondo limites arquiteturais através de regras imutáveis, exceto quando há alguma relação com o negócio.",
+    imgUrl: "/images/skills/architecture.svg",
+    color: "#AFAFAF",
+  },
+  {
+    name: "GitFlow",
+    description:
+      "Git Flow é um modelo, uma estratégia ou, ainda, um fluxo de trabalho muito utilizado por equipes de desenvolvimento de software. Ele se destaca por auxiliar na organização do versionamento de códigos.",
+    imgUrl: "/images/skills/gitflow.svg",
+    color: "#AFAFAF",
+  },
+  {
+    name: "Design Patterns",
+    description:
+      "Em Engenharia de Software, um padrão de desenho ou padrão de projeto é uma solução geral para um problema que ocorre com frequência dentro de um determinado contexto no projeto de software.",
+    imgUrl: "/images/skills/pattern.svg",
+    color: "#AFAFAF",
+  },
 ];
