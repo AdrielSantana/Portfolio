@@ -2,7 +2,7 @@
 @import "../../assets/typography.scss";
 
 .principal-layout {
-  height: calc(100% - 6rem);
+  height: calc(100% - 5rem);
   overflow: hidden;
 }
 
@@ -12,6 +12,7 @@
 
 .selector {
   width: 16rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

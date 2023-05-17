@@ -7,7 +7,7 @@
   padding: 2rem;
   border-radius: 64px;
   max-width: 800px;
-  height: 75vh;
+  height: 100%;
   z-index: 2;
   filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.4));
 }
@@ -33,10 +33,4 @@
   /* color of the scroll thumb */
   border-radius: 2rem;
   /* roundness of the scroll thumb */
-}
-
-@media (max-height: 560px) {
-  .principal-card {
-    height: 60vh;
-  }
 }

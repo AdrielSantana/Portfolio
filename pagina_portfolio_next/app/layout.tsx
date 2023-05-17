@@ -1,7 +1,7 @@
 import "../src/styles/main.scss";
 
 import { Analytics } from "@vercel/analytics/react";
-import { Nunito, Courgette } from "next/font/google";
+import { Montserrat, Courgette } from "next/font/google";
 
 import { CardContextProvider } from "../src/hooks/useCard";
 import BurgerMenu from "../src/components/layout/BurgerMenu";
@@ -29,11 +29,11 @@ export const metadata = {
   },
 };
 
-const nunito = Nunito({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
-  variable: "--font-nunito",
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -50,7 +50,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br" className={`${nunito.variable} ${courgette.variable}`}>
+    <html
+      lang="pt-br"
+      className={`${montserrat.variable} ${courgette.variable}`}
+    >
       <body>
         <CardContextProvider>
           <div id="outer-container">

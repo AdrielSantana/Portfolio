@@ -7,7 +7,7 @@ const AboutCard = () => {
     <>
       <p className="about-text">
         Olá! Meu nome é Adriel Santana e sou um engenheiro de computação
-        apaixonado por tecnologia e programação. Com apenas 20 anos de idade, já
+        apaixonado por tecnologia e programação. Com 20 anos de idade, já
         tenho uma vasta experiência como programador Full-Stack mobile e web, e
         estou sempre em busca de novos desafios e oportunidades para aprender e
         crescer profissionalmente.

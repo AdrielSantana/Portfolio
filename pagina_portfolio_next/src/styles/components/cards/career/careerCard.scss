@@ -19,8 +19,15 @@
   position: relative;
 }
 
-.company-description, .company-date{
+.company-description,
+.company-date {
   text-align: center;
 }
 
+.career-date{
+  font-family: $custom-font-body;
+}
 
+.company-date {
+  font-style: italic;
+}

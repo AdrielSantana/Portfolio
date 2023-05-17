@@ -168,46 +168,38 @@ const PrincipalLayout = ({ children }: Props) => {
 
         <Container
           fluid
-          className="justify-content-center align-items-center principal-layout d-flex"
+          className="justify-content-center z-1 align-items-center principal-layout d-flex"
           id="page-wrap"
         >
-          <Container
-            style={{ zIndex: 1 }}
-            className="d-flex justify-content-center"
-          >
-            <AnimatePresence
-              initial={false}
+          <AnimatePresence initial={false} custom={slideAnimation} mode="wait">
+            <motion.div
+              style={{ height: "100%", padding: "2rem 0" }}
+              key={card}
+              variants={animationCard}
               custom={slideAnimation}
-              mode="wait"
-            >
-              <motion.div
-                key={card}
-                variants={animationCard}
-                custom={slideAnimation}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
 
-                  if (swipe < -swipeConfidenceThreshold) {
-                    handleSlide(findNext());
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    handleSlide(findPrevious());
-                  }
-                }}
-              >
-                {children}
-              </motion.div>
-            </AnimatePresence>
-          </Container>
+                if (swipe < -swipeConfidenceThreshold) {
+                  handleSlide(findNext());
+                } else if (swipe > swipeConfidenceThreshold) {
+                  handleSlide(findPrevious());
+                }
+              }}
+            >
+              {children}
+            </motion.div>
+          </AnimatePresence>
         </Container>
       </div>
     </>

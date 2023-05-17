@@ -9,98 +9,106 @@ export const skills: Skill[] = [
   {
     name: "HTML",
     description:
-      "Linguagem de marcação utilizada na construção de páginas na Web.",
+      "Linguagem de marcação usada para estruturar e apresentar conteúdo na web.",
     imgUrl: "/images/skills/html.svg",
     color: "#f06529",
   },
   {
     name: "CSS",
     description:
-      "Mecanismo para adicionar estilo a um documento web em formato cascata.",
+      " Linguagem de estilo usada para estilizar e formatar elementos HTML em páginas da web.",
     imgUrl: "/images/skills/css.svg",
     color: "#2965f1",
   },
   {
-    name: "JavaScript",
-    description:
-      "Linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.",
-    imgUrl: "/images/skills/javascript.svg",
-    color: "#f7df1e",
-  },
-  {
     name: "Sass",
     description:
-      "Linguagem de extensão do CSS pré-compilada para dar mais agilidade e utilidade ao CSS padrão, além da facil manutenção e desenvolvimento de páginas.",
+      "Pré-processador CSS que adiciona recursos como variáveis, aninhamento e mixins para facilitar a estilização.",
     imgUrl: "/images/skills/sass.svg",
     color: "#cd6799",
   },
   {
     name: "Bootstrap",
     description:
-      "Framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web.",
+      "Framework CSS popular que fornece estilos e componentes pré-construídos para criar interfaces responsivas.",
     imgUrl: "/images/skills/bootstrap.svg",
     color: "#563d7c",
   },
   {
-    name: "Git",
-    description:
-      "Um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software.",
-    imgUrl: "/images/skills/git.svg",
-    color: "#f1502f",
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Banco de dados NoSQL. O MongoDB usa documentos semelhantes a JSON com esquemas.",
-    imgUrl: "/images/skills/mongoDB.svg",
-    color: "#58AA50",
-  },
-  {
     name: "Figma",
     description:
-      "Figma é um editor gráfico de vetor e prototipagem de projetos de design baseado principalmente no navegador web.",
+      "Ferramenta de design colaborativo baseada em nuvem para criar protótipos de interface de usuário e designs.",
     imgUrl: "/images/skills/figma.svg",
     color: "#E64A19",
   },
   {
+    name: "JavaScript",
+    description:
+      "Linguagem de programação usada para criar interatividade e comportamento dinâmico em páginas da web.",
+    imgUrl: "/images/skills/javascript.svg",
+    color: "#f7df1e",
+  },
+  {
+    name: "TypeScript",
+    description:
+      "Superconjunto tipado do JavaScript que adiciona recursos de tipagem estática e facilita o desenvolvimento escalável.",
+    imgUrl: "/images/skills/typescript.svg",
+    color: "#1976D2",
+  },
+  {
     name: "Node Js",
     description:
-      "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.",
+      "Ambiente de tempo de execução JavaScript assíncrono para executar código JavaScript no lado do servidor.",
     imgUrl: "/images/skills/nodeJs.svg",
     color: "#388E3C",
   },
   {
     name: "React",
     description:
-      "O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.",
+      "Biblioteca JavaScript de código aberto para criar interfaces de usuário reativas e componentes reutilizáveis.",
     imgUrl: "/images/skills/react.svg",
     color: "#4E7AB5",
   },
   {
-    name: "TypeScript",
-    description:
-      "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.",
-    imgUrl: "/images/skills/typescript.svg",
-    color: "#1976D2",
-  },
-  {
     name: "Next Js",
     description:
-      "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+      "Estrutura JavaScript para renderização do lado do servidor e criação de aplicativos web modernos.",
     imgUrl: "/images/skills/nextJs.svg",
     color: "#95A5A6",
   },
   {
+    name: "Git",
+    description:
+      "Sistema de controle de versão distribuído usado para rastrear e gerenciar alterações no código-fonte.",
+    imgUrl: "/images/skills/git.svg",
+    color: "#f1502f",
+  },
+  {
+    name: "GitFlow",
+    description:
+      "Metodologia de ramificação do Git que promove um fluxo de trabalho estruturado e colaborativo.",
+    imgUrl: "/images/skills/gitflow.svg",
+    color: "#f1502f",
+  },
+  {
+    name: "MongoDB",
+    description:
+      "Banco de dados NoSQL baseado em documentos, usado para armazenar dados de forma flexível e escalável.",
+    imgUrl: "/images/skills/mongoDB.svg",
+    color: "#58AA50",
+  },
+
+  {
     name: "PostgreSQL",
     description:
-      "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.",
+      "Sistema de gerenciamento de banco de dados relacional de código aberto, conhecido por sua confiabilidade e recursos avançados.",
     imgUrl: "/images/skills/postgre.svg",
     color: "#0275B9",
   },
   {
     name: "Docker",
     description:
-      "Docker é um projeto de código aberto que automatiza a implantação de aplicativos dentro de recipientes de software.",
+      "Plataforma de virtualização de contêiner que permite empacotar e distribuir aplicativos com suas dependências.",
     imgUrl: "/images/skills/docker.svg",
     color: "#2395EC",
   },
@@ -109,27 +117,21 @@ export const skills: Skill[] = [
     description:
       "Metodologia de desenvolvimento voltada à testes automatizados.",
     imgUrl: "/images/skills/tdd.svg",
-    color: "#AFAFAF",
+    color: "#27dd46",
   },
   {
-    name: "DDD - Clean Architecture",
+    name: "DDD",
     description:
-      "Clean Architecture esclareceu as responsabilidades de cada área da nossa aplicação, impondo limites arquiteturais através de regras imutáveis, exceto quando há alguma relação com o negócio.",
+      "Abordagem de desenvolvimento de software focada em modelar o domínio do problema em soluções.",
     imgUrl: "/images/skills/architecture.svg",
-    color: "#AFAFAF",
+    color: "#c7d317",
   },
-  {
-    name: "GitFlow",
-    description:
-      "Git Flow é um modelo, uma estratégia ou, ainda, um fluxo de trabalho muito utilizado por equipes de desenvolvimento de software. Ele se destaca por auxiliar na organização do versionamento de códigos.",
-    imgUrl: "/images/skills/gitflow.svg",
-    color: "#AFAFAF",
-  },
+
   {
     name: "Design Patterns",
     description:
-      "Em Engenharia de Software, um padrão de desenho ou padrão de projeto é uma solução geral para um problema que ocorre com frequência dentro de um determinado contexto no projeto de software.",
+      "Soluções recorrentes e comprovadas para problemas de design de software, visando reutilização e modularidade.",
     imgUrl: "/images/skills/pattern.svg",
-    color: "#AFAFAF",
+    color: "#cecece",
   },
 ];
