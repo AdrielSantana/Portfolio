@@ -173,7 +173,7 @@ const PrincipalLayout = ({ children }: Props) => {
         >
           <AnimatePresence initial={false} custom={slideAnimation} mode="wait">
             <motion.div
-              style={{ height: "100%", padding: "2rem 0" }}
+              className="draggable-container"
               key={card}
               variants={animationCard}
               custom={slideAnimation}
