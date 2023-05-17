@@ -55,7 +55,7 @@ const animationCard = {
     };
   },
   center: {
-    zIndex: 1,
+    zIndex: 2,
     x: 0,
     opacity: 1,
   },
