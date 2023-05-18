@@ -9,7 +9,7 @@ const Skills = () => {
   const { setTitle, setCard } = useCard();
 
   useEffect(() => {
-    setTitle("habilidades");
+    setTitle("Habilidades");
     setCard("skills");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
