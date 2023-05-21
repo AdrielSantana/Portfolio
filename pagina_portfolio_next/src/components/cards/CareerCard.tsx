@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+'use client'
 import CompanyCard from "./career/CompanyCard";
 import Line from "./career/Line";
 import { companies } from "../../types/companies";

@@ -1,3 +1,4 @@
+'use client'
 import { Col, Row } from "react-bootstrap";
 import ProjectCard from "./projects/ProjectCard";
 import { motion } from "framer-motion";

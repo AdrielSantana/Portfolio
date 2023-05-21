@@ -1,11 +1,17 @@
-import "../src/styles/main.scss";
+import "../../src/styles/main.scss";
 
 import { Analytics } from "@vercel/analytics/react";
 import { Montserrat, Courgette } from "next/font/google";
 
-import { CardContextProvider } from "../src/hooks/useCard";
-import BurgerMenu from "../src/components/layout/BurgerMenu";
-import PrincipalLayout from "../src/components/layout/PrincipalLayout";
+import { CardContextProvider } from "../../src/hooks/useCard";
+import BurgerMenu from "../../src/components/layout/BurgerMenu";
+import PrincipalLayout from "../../src/components/layout/PrincipalLayout";
+
+import { i18n } from "../../i18n-config";
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export const metadata = {
   title: {
@@ -46,12 +52,14 @@ const courgette = Courgette({
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
     <html
-      lang="pt-br"
+      lang={params.lang}
       className={`${montserrat.variable} ${courgette.variable}`}
     >
       <body>

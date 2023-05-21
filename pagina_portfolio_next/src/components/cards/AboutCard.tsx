@@ -1,3 +1,5 @@
+'use client'
+
 import { useCard } from "../../hooks/useCard";
 
 const AboutCard = () => {
