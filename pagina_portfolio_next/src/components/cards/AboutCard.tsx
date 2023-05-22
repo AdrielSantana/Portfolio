@@ -1,58 +1,58 @@
-'use client'
+"use client";
 
 import { useCard } from "../../hooks/useCard";
 
-const AboutCard = () => {
+type Props = {
+  translation: {
+    section1: string;
+    section2: string;
+    section3: string;
+    section4: string;
+    section5: string;
+    section6: string;
+    section7: string;
+    projects: string;
+    skills: string;
+    contact: string;
+  };
+};
+
+const AboutCard = ({ translation }: Props) => {
   const { handleCardChange } = useCard();
 
   return (
     <>
+      <p className="about-text">{translation.section1}</p>
       <p className="about-text">
-        Olá! Meu nome é Adriel Santana e sou um engenheiro de computação
-        apaixonado por tecnologia e programação. Com 20 anos de idade, já
-        tenho uma vasta experiência como programador Full-Stack mobile e web, e
-        estou sempre em busca de novos desafios e oportunidades para aprender e
-        crescer profissionalmente.
-      </p>
-      <p className="about-text">
-        Tenho o privilégio de trabalhar em{" "}
+        {translation.section2}
         <a onClick={(e) => handleCardChange("projects")}>
           <strong>
             <i>
-              <span className="pointer">projetos</span>
+              <span className="pointer">{translation.projects}</span>
             </i>
           </strong>
-        </a>{" "}
-        incríveis que me permitem aplicar minhas habilidades e conhecimentos
-        para criar soluções inovadoras e eficientes.
+        </a>
+        {translation.section3}
       </p>
+      <p className="about-text">{translation.section4}</p>
       <p className="about-text">
-        Meu objetivo como programador é sempre entregar resultados de alta
-        qualidade, seguindo as melhores práticas do mercado e buscando
-        constantemente aprimorar minha técnica e criatividade. Estou sempre
-        aberto a novos desafios e oportunidades, e espero poder colaborar em
-        projetos que possam agregar valor e impactar positivamente a vida das
-        pessoas.
-      </p>
-      <p className="about-text">
-        Se você estiver em busca de um programador dedicado, apaixonado por
-        tecnologia e com{" "}
+        {translation.section5}
         <a onClick={(e) => handleCardChange("skills")}>
           <strong>
             <i>
-              <span className="pointer">habilidades</span>
+              <span className="pointer">{translation.skills}</span>
             </i>
           </strong>
         </a>{" "}
-        comprovadas em desenvolvimento mobile e web, não hesite em entrar em{" "}
+        {translation.section6}
         <a onClick={(e) => handleCardChange("contact")}>
           <strong>
             <i>
-              <span className="pointer">contato</span>
+              <span className="pointer">{translation.contact}</span>
             </i>
           </strong>
-        </a>{" "}
-        comigo!
+        </a>
+        {translation.section7}
       </p>
     </>
   );

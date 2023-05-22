@@ -1,3 +1,108 @@
 {
-    "test": "test pt"
+  "titles": {
+    "about": "Sobre",
+    "career": "Carreira",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato"
+  },
+  "cards": {
+    "hero": {
+      "firstLine": " Bem vindo ao",
+      "secondLine": "meu Portfolio :)"
+    },
+    "about": {
+      "section1": "Olá! Meu nome é Adriel Santana e sou um engenheiro de computação apaixonado por tecnologia e programação. Com 20 anos de idade, já tenho uma vasta experiência como programador Full-Stack mobile e web, e estou sempre em busca de novos desafios e oportunidades para aprender e crescer profissionalmente.",
+      "section2": "Tenho o privilégio de trabalhar em ",
+      "section3": " incríveis que me permitem aplicar minhas habilidades e conhecimentos para criar soluções inovadoras e eficientes.",
+      "section4": "Meu objetivo como programador é sempre entregar resultados de alta qualidade, seguindo as melhores práticas do mercado e buscando constantemente aprimorar minha técnica e criatividade. Estou sempre aberto a novos desafios e oportunidades, e espero poder colaborar em projetos que possam agregar valor e impactar positivamente a vida das pessoas.",
+      "section5": "Se você estiver em busca de um programador dedicado, apaixonado por tecnologia e com ",
+      "section6": " comprovadas em desenvolvimento mobile e web, não hesite em entrar em ",
+      "section7": " comigo!",
+      "projects": "projetos",
+      "skills": "habilidades",
+      "contact": "contato"
+    },
+    "career": {
+      "jobs": {
+        "mandarin": {
+          "name": "Agência Mandarin",
+          "description": "Engenheiro de Software Full Stack Estagiário",
+          "period": "Março 2023 - Atual"
+        }
+      }
+    },
+    "projects": {
+      "buttonLabel": {
+        "seeMore": "Ver mais"
+      },
+      "project": {
+        "dashboardApp": {
+          "name": "Dashboard App",
+          "description": "Projeto Full-Stack Web. Veja dados e informações relevantes sobre a empresa. Clique na engranagem para acessar. Utilizei ChakraUi, NextJs, TypeScript e MongoDB."
+        },
+        "mandaDex": {
+          "name": "MandaDex",
+          "description": "Projeto Front-End Web. Procure e ache seu pokemon favorito. Api fornecida pela Mandarin desabilitada no momento. Utilizei Bootstrap, NextJs e TypeScript."
+        },
+        "tomenote": {
+          "name": "Tomenote",
+          "description": "Projeto Full-Stack Web. Crie e edite notas de onde quiser. Utilizei Figma, Sass, Bootstrap, ReactJs, NodeJS e MongoDB."
+        },
+        "gameAwards": {
+          "name": "Game Awards",
+          "description": "Projeto Full-Stack Mobile. Vote nos jogos e categorias do Game Awards. Utilizei Figma, Sequelize, Express, Postgres e React Native / Expo."
+        },
+        "oneBitLife": {
+          "name": "OneBitLife",
+          "description": "Projeto Full-Stack Mobile. Cumpra bons hábitos para ajudar o robô. Utilizei React Native / Expo e SQLite."
+        },
+        "catalogoApple": {
+          "name": "Catálogo Apple",
+          "description": "Projeto Front-End Web. Simula um catálogo com carrinho de compras. Utilizei Next Js e TypeScript."
+        },
+        "meuClima": {
+          "name": "Meu Clima",
+          "description": "Projeto Front-End Web. Mostrar o clima local, atual e previsões consumindo uma API externa. Utilizei React."
+        },
+        "spaceX": {
+          "name": "SpaceX",
+          "description": "Projeto Front-End Web. Insparado no site da SpaceX, mostrando sua funcionalidade e responsividade Front-End. Utilizei apenas HTML, CSS, Bootstrap e Sass."
+        },
+        "meuPortfolio": {
+          "name": "Meu Portfolio",
+          "description": "Projeto Front-End Web. Apresentar meu portfolio com um visual limpo, moderno, responsivo e de alta performance. Utilizei Next Js, TypeScript, Sass e Bootstrap."
+        },
+        "meuGitHub": {
+          "name": "Meu GitHub",
+          "description": "Aqui você pode ver meus variados projetos e descrição técnica sobre eles. Dá uma olhadinha :)"
+        }
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Deixe sua mensagem",
+        "labels": {
+          "name": "Nome",
+          "message": "Mensagem",
+          "send": "Enviar"
+        },
+        "placeholder": {
+          "name": "Seu nome",
+          "email": "Seu email",
+          "message": "Olá, gostaria de te contatar..."
+        },
+        "mutedText": {
+          "message": "Será enviado um email de confirmação, favor checar caixa de spam"
+        },
+        "result": {
+          "message1": "Sua mensagem foi ",
+          "sended": "enviada",
+          "messageSended": ", entrarei em contato assim que possível!",
+          "denied": "negada",
+          "messageDenied": ", tente novamente ou me contate por outros meios."
+        }
+      }
+    }
+  }
 }

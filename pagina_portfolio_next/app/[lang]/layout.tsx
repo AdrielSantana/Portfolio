@@ -8,6 +8,8 @@ import BurgerMenu from "../../src/components/layout/BurgerMenu";
 import PrincipalLayout from "../../src/components/layout/PrincipalLayout";
 
 import { i18n } from "../../i18n-config";
+import { Locale } from "../../i18n-config";
+import { getTranslation } from "../../get-translation";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -50,13 +52,14 @@ const courgette = Courgette({
   display: "swap",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
+  const translation = await getTranslation(params.lang);
   return (
     <html
       lang={params.lang}
@@ -65,7 +68,7 @@ export default function RootLayout({
       <body>
         <CardContextProvider>
           <div id="outer-container">
-            <BurgerMenu />
+            <BurgerMenu translation={translation.titles}/>
             <PrincipalLayout>{children}</PrincipalLayout>
           </div>
         </CardContextProvider>

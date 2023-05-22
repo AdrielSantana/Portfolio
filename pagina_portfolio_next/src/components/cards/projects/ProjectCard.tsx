@@ -7,9 +7,12 @@ import { Project } from "../../../types/projects";
 
 type Props = {
   project: Project;
+  translation: {
+    seeMore: string;
+  };
 };
 
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ project, translation }: Props) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -43,7 +46,7 @@ const ProjectCard = ({ project }: Props) => {
                 <p className="text-center">
                   <Button className="project-button">
                     <a target="_blank" rel="noreferrer" href={project.link}>
-                      Veja aqui
+                      {translation.seeMore}
                     </a>
                   </Button>
                 </p>

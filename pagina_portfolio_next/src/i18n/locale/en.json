@@ -1,3 +1,108 @@
 {
-    "test": "test en"
+  "titles": {
+    "about": "About",
+    "career": "Career",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "cards": {
+    "hero": {
+      "firstLine": " Welcome to",
+      "secondLine": "my Portfolio :)"
+    },
+    "about": {
+      "section1": "Hello! My name is Adriel Santana and I am a computer engineer passionate about technology and programming. At the age of 20, I already have extensive experience as a Full-Stack mobile and web programmer, and I am always looking for new challenges and opportunities to learn and grow professionally.",
+      "section2": "I have the privilege of working on incredible ",
+      "section3": " that allow me to apply my skills and knowledge to create innovative and efficient solutions.",
+      "section4": "My goal as a programmer is to always deliver high quality results, following the best practices on the market and constantly seeking to improve my technique and creativity. I am always open to new challenges and opportunities, and I hope to be able to collaborate on projects that can add value and positively impact people's lives.",
+      "section5": "If you are looking for a dedicated programmer, passionate about technology and with proven ",
+      "section6": " in mobile and web development, do not hesitate to ",
+      "section7": " me!",
+      "projects": "projects",
+      "skills": "skills",
+      "contact": "contact"
+    },
+    "career": {
+      "jobs": {
+        "mandarin": {
+          "name": "Mandarin Agency",
+          "description": "Software Engineer Full Stack Intern",
+          "period": "March 2023 - Today"
+        }
+      }
+    },
+    "projects": {
+      "buttonLabel": {
+        "seeMore": "See more"
+      },
+      "project": {
+        "dashboardApp": {
+          "name": "Dashboard App",
+          "description": "Full-Stack Web Project. See relevant data and information about the company. Click on the gear to access. I used ChakraUi, NextJs, TypeScript and MongoDB."
+        },
+        "mandaDex": {
+          "name": "MandaDex",
+          "description": "Front End Web Project. Search and find your favorite pokemon. Api provided by Mandarin currently disabled. I used Bootstrap, NextJs and TypeScript."
+        },
+        "tomenote": {
+          "name": "Tomenote",
+          "description": "Full-Stack Web Project. Create and edit notes wherever you want. I used Figma, Sass, Bootstrap, ReactJs, NodeJS and MongoDB."
+        },
+        "gameAwards": {
+          "name": "Game Awards",
+          "description": "Full-Stack Mobile Project. Vote for games and categories in the Game Awards. I used Figma, Sequelize, Express, Postgres and React Native / Expo."
+        },
+        "oneBitLife": {
+          "name": "OneBitLife",
+          "description": "Full-Stack Mobile Project. Follow good habits to help the robot. I used React Native / Expo and SQLite."
+        },
+        "catalogoApple": {
+          "name": "Apple Catalog",
+          "description": "Front End Web Project. Simulates a catalog with a shopping cart. I used Next Js and TypeScript."
+        },
+        "meuClima": {
+          "name": "My Weather",
+          "description": "Front End Web Project. Show local, current weather and forecasts by consuming an external API. I used React."
+        },
+        "spaceX": {
+          "name": "SpaceX",
+          "description": "Front End Web Project. Inspired on the SpaceX website, showing its Front-End functionality and responsiveness. I used only HTML, CSS, Bootstrap and Sass."
+        },
+        "meuPortfolio": {
+          "name": "My Portfolio",
+          "description": "Front End Web Project. Present my portfolio with a clean, modern, responsive and high-performance look. I used Next Js, TypeScript, Sass and Bootstrap."
+        },
+        "meuGitHub": {
+          "name": "My GitHub",
+          "description": "Here you can see my various projects and technical description about them. Take a look :)"
+        }
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Leave your message",
+        "labels": {
+          "name": "Name",
+          "message": "Message",
+          "send": "Send"
+        },
+        "placeholder": {
+          "name": "Your name",
+          "email": "Your email",
+          "message": "Hello, I would like to contact you..."
+        },
+        "mutedText": {
+          "message": "A confirmation email will be sent, please check your spam folder."
+        },
+        "result": {
+          "message1": "Your message was ",
+          "sended": "sended",
+          "messageSended": ", I will get in touch as soon as possible!",
+          "denied": "denied",
+          "messageDenied": ", please try again or contact me by other means."
+        }
+      }
+    }
+  }
 }

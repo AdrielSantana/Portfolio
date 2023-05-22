@@ -1,14 +1,28 @@
-'use client'
+"use client";
 import { Col, Row } from "react-bootstrap";
 import ProjectCard from "./projects/ProjectCard";
 import { motion } from "framer-motion";
-import { Project, projects } from "../../types/projects";
+import { projects } from "../../types/projects";
 
-const ProjectsCard = () => {
+type Props = {
+  translation: {
+    project: {
+      [project: string]: {
+        name: string;
+        description: string;
+      };
+    };
+    buttonLabel: {
+      seeMore: string;
+    };
+  };
+};
+
+const ProjectsCard = ({ translation }: Props) => {
   return (
     <>
       <Row>
-        {projects.map((project: Project, i: number) => {
+        {projects.map((project, i: number) => {
           return (
             <Col
               className="my-4 d-flex justify-content-center align-self-start"
@@ -32,7 +46,15 @@ const ProjectsCard = () => {
                   },
                 }}
               >
-                <ProjectCard project={project} key={i} />
+                <ProjectCard
+                  translation={translation.buttonLabel}
+                  project={{
+                    ...project,
+                    name: translation.project[project.name].name,
+                    description: translation.project[project.name].description,
+                  }}
+                  key={i}
+                />
               </motion.div>
             </Col>
           );

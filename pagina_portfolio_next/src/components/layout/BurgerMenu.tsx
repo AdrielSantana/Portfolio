@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 
@@ -8,8 +8,19 @@ import { Col, Row } from "react-bootstrap";
 
 import BurgerButton from "./BurgerButton";
 import { useCard } from "../../hooks/useCard";
+import LanguageChanger from "./LanguageChanger";
 
-const BurguerMenu = () => {
+type Props = {
+  translation: {
+    about: string;
+    career: string;
+    projects: string;
+    skills: string;
+    contact: string;
+  };
+};
+
+const BurguerMenu = ({ translation }: Props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const { handleCardChange } = useCard();
 
@@ -42,23 +53,24 @@ const BurguerMenu = () => {
           </Col>
         </Row>
 
-        <Row className="align-self-center menu-buttons">
+        <Row className="align-self-center">
           <Col>
-            <BurgerButton name={"Sobre"} card={"about"} />
+            <BurgerButton name={translation.about} card={"about"} />
           </Col>
           <Col>
-            <BurgerButton name={"Carreira"} card={"career"} />
+            <BurgerButton name={translation.career} card={"career"} />
           </Col>
           <Col>
-            <BurgerButton name={"Projetos"} card={"projects"} />
+            <BurgerButton name={translation.projects} card={"projects"} />
           </Col>
           <Col>
-            <BurgerButton name={"Habilidades"} card={"skills"} />
+            <BurgerButton name={translation.skills} card={"skills"} />
           </Col>
           <Col>
-            <BurgerButton name={"Contato"} card={"contact"} />
+            <BurgerButton name={translation.contact} card={"contact"} />
           </Col>
         </Row>
+        <LanguageChanger />
       </Menu>
     </>
   );

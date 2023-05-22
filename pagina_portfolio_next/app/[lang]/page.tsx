@@ -5,7 +5,7 @@ import { getTranslation } from "../../get-translation";
 const Home = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   const translation = await getTranslation(lang);
 
-  return <HeroTitle title={"/"} card={"hero"} />;
+  return <HeroTitle translation={translation.cards.hero} title={"/"} card={"hero"} />;
 };
 
 export default Home;

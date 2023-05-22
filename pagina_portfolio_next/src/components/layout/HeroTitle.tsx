@@ -7,9 +7,13 @@ import WavyText from "./WavyText";
 type Props = {
   title: string;
   card: string;
+  translation: {
+    firstLine: string;
+    secondLine: string;
+  };
 };
 
-const HeroTitle = ({ title, card }: Props) => {
+const HeroTitle = ({ title, card, translation }: Props) => {
   const [replay, setReplay] = useState<boolean>(false);
   const { setTitle, setCard } = useCard();
 
@@ -24,13 +28,13 @@ const HeroTitle = ({ title, card }: Props) => {
     <>
       <div className="title pb-5">
         <WavyText
-          text=" Bem vindo ao"
+          text={translation.firstLine}
           replay={replay}
           duration={0.1}
           delay={0.2}
         />
         <WavyText
-          text="meu Portfolio :)"
+          text={translation.secondLine}
           replay={replay}
           duration={0.1}
           delay={1.8}

@@ -2,22 +2,48 @@ import { Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import useContactForm from "../../../hooks/useContactForm";
 
-const ContactForm = () => {
+type Props = {
+  translation: {
+    title: string
+    labels: {
+      name: string;
+      message: string;
+      send: string;
+    };
+    placeholder: {
+      name: string;
+      email: string;
+      message: string;
+    };
+    mutedText: {
+      message: string;
+    };
+    result: {
+      message1: string;
+      sended: string;
+      messageSended: string;
+      denied: string;
+      messageDenied: string;
+    };
+  };
+};
+
+const ContactForm = ({ translation }: Props) => {
   const { nameRef, emailRef, messageRef, result, showResult, handleSubmit } =
     useContactForm();
 
   return (
     <>
-      <p className="fs-4 text-center form-title">Deixe sua mensagem</p>
+      <p className="fs-4 text-center form-title">{translation.title}</p>
 
       <Form style={{ width: "80%" }} onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>Nome</Form.Label>
+          <Form.Label>{translation.labels.name}</Form.Label>
           <Form.Control
             required
             type="text"
             ref={nameRef}
-            placeholder="Seu nome"
+            placeholder={translation.placeholder.name}
           />
         </Form.Group>
 
@@ -27,20 +53,20 @@ const ContactForm = () => {
             required
             type="email"
             ref={emailRef}
-            placeholder="Seu email"
+            placeholder={translation.placeholder.email}
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formMessage">
-          <Form.Label>Mensagem</Form.Label>
+          <Form.Label>{translation.labels.message}</Form.Label>
           <Form.Control
             required
             as="textarea"
             ref={messageRef}
-            placeholder="Olá, gostaria de te contatar..."
+            placeholder={translation.placeholder.message}
           />
           <Form.Text className="text-muted">
-            Será enviado um email de confirmação, favor checar caixa de spam
+            {translation.mutedText.message}
           </Form.Text>
         </Form.Group>
 
@@ -50,25 +76,25 @@ const ContactForm = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Button variant="primary" className="form-button" type="submit">
-            Enviar
+            {translation.labels.send}
           </Button>
         </motion.div>
         {showResult ? (
           result ? (
             <h6 className="form-confirmation pt-3 text-center">
-              Sua mensagem foi{" "}
+              {translation.result.message1}
               <strong className="sucessful">
-                <i>enviada</i>
+                <i>{translation.result.sended}</i>
               </strong>
-              , entrarei em contato assim que possível!
+              {translation.result.messageSended}
             </h6>
           ) : (
             <h6 className="form-confirmation pt-3 text-center">
-              Sua mensagem foi{" "}
+              {translation.result.message1}
               <strong className="denied">
-                <i>negada</i>
+                <i>{translation.result.denied}</i>
               </strong>
-              , tente novamente ou me contate por outros meios.
+              {translation.result.messageDenied}
             </h6>
           )
         ) : (

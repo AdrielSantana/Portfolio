@@ -1,10 +1,38 @@
-'use client'
+"use client";
 import { Col, Row } from "react-bootstrap";
 
 import ContactLink from "./contact/ContactLink";
 import ContactForm from "./contact/ContactForm";
 
-const ContactCard = () => {
+type Props = {
+  translation: {
+    form: {
+      title: string
+      labels: {
+        name: string;
+        message: string;
+        send: string;
+      };
+      placeholder: {
+        name: string;
+        email: string;
+        message: string;
+      };
+      mutedText: {
+        message: string;
+      };
+      result: {
+        message1: string;
+        sended: string;
+        messageSended: string;
+        denied: string;
+        messageDenied: string;
+      };
+    };
+  };
+};
+
+const ContactCard = ({ translation }: Props) => {
   return (
     <>
       <Row style={{ height: "100%" }}>
@@ -44,7 +72,7 @@ const ContactCard = () => {
           xs={12}
           lg={6}
         >
-          <ContactForm />
+          <ContactForm translation={translation.form} />
         </Col>
       </Row>
     </>

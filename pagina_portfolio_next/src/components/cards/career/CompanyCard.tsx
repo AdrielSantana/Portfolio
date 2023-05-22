@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { Card, Collapse } from "react-bootstrap";
 
@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Company } from "../../../types/companies";
 
 type Props = {
-  company: Company;
+  company: Company
 };
 
 const CompanyCard = ({ company }: Props) => {
@@ -50,7 +50,7 @@ const CompanyCard = ({ company }: Props) => {
               </Card.Title>
               <Card.Text>
                 <p className="company-description">{company.description}</p>
-                <p className="company-date">{company.date}</p>
+                <p className="company-date">{company.period}</p>
               </Card.Text>
             </Card>
           </div>

@@ -18,74 +18,54 @@ export type Project = {
   link: string;
 };
 
-export const projects: Project[] = [
+export const projects = [
   {
-    name: "Dashboard App",
-    description:
-      "Projeto Full-Stack Web. Veja dados e informações relevantes sobre a empresa. Clique na engranagem para acessar. Utilizei ChakraUi, NextJs, TypeScript e MongoDB.",
+    name: "dashboardApp",
     imgUrl: dashboardApp,
     link: "https://dashboard-app-indol.vercel.app",
   },
   {
-    name: "MandaDex",
-    description:
-      "Projeto Front-End Web. Procure e ache seu pokemon favorito. Api fornecida pela Mandarin desabilitada no momento. Utilizei Bootstrap, NextJs e TypeScript.",
+    name: "mandaDex",
     imgUrl: mandaDex,
     link: "https://mandadex-client.vercel.app",
   },
   {
-    name: "Tomenote",
-    description:
-      "Projeto Full-Stack Web. Crie e edite notas de onde quiser. Utilizei Figma, Sass, Bootstrap, ReactJs, NodeJS e MongoDB.",
+    name: "tomenote",
     imgUrl: tomenoteImg,
-    link: "http://www.tomenote.adrielsan.social",
+    link: "https://tomenote-su43z.ondigitalocean.app",
   },
   {
-    name: "Game Awards",
-    description:
-      "Projeto Full-Stack Mobile. Vote nos jogos e categorias do Game Awards. Utilizei Figma, Sequelize, Express, Postgres e React Native / Expo.",
+    name: "gameAwards",
     imgUrl: gameAwards,
     link: "https://github.com/AdrielSantana/game-awards",
   },
   {
-    name: "OneBitLife",
-    description:
-      "Projeto Full-Stack Mobile. Cumpra bons hábitos para ajudar o robô. Utilizei React Native / Expo e SQLite.",
+    name: "oneBitLife",
     imgUrl: oneBitLifeImg,
     link: "https://github.com/AdrielSantana/Projeto-React-Native-OBC",
   },
   {
-    name: "Catálogo Apple",
-    description:
-      "Projeto Front-End Web. Simula um catálogo com carrinho de compras. Utilizei Next Js e TypeScript.",
+    name: "catalogoApple",
     imgUrl: catalogoAppleImg,
     link: "http://www.catalogoapple.adrielsan.social",
   },
   {
-    name: "Meu Clima",
-    description:
-      "Projeto Front-End Web. Mostrar o clima local, atual e previsões consumindo uma API externa. Utilizei React.",
+    name: "meuClima",
     imgUrl: meuClimaImg,
     link: "http://www.climalocal.adrielsan.social",
   },
   {
-    name: "SpaceX",
-    description:
-      "Projeto Front-End Web. Insparado no site da SpaceX, mostrando sua funcionalidade e responsividade Front-End. Utilizei apenas HTML, CSS, Bootstrap e Sass.",
+    name: "spaceX",
     imgUrl: spaceXImg,
     link: "http://www.spacex.adrielsan.social",
   },
   {
-    name: "Meu Portfolio",
-    description:
-      "Projeto Front-End Web. Apresentar meu portfolio com um visual limpo, moderno, responsivo e de alta performance. Utilizei Next Js e TypeScript.",
+    name: "meuPortfolio",
     imgUrl: portfolioImg,
     link: "",
   },
   {
-    name: "Meu Github",
-    description:
-      "Aqui você pode ver meus variados projetos e descrição técnica sobre eles. Dá uma olhadinha :)",
+    name: "meuGitHub",
     imgUrl: githubImg,
     link: "https://github.com/AdrielSantana?tab=repositories",
   },
