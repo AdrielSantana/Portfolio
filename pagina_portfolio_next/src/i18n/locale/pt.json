@@ -79,6 +79,26 @@
         }
       }
     },
+    "skills": {
+      "HTML": "Linguagem de marcação usada para estruturar e apresentar conteúdo na web.",
+      "CSS": "Linguagem de estilo usada para estilizar e formatar elementos HTML em páginas da web.",
+      "Sass": "Pré-processador CSS que adiciona recursos como variáveis, aninhamento e mixins para facilitar a estilização.",
+      "Bootstrap": "Framework CSS popular que fornece estilos e componentes pré-construídos para criar interfaces responsivas.",
+      "Figma": "Ferramenta de design colaborativo baseada em nuvem para criar protótipos de interface de usuário e designs.",
+      "JavaScript": "Linguagem de programação usada para criar interatividade e comportamento dinâmico em páginas da web.",
+      "TypeScript": "Superconjunto tipado do JavaScript que adiciona recursos de tipagem estática e facilita o desenvolvimento escalável.",
+      "Node Js": "Ambiente de tempo de execução JavaScript assíncrono para executar código JavaScript no lado do servidor.",
+      "React": "Biblioteca JavaScript de código aberto para criar interfaces de usuário reativas e componentes reutilizáveis.",
+      "Next Js": "Framework JavaScript para renderização do lado do servidor e criação de aplicativos web modernos.",
+      "Git": "Sistema de controle de versão distribuído usado para rastrear e gerenciar alterações no código-fonte.",
+      "GitFlow": "Metodologia de ramificação do Git que promove um fluxo de trabalho estruturado e colaborativo.",
+      "MongoDB": "Banco de dados NoSQL baseado em documentos, usado para armazenar dados de forma flexível e escalável.",
+      "PostgreSQL": "Sistema de gerenciamento de banco de dados relacional de código aberto, conhecido por sua confiabilidade e recursos avançados.",
+      "Docker": "Plataforma de virtualização de contêiner que permite empacotar e distribuir aplicativos com suas dependências.",
+      "TDD": "Metodologia de desenvolvimento voltada à testes automatizados.",
+      "DDD": "Abordagem de desenvolvimento de software focada em modelar o domínio do problema em soluções.",
+      "Design Patterns": "Soluções recorrentes e comprovadas para problemas de design de software, visando reutilização e modularidade."
+    },
     "contact": {
       "form": {
         "title": "Deixe sua mensagem",

@@ -79,6 +79,26 @@
         }
       }
     },
+    "skills": {
+      "HTML": "Markup language used to structure and present content on the web.",
+      "CSS": "Styling language used to style and format HTML elements on web pages.",
+      "Sass": "CSS preprocessor that adds features like variables, nesting, and mixins for easy styling.",
+      "Bootstrap": "Popular CSS framework that provides pre-built styles and components to create responsive interfaces.",
+      "Figma": "Cloud-based collaborative design tool for creating user interface prototypes and designs.",
+      "JavaScript": "Programming language used to create interactivity and dynamic behavior in web pages.",
+      "TypeScript": "Typed superset of JavaScript that adds statically typing capabilities and facilitates scalable development.",
+      "Node Js": "Asynchronous JavaScript runtime environment for executing server-side JavaScript code.",
+      "React": "Open source JavaScript library for creating reactive user interfaces and reusable components.",
+      "Next Js": "JavaScript framework for server-side rendering and building modern web apps.",
+      "Git": "Distributed version control system used to track and manage changes to source code.",
+      "GitFlow": "Git branching methodology that promotes a structured and collaborative workflow.",
+      "MongoDB": "Document-based NoSQL database used to store data in a flexible and scalable way.",
+      "PostgreSQL": "Open source relational database management system known for its reliability and advanced features.",
+      "Docker": "Container virtualization platform that allows you to package and distribute applications with their dependencies.",
+      "TDD": "Development methodology focused on automated testing.",
+      "DDD": "Approach to software development focused on modeling the problem domain into solutions.",
+      "Design Patterns": "Recurring and proven solutions to software design problems, aiming for reusability and modularity."
+    },
     "contact": {
       "form": {
         "title": "Leave your message",
