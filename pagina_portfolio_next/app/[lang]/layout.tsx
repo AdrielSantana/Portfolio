@@ -16,6 +16,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
+  metadataBase: new URL('https://www.adrielsan.social'),
   title: {
     template: "%s | Adriel Santana",
     default: "Porfolio | Adriel Santana",
@@ -32,7 +33,7 @@ export const metadata = {
       { url: "/favicon/favicon-16x16.png", sizes: "16x16" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 };
