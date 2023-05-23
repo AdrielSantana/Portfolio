@@ -17,7 +17,7 @@ const SkillsCard = ({ translation }: Props) => {
   return (
     <div>
       <Row>
-        {skills.map((skill: Skill, i: number) => {
+        {skills.map((skill, i: number) => {
           return (
             <Col
               className="my-4 d-flex justify-content-center align-self-start"
