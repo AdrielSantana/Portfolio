@@ -1,10 +1,11 @@
 import { Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import useContactForm from "../../../hooks/useContactForm";
+import { useEffect } from "react";
 
 type Props = {
   translation: {
-    title: string
+    title: string;
     labels: {
       name: string;
       message: string;
@@ -25,12 +26,18 @@ type Props = {
       denied: string;
       messageDenied: string;
     };
+    email: {
+      head: string;
+      hello: string;
+      feedback: string;
+      thanks: string;
+    };
   };
 };
 
 const ContactForm = ({ translation }: Props) => {
   const { nameRef, emailRef, messageRef, result, showResult, handleSubmit } =
-    useContactForm();
+    useContactForm({ translation: translation.email });
 
   return (
     <>

@@ -121,6 +121,12 @@
           "messageSended": ", I will get in touch as soon as possible!",
           "denied": "denied",
           "messageDenied": ", please try again or contact me by other means."
+        },
+        "email":{
+          "head": "I'll be in touch.",
+          "hello": "Hello, ",
+          "feedback": "I received your message and will answer you as soon as possible!",
+          "thanks": "Thanks, "
         }
       }
     }

@@ -28,6 +28,12 @@ type Props = {
         denied: string;
         messageDenied: string;
       };
+      email: {
+        head: string;
+        hello: string;
+        feedback: string;
+        thanks: string;
+      };
     };
   };
 };

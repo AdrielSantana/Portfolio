@@ -13,7 +13,16 @@ type fetchData = {
   validate: boolean;
 };
 
-export const useContactForm = () => {
+type Props = {
+  translation: {
+    head: string;
+    hello: string;
+    feedback: string;
+    thanks: string;
+  };
+};
+
+export const useContactForm = ({ translation }: Props) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
@@ -40,13 +49,19 @@ export const useContactForm = () => {
     const email = emailRef?.current?.value;
     const message = messageRef?.current?.value;
 
-    const html = render(<UserEmail name={getFirstName(name)} />, {
-      pretty: true,
-    });
+    const html = render(
+      <UserEmail name={getFirstName(name)} translation={translation} />,
+      {
+        pretty: true,
+      }
+    );
 
-    const text = render(<UserEmail name={name} />, {
-      plainText: true,
-    });
+    const text = render(
+      <UserEmail name={getFirstName(name)} translation={translation} />,
+      {
+        plainText: true,
+      }
+    );
 
     let userRequest: Request = {
       email: `${email}`,

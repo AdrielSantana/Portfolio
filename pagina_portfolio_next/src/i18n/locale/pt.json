@@ -121,6 +121,12 @@
           "messageSended": ", entrarei em contato assim que possível!",
           "denied": "negada",
           "messageDenied": ", tente novamente ou me contate por outros meios."
+        },
+        "email":{
+          "head": "Entrarei em contato.",
+          "hello": "Olá, ",
+          "feedback": "Recebi sua mensagem e vou te responder o mais rápido possível!",
+          "thanks": "Agradecimentos, "
         }
       }
     }

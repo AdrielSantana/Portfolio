@@ -10,28 +10,32 @@ import * as React from "react";
 
 type Props = {
   name?: string;
+  translation: {
+    head: string;
+    hello: string;
+    feedback: string;
+    thanks: string;
+  };
 };
 
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : "";
 
-const UserEmail = ({ name }: Props) => {
+const UserEmail = ({ name, translation }: Props) => {
   return (
     <Html lang="pt-br">
       <Head>
-        <title>Entrarei em contato.</title>
+        <title>{translation.head}</title>
       </Head>
       <Container style={main}>
         <Heading style={title} my="32" as="h2">
           <strong>
-            <i>Olá, </i>
+            <i>{translation.hello}</i>
           </strong>
           {name}
         </Heading>
-        <Text style={message}>
-          Recebi sua mensagem e vou te responder o mais rápido possível!
-        </Text>
+        <Text style={message}>{translation.feedback}</Text>
         <Link href="https://www.adrielsan.social">
           <Img
             style={image}
@@ -43,7 +47,7 @@ const UserEmail = ({ name }: Props) => {
         </Link>
         <Hr style={hr} />
         <Text style={outro}>
-          Agradecimentos,{" "}
+          {translation.thanks}
           <Link style={link} href="https://www.adrielsan.social">
             <i>Adriel Santana</i>
           </Link>
