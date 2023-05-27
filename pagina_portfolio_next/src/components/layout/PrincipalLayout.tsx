@@ -75,7 +75,7 @@ const animationCard = {
   },
 };
 
-const swipeConfidenceThreshold = 10000;
+const swipeConfidenceThreshold = 100000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
@@ -189,6 +189,7 @@ const PrincipalLayout = ({ children }: Props) => {
               dragElastic={1}
               onDragEnd={(e, { offset, velocity }) => {
                 const swipe = swipePower(offset.x, velocity.x);
+                console.log(swipe)
 
                 if (swipe < -swipeConfidenceThreshold) {
                   handleSlide(findNext());

@@ -48,10 +48,8 @@ const CompanyCard = ({ company }: Props) => {
               <Card.Title className="text-center">
                 <strong>{company.name}</strong>
               </Card.Title>
-              <Card.Text>
                 <p className="company-description">{company.description}</p>
                 <p className="company-date">{company.period}</p>
-              </Card.Text>
             </Card>
           </div>
         </Collapse>

@@ -20,26 +20,8 @@ export const CardContextProvider = (props: { children?: ReactNode }) => {
   const router = useRouter();
 
   const handleCardChange = (card: string) => {
-    switch (card) {
-      case "about":
-        router.push("/about");
-        break;
-      case "projects":
-        router.push("/projects");
-        break;
-      case "skills":
-        router.push("/skills");
-        break;
-      case "contact":
-        router.push("/contact");
-        break;
-      case "career":
-        router.push("/career");
-        break;
-      default:
-        router.push("/");
-        break;
-    }
+    if(card === "hero") return router.push("/")
+    return router.push(`/${card}`);
   };
 
   return (
