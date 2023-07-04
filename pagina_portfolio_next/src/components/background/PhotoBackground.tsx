@@ -4,6 +4,7 @@ const PhotoBackground = () => {
   return (
     <div className="perfil-photo-container">
       <Image
+        draggable={false}
         width={400}
         height={300}
         priority

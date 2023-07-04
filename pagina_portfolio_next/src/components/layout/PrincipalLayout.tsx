@@ -123,6 +123,7 @@ const PrincipalLayout = ({ children }: Props) => {
             whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
           >
             <Image
+              draggable={false}
               src={"/images/extra/pointer.svg"}
               alt={"Previous card"}
               height={30}
@@ -157,6 +158,7 @@ const PrincipalLayout = ({ children }: Props) => {
             whileTap={!slidePointerAnimation ? { scale: 0.8 } : {}}
           >
             <Image
+              draggable={false}
               style={{ transform: "rotate(180deg)" }}
               src={"/images/extra/pointer.svg"}
               alt={"Next card"}
@@ -189,7 +191,7 @@ const PrincipalLayout = ({ children }: Props) => {
               dragElastic={1}
               onDragEnd={(e, { offset, velocity }) => {
                 const swipe = swipePower(offset.x, velocity.x);
-                console.log(swipe)
+                console.log(swipe);
 
                 if (swipe < -swipeConfidenceThreshold) {
                   handleSlide(findNext());

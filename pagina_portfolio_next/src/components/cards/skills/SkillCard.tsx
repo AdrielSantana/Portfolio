@@ -20,6 +20,7 @@ const SkillCard = ({ skill }: Props) => {
         whileHover={{ scale: 1.05, backgroundColor: skill.color }}
       >
         <Image
+          draggable={false}
           className="pointer"
           onClick={() => setOpen(!open)}
           aria-controls={`skill-${skill.name}`}

@@ -16,11 +16,12 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
-  metadataBase: new URL('https://www.adrielsan.social'),
+  metadataBase: new URL("https://www.adrielsan.social"),
   title: {
     template: "%s | Adriel Santana",
     default: "Porfolio | Adriel Santana",
   },
+  themeColor: "#00a9a5",
   description: "Adriel's Portfolio",
   colorScheme: "light",
   keywords: ["Adriel Santana", "Adriel", "Portfolio"],
@@ -33,7 +34,11 @@ export const metadata = {
       { url: "/favicon/favicon-16x16.png", sizes: "16x16" },
     ],
     apple: [
-      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
   },
 };
@@ -61,6 +66,7 @@ export default async function RootLayout({
   params: { lang: Locale };
 }) {
   const translation = await getTranslation(params.lang);
+
   return (
     <html
       lang={params.lang}
@@ -69,7 +75,7 @@ export default async function RootLayout({
       <body>
         <CardContextProvider>
           <div id="outer-container">
-            <BurgerMenu translation={translation.titles}/>
+            <BurgerMenu translation={translation.titles} />
             <PrincipalLayout>{children}</PrincipalLayout>
           </div>
         </CardContextProvider>

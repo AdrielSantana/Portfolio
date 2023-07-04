@@ -31,6 +31,7 @@ const CompanyCard = ({ company }: Props) => {
       >
         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
           <Image
+            draggable={false}
             className="project-image pointer"
             onClick={() => setOpen(!open)}
             aria-controls={`company-${company.name}`}

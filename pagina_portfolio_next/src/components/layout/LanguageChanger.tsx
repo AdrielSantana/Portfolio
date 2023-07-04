@@ -36,12 +36,12 @@ export default function LanguageChanger() {
     <div className="locales-container">
       <span className="locale">
         <Link onClick={() => setCookies("pt")} href={redirectedPathName("pt")}>
-          <Image src={brazil} width={48} height={48} alt="pt" />
+          <Image draggable={false} src={brazil} width={48} height={48} alt="pt" />
         </Link>
       </span>
       <span className="locale">
         <Link onClick={() => setCookies("en")} href={redirectedPathName("en")}>
-          <Image src={usa} width={48} height={48} alt="en" />
+          <Image draggable={false} src={usa} width={48} height={48} alt="en" />
         </Link>
       </span>
     </div>

@@ -20,6 +20,7 @@ const ProjectCard = ({ project, translation }: Props) => {
       <div className="project-container">
         <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
           <Image
+            draggable={false}
             className="project-image pointer"
             onClick={() => setOpen(!open)}
             aria-controls={`project-${project.name}`}

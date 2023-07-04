@@ -26,7 +26,7 @@ const ContactLink = ({ name, imgUrl, size, link }: Props) => {
             xs={12}
             sm={6}
           >
-            <Image width={size} height={size} src={imgUrl} alt={name} />
+            <Image draggable={false} width={size} height={size} src={imgUrl} alt={name} />
           </Col>
           <Col
             xs={12}

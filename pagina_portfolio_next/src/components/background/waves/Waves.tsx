@@ -56,7 +56,7 @@ const Waves = ({ src, animation }: Props) => {
         variants={animationWave}
         animate={animation}
       >
-        <Image priority src={src} alt={"waves"} fill />
+        <Image draggable={false} priority src={src} alt={"waves"} fill />
       </motion.div>
     </>
   );

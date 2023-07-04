@@ -57,7 +57,7 @@ const FloatingObjects = ({ src, animation, device }: Props) => {
         variants={animationFloating}
         animate={animation}
       >
-        <Image priority src={src} alt={"floating objects"} fill />
+        <Image draggable={false} priority src={src} alt={"floating objects"} fill />
       </motion.div>
     </>
   );
