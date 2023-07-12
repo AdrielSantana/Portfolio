@@ -7,7 +7,6 @@ import { slide as Menu } from "react-burger-menu";
 import { Col, Row } from "react-bootstrap";
 
 import BurgerButton from "./BurgerButton";
-import { useCard } from "../../hooks/useCard";
 import LanguageChanger from "./LanguageChanger";
 import Link from "next/link";
 
@@ -28,13 +27,15 @@ const BurguerMenu = ({ translation }: Props) => {
     <>
       <Menu
         customBurgerIcon={
-          <Hamburger
-            color="#212121"
-            distance="md"
-            direction="right"
-            rounded
-            onToggle={setNavbarOpen}
-          />
+          <div role="div">
+            <Hamburger
+              color="#212121"
+              distance="md"
+              direction="right"
+              rounded
+              onToggle={setNavbarOpen}
+            />
+          </div>
         }
         customCrossIcon={false}
         pageWrapId={"page-wrap"}
