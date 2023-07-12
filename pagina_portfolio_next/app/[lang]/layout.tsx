@@ -24,7 +24,7 @@ export const metadata = {
   themeColor: "#00a9a5",
   description: "Adriel's Portfolio",
   colorScheme: "light",
-  keywords: ["Adriel Santana", "Adriel", "Portfolio"],
+  keywords: ["Adriel", "Santana", "Portfolio", "Web", "Developer"],
   creator: "Adriel Santana",
   manifest: "/favicon/site.webmanifest",
   icons: {
@@ -38,6 +38,22 @@ export const metadata = {
         url: "/favicon/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
+      },
+    ],
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://www.adrielsan.social",
+    siteName: "Adriel Santana Portfolio",
+    title: "Portfolio | Adriel Santana ",
+    description: "Adriel's Portfolio",
+    images: [
+      {
+        url: "/images/extra/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Adriel Santana Portfolio",
       },
     ],
   },

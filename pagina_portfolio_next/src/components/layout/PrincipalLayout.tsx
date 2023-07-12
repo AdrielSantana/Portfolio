@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Background from "./Background";
 import { useCard } from "../../hooks/useCard";
 import { useSlide } from "../../hooks/useSlide";
+import { useEffect } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -101,6 +102,10 @@ const PrincipalLayout = ({ children }: Props) => {
     }
   }
 
+  if (typeof window !== "undefined") {
+    window.addEventListener("keydown", checkKey);
+  }
+  
   return (
     <>
       <Background />
@@ -143,7 +148,7 @@ const PrincipalLayout = ({ children }: Props) => {
                 opacity: { duration: 0.2 },
               }}
             >
-              <p className="h1 title text-center">{title}</p>
+              <h1 className="title text-center">{title}</h1>
             </motion.div>
           </AnimatePresence>
 

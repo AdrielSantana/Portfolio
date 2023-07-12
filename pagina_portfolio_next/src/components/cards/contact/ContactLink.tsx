@@ -15,6 +15,7 @@ const ContactLink = ({ name, imgUrl, size, link }: Props) => {
     <>
       <motion.a
         target="_blank"
+        rel="noreferrer"
         href={link}
         whileTap={{ scale: 0.95 }}
         whileHover={{ scale: 1.05 }}

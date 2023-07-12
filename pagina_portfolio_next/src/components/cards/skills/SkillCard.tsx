@@ -34,7 +34,7 @@ const SkillCard = ({ skill }: Props) => {
 
       <Collapse in={open}>
         <div id={`skill-${skill.name}`}>
-          <p className="fs-4 skill-title text-center">{skill.name}</p>
+          <h2 className="fs-4 mb-2 skill-title text-center">{skill.name}</h2>
           <Card className="skill-card" body>
             <Card.Text>{skill.description}</Card.Text>
           </Card>

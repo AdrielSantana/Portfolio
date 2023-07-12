@@ -37,7 +37,7 @@ const ProjectCard = ({ project, translation }: Props) => {
           <div id={`project-${project.name}`}>
             <Card className="project-card" body>
               <Card.Title className="text-center">
-                <strong>{project.name}</strong>
+                <h2 className="fs-5"><strong>{project.name}</strong></h2>
               </Card.Title>
               <Card.Text>{project.description}</Card.Text>
               <motion.div

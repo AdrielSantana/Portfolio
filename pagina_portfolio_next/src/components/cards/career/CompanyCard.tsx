@@ -47,7 +47,7 @@ const CompanyCard = ({ company }: Props) => {
           <div id={`company-${company.name}`}>
             <Card className="project-card" body>
               <Card.Title className="text-center">
-                <strong>{company.name}</strong>
+                <h2 className="fs-5"><strong>{company.name}</strong></h2>
               </Card.Title>
                 <p className="company-description">{company.description}</p>
                 <p className="company-date">{company.period}</p>

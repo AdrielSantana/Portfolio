@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCard } from "../../hooks/useCard";
 
 type Props = {
@@ -18,40 +19,39 @@ type Props = {
 };
 
 const AboutCard = ({ translation }: Props) => {
-  const { handleCardChange } = useCard();
 
   return (
     <>
       <p className="about-text">{translation.section1}</p>
       <p className="about-text">
         {translation.section2}
-        <a onClick={(e) => handleCardChange("projects")}>
+        <Link href='/projects'>
           <strong>
             <i>
               <span className="pointer">{translation.projects}</span>
             </i>
           </strong>
-        </a>
+        </Link>
         {translation.section3}
       </p>
       <p className="about-text">{translation.section4}</p>
       <p className="about-text">
         {translation.section5}
-        <a onClick={(e) => handleCardChange("skills")}>
+        <Link href='/skills'>
           <strong>
             <i>
               <span className="pointer">{translation.skills}</span>
             </i>
           </strong>
-        </a>{" "}
+        </Link>{" "}
         {translation.section6}
-        <a onClick={(e) => handleCardChange("contact")}>
+        <Link href='/contact'>
           <strong>
             <i>
               <span className="pointer">{translation.contact}</span>
             </i>
           </strong>
-        </a>
+        </Link>
         {translation.section7}
       </p>
     </>

@@ -24,7 +24,7 @@ const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
 
 const UserEmail = ({ name, translation }: Props) => {
   return (
-    <Html lang="pt-br">
+    <Html lang="pt-BR">
       <Head>
         <title>{translation.head}</title>
       </Head>

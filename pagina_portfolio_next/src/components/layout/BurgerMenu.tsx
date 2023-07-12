@@ -9,6 +9,7 @@ import { Col, Row } from "react-bootstrap";
 import BurgerButton from "./BurgerButton";
 import { useCard } from "../../hooks/useCard";
 import LanguageChanger from "./LanguageChanger";
+import Link from "next/link";
 
 type Props = {
   translation: {
@@ -22,7 +23,6 @@ type Props = {
 
 const BurguerMenu = ({ translation }: Props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const { handleCardChange } = useCard();
 
   return (
     <>
@@ -44,12 +44,9 @@ const BurguerMenu = ({ translation }: Props) => {
       >
         <Row className="justify-items-start my-5 align-self-center">
           <Col>
-            <a
-              onClick={(e) => handleCardChange("hero")}
-              className="pointer nav-title"
-            >
+            <Link href="/" className="pointer nav-title">
               Adriel&apos;s Portfolio
-            </a>
+            </Link>
           </Col>
         </Row>
 

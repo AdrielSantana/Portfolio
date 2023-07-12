@@ -21,9 +21,9 @@ const PrincipalCard = ({ children, title, card }: Props) => {
 
   return (
     <>
-      <div className="principal-card">
+      <section className="principal-card">
         <Container className="principal-container">{children}</Container>
-      </div>
+      </section>
     </>
   );
 };
