@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { email, subject, text, html } = body
 
-    resend.emails.send({
+    await resend.emails.send({
       from: 'Adriel Santana <no-reply@adrielsan.pro>',
       to: [email],
       subject: subject,
