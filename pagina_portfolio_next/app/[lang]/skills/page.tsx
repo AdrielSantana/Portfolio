@@ -12,7 +12,7 @@ const Skills = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
   return (
     <PrincipalCard title={translation.titles.skills} card="skills">
-      <SkillsCard translation={translation.cards.skills}/>
+      <SkillsCard translation={translation.cards.skills} />
     </PrincipalCard>
   );
 };

@@ -1,15 +1,18 @@
 "use client";
 
+import { useParams } from "next/navigation";
+import { Locale } from "../../i18n-config";
 import BurgerButton from "../../src/components/layout/BurgerButton";
-import PrincipalCard from "../../src/components/layout/PrincipalCard";
 
 export default function NotFound() {
+  const {lang} = useParams() as { lang: Locale };
+
   return (
     <div className="d-flex gap-5 justify-content-center align-items-center row">
       <h1 className="text-center">
-        <i>404</i>!
+        <i>{lang === 'pt-BR' ? 'Página Não Encontrada' : 'Page Not Found'}</i>!
       </h1>
-      <BurgerButton card="/" name="Home Page" />
+      <BurgerButton card="/" name={lang === 'pt-BR' ? "Voltar" : "Go Back"} />
     </div>
   );
 }
