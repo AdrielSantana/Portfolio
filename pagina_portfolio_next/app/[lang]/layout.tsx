@@ -40,23 +40,7 @@ export const metadata = {
         type: "image/png",
       },
     ],
-  },
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://www.adrielsan.social",
-    siteName: "Adriel Santana Portfolio",
-    title: "Portfolio | Adriel Santana ",
-    description: "Adriel's Portfolio",
-    images: [
-      {
-        url: "/images/extra/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Adriel Santana Portfolio",
-      },
-    ],
-  },
+  }
 };
 
 const montserrat = Montserrat({
