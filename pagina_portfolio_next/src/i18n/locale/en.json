@@ -61,18 +61,6 @@
           "name": "Apple Catalog",
           "description": "Front End Web Project. Simulates a catalog with a shopping cart. I used Next Js and TypeScript."
         },
-        "meuClima": {
-          "name": "My Weather",
-          "description": "Front End Web Project. Show local, current weather and forecasts by consuming an external API. I used React."
-        },
-        "spaceX": {
-          "name": "SpaceX",
-          "description": "Front End Web Project. Inspired on the SpaceX website, showing its Front-End functionality and responsiveness. I used only HTML, CSS, Bootstrap and Sass."
-        },
-        "meuPortfolio": {
-          "name": "My Portfolio",
-          "description": "Front End Web Project. Present my portfolio with a clean, modern, responsive and high-performance look. I used Next Js, TypeScript, Sass and Bootstrap."
-        },
         "meuGitHub": {
           "name": "My GitHub",
           "description": "Here you can see my various projects and technical description about them. Take a look :)"

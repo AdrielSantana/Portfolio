@@ -1,9 +1,6 @@
 import tomenoteImg from "../../public/images/projects/tomenote.png";
 import oneBitLifeImg from "../../public/images/projects/oneBitLife.png";
 import catalogoAppleImg from "../../public/images/projects/catalogoApple.png";
-import meuClimaImg from "../../public/images/projects/meuClima.png";
-import spaceXImg from "../../public/images/projects/spaceX.png";
-import portfolioImg from "../../public/images/projects/portfolio.png";
 import githubImg from "../../public/images/projects/github.png";
 import gameAwards from "../../public/images/projects/gameAwards.png";
 import dashboardApp from "../../public/images/projects/dashboardApp.png";
@@ -47,22 +44,7 @@ export const projects = [
   {
     name: "catalogoApple",
     imgUrl: catalogoAppleImg,
-    link: "http://www.catalogoapple.adrielsan.social",
-  },
-  {
-    name: "meuClima",
-    imgUrl: meuClimaImg,
-    link: "http://www.climalocal.adrielsan.social",
-  },
-  {
-    name: "spaceX",
-    imgUrl: spaceXImg,
-    link: "http://www.spacex.adrielsan.social",
-  },
-  {
-    name: "meuPortfolio",
-    imgUrl: portfolioImg,
-    link: "",
+    link: "https://projeto-next-js-lac.vercel.app",
   },
   {
     name: "meuGitHub",
