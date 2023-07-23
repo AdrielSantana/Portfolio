@@ -1,40 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const formData = require("form-data");
-const Mailgun = require("mailgun.js");
-const mailgun = new Mailgun(formData);
-const mg = mailgun.client({
-  username: "Adrielsan",
-  key: `${process.env.NEXT_PUBLIC_API_KEY}`,
-});
+import { Resend } from 'resend';
 
-const sendEmail = (
-  to: string,
-  from: string,
-  subject: string,
-  text: string,
-  html: string
-) => {
-  let data = {
-    to: [to],
-    from,
-    subject,
-    text,
-    html,
-  };
-  return mg.messages.create("adrielsan.social", data);
-};
+const resend = new Resend(process.env.NEXT_PUBLIC_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    await sendEmail(
-      body.email,
-      "Adriel Santana <no-reply@adrielsan.social>",
-      body.subject,
-      body.text,
-      body.html
-    );
+    const { email, subject, text, html } = body
+
+    resend.emails.send({
+      from: 'Adriel Santana <no-reply@adrielsan.pro>',
+      to: email,
+      subject: subject,
+      html: html,
+      text: text
+    });
+
     return NextResponse.json({ validate: true });
   } catch (error) {
     console.log(error);

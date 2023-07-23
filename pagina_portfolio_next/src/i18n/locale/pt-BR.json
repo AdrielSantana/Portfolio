@@ -39,7 +39,7 @@
       "project": {
         "dashboardApp": {
           "name": "Dashboard App",
-          "description": "Projeto Full-Stack Web. Veja dados e informações relevantes sobre a empresa. Clique na engranagem para acessar. Utilizei ChakraUi, NextJs, TypeScript e MongoDB."
+          "description": "Projeto Full-Stack Web. Veja dados e informações relevantes sobre a empresa. Clique na engrenagem para acessar. Utilizei ChakraUi, NextJs, TypeScript e MongoDB."
         },
         "mandaDex": {
           "name": "MandaDex",

@@ -23,7 +23,6 @@
     "@react-email/render": "^0.0.6",
     "@react-email/section": "^0.0.9",
     "@react-email/text": "^0.0.5",
-    "@types/mailgun-js": "^0.22.13",
     "@types/negotiator": "^0.6.1",
     "@types/react-burger-menu": "^2.8.3",
     "@vercel/analytics": "^0.1.11",
@@ -32,7 +31,6 @@
     "framer-motion": "^7.4.0",
     "hamburger-react": "^2.5.0",
     "i18next": "^22.5.0",
-    "mailgun.js": "^8.2.1",
     "negotiator": "^0.6.3",
     "next": "^13.4.1-canary.1",
     "react": "^18.2.0",
@@ -41,6 +39,7 @@
     "react-dom": "^18.2.0",
     "react-email": "^1.9.0",
     "react-i18next": "^12.3.1",
+    "resend": "^0.17.1",
     "sass": "^1.55.0",
     "server-only": "^0.0.1"
   },

@@ -36,7 +36,7 @@ const UserEmail = ({ name, translation }: Props) => {
           {name}
         </Heading>
         <Text style={message}>{translation.feedback}</Text>
-        <Link href="https://www.adrielsan.social">
+        <Link href={baseUrl}>
           <Img
             style={image}
             src={`${baseUrl}/images/extra/logo.png`}
@@ -48,7 +48,7 @@ const UserEmail = ({ name, translation }: Props) => {
         <Hr style={hr} />
         <Text style={outro}>
           {translation.thanks}
-          <Link style={link} href="https://www.adrielsan.social">
+          <Link style={link} href={baseUrl}>
             <i>Adriel Santana</i>
           </Link>
           .
