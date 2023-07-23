@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
-  metadataBase: new URL("https://www.adrielsan.social"),
+  metadataBase: new URL("https://adrielsan.pro"),
   title: {
     template: "%s | Adriel Santana",
     default: "Porfolio | Adriel Santana",
@@ -40,6 +40,14 @@ export const metadata = {
         type: "image/png",
       },
     ],
+  },
+  openGraph: {
+    title: "Portfolio | Adriel Santana",
+    description: "Adriel's Portfolio",
+    url: "https://adrielsan.pro",
+    type: "website",
+    locale: "pt_BR",
+    countryName: "Brazil",
   }
 };
 

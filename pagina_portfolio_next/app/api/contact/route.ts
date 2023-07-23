@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
     resend.emails.send({
       from: 'Adriel Santana <no-reply@adrielsan.pro>',
-      to: email,
+      to: [email],
       subject: subject,
       html: html,
       text: text
