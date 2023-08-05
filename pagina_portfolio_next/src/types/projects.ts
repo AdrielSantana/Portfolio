@@ -19,17 +19,17 @@ export const projects = [
   {
     name: "dashboardApp",
     imgUrl: dashboardApp,
-    link: "https://dashboard-app-indol.vercel.app",
+    link: "https://dashboard.adrielsan.pro",
   },
   {
     name: "mandaDex",
     imgUrl: mandaDex,
-    link: "https://mandadex-client.vercel.app",
+    link: "https://mandadex.adrielsan.pro",
   },
   {
     name: "tomenote",
     imgUrl: tomenoteImg,
-    link: "https://tomenote-su43z.ondigitalocean.app",
+    link: "https://tomenote.adrielsan.pro",
   },
   {
     name: "gameAwards",
@@ -44,7 +44,7 @@ export const projects = [
   {
     name: "catalogoApple",
     imgUrl: catalogoAppleImg,
-    link: "https://projeto-next-js-lac.vercel.app",
+    link: "https://catalogo.adrielsan.pro",
   },
   {
     name: "meuGitHub",
